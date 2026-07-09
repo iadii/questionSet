@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import ProtectedRoute from '@/components/ProtectedRoute';
 
 export default function DashboardPage() {
     return (
+        <ProtectedRoute>
         <div className="p-8 max-w-6xl mx-auto space-y-8">
             <h1 className="text-4xl font-bold text-gray-900">WalmartPrep Dashboard</h1>
             
@@ -42,5 +44,6 @@ export default function DashboardPage() {
                 </button>
             </div>
         </div>
+        </ProtectedRoute>
     );
 }

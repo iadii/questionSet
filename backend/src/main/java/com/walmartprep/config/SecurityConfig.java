@@ -37,7 +37,6 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable()) // Disable CSRF for simple REST API
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers("/api/questions/**").permitAll()
                 .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/actuator/**", "/").permitAll()
                 .anyRequest().authenticated()
             )
