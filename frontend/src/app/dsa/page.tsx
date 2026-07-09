@@ -46,20 +46,19 @@ export default function DSASheetPage() {
 
   // Update progress mutation
   const updateProgress = useMutation({
-    mutationFn: (questionId: string) =>
+    mutationFn: ({ questionId, status, confidence }: { questionId: string; status: string; confidence?: string }) =>
       apiFetch(`/progress/${questionId}`, {
         method: "POST",
-        body: JSON.stringify({ status: "SOLVED" }),
+        body: JSON.stringify({ status, confidence }),
       }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["progress"] });
     },
   });
 
-  const handleToggleSolved = (questionId: string, currentStatus?: string) => {
-    // For now, checking the box sets it to SOLVED.
-    if (currentStatus !== "SOLVED") {
-      updateProgress.mutate(questionId);
+  const handleToggleSolved = (questionId: string, currentStatus?: string, confidence?: string) => {
+    if (currentStatus !== "SOLVED" || confidence) {
+      updateProgress.mutate({ questionId, status: "SOLVED", confidence });
     }
   };
 

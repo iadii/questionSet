@@ -5,7 +5,7 @@ import clsx from "clsx";
 interface QuestionRowProps {
   question: Question;
   status: string | undefined;
-  onToggleStatus: (id: string, currentStatus?: string) => void;
+  onToggleStatus: (id: string, currentStatus?: string, confidence?: string) => void;
   isPending: boolean;
 }
 
@@ -18,20 +18,31 @@ export default function QuestionRow({
   const isSolved = status === "SOLVED";
 
   return (
-    <tr className="group hover:bg-gray-50/80 transition-colors border-b border-gray-100 last:border-0">
+    <tr className="group hover:bg-gray-50/80 transition-colors border-b border-gray-100 last:border-0 relative">
       {/* Status Toggle */}
       <td className="pl-6 pr-3 py-4 w-14">
-        <button
-          onClick={() => onToggleStatus(question.id, status)}
-          disabled={isPending}
-          className="flex items-center justify-center text-gray-300 hover:text-emerald-500 transition-colors disabled:opacity-50"
-        >
-          {isSolved ? (
-            <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-          ) : (
-            <Circle className="w-5 h-5" />
-          )}
-        </button>
+        <div className="relative flex items-center justify-center group/status">
+          <button
+            onClick={() => onToggleStatus(question.id, status, "MEDIUM")}
+            disabled={isPending}
+            className="flex items-center justify-center text-gray-300 hover:text-emerald-500 transition-colors disabled:opacity-50"
+          >
+            {isSolved ? (
+              <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+            ) : status === "REVISION_NEEDED" ? (
+              <Circle className="w-5 h-5 text-orange-500 fill-orange-100" />
+            ) : (
+              <Circle className="w-5 h-5" />
+            )}
+          </button>
+          
+          {/* SRS Confidence popover (shows on hover of the status button) */}
+          <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden group-hover/status:flex items-center gap-1 bg-white border border-gray-200 shadow-lg rounded-lg p-1 z-20">
+            <button onClick={(e) => { e.stopPropagation(); onToggleStatus(question.id, status, "EASY"); }} className="px-2 py-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded">EASY</button>
+            <button onClick={(e) => { e.stopPropagation(); onToggleStatus(question.id, status, "MEDIUM"); }} className="px-2 py-1 text-[10px] font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 rounded">MED</button>
+            <button onClick={(e) => { e.stopPropagation(); onToggleStatus(question.id, status, "HARD"); }} className="px-2 py-1 text-[10px] font-bold text-rose-700 bg-rose-50 hover:bg-rose-100 rounded">HARD</button>
+          </div>
+        </div>
       </td>
 
       {/* Title & Tags */}

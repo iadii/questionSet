@@ -5,7 +5,7 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 import { useQuery } from "@tanstack/react-query";
 import { apiFetch } from "@/lib/api";
 import { Question, PageResponse } from "@/types";
-import { ChevronRight, Target, Briefcase } from "lucide-react";
+import { ChevronRight, Target, Briefcase, ClockAlert } from "lucide-react";
 
 interface UserProfile {
   name: string;
@@ -26,10 +26,15 @@ export default function DashboardPage() {
 
   const { data: questionsData, isLoading: isQuestionsLoading } = useQuery<PageResponse<Question>>({
     queryKey: ["questions", "DSA"],
-    queryFn: () => apiFetch<PageResponse<Question>>("/questions?category=DSA&page=0&size=100", { requireAuth: true }),
+    queryFn: () => apiFetch<PageResponse<Question>>("/questions?category=DSA&page=0&size=500", { requireAuth: true }),
   });
 
-  if (isProfileLoading || isQuestionsLoading) {
+  const { data: progressData, isLoading: isProgressLoading } = useQuery<any[]>({
+    queryKey: ["progress"],
+    queryFn: () => apiFetch<any[]>("/progress", { requireAuth: true }),
+  });
+
+  if (isProfileLoading || isQuestionsLoading || isProgressLoading) {
     return (
       <ProtectedRoute>
         <div className="min-h-screen flex items-center justify-center bg-[#fafbfc]">
@@ -45,6 +50,14 @@ export default function DashboardPage() {
   const companyTrack = questionsData?.content
     ?.filter(q => q.companyTags && q.companyTags.includes(targetCompany))
     ?.slice(0, 5) || [];
+
+  // Filter for Due Reviews (SRS)
+  const dueReviewIds = progressData
+    ?.filter(p => p.status === "REVISION_NEEDED")
+    .map(p => p.questionId) || [];
+    
+  const dueReviews = questionsData?.content
+    ?.filter(q => dueReviewIds.includes(q.id)) || [];
 
   return (
     <ProtectedRoute>
@@ -104,6 +117,49 @@ export default function DashboardPage() {
               <p className="text-sm text-gray-500 mt-4">Keep the momentum going!</p>
             </div>
           </div>
+
+          {/* Due for Review (SRS) */}
+          {dueReviews.length > 0 && (
+            <section className="bg-orange-50 rounded-2xl shadow-sm border border-orange-200 overflow-hidden">
+              <div className="p-6 border-b border-orange-200 flex justify-between items-center bg-orange-100/50">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-orange-200 text-orange-600 flex items-center justify-center">
+                    <ClockAlert className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold text-orange-900">Due for Review Today</h2>
+                    <p className="text-sm text-orange-700">Spaced repetition to reinforce memory.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="divide-y divide-orange-100 bg-white">
+                {dueReviews.map((q, idx) => (
+                  <div key={q.id} className="p-4 flex items-center justify-between hover:bg-orange-50/50 transition-colors">
+                    <div className="flex items-center gap-4">
+                      <span className="text-orange-400 font-mono text-sm w-6 text-center">{idx + 1}</span>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 text-base">{q.title}</h4>
+                        <div className="flex items-center gap-3 mt-1">
+                          <span className={`text-[11px] px-2 py-0.5 rounded-md font-bold tracking-wide ${
+                            q.difficulty === 'EASY' ? 'bg-emerald-100 text-emerald-700' :
+                            q.difficulty === 'MEDIUM' ? 'bg-amber-100 text-amber-700' :
+                            'bg-rose-100 text-rose-700'
+                          }`}>
+                            {q.difficulty}
+                          </span>
+                          <span className="text-xs text-gray-500 font-medium">{q.topic}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <Link href={`/dsa`} className="px-4 py-2 bg-orange-100 hover:bg-orange-200 text-orange-800 text-sm font-medium rounded-lg transition-colors shadow-sm">
+                      Review Now
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Company-Specific Prep Track */}
           <section className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">

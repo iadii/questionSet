@@ -9,7 +9,7 @@ interface TopicAccordionProps {
   isExpanded: boolean;
   onToggle: () => void;
   getQuestionStatus: (id: string) => string | undefined;
-  onToggleStatus: (id: string, currentStatus?: string) => void;
+  onToggleStatus: (id: string, currentStatus?: string, confidence?: string) => void;
   isUpdatePending: boolean;
 }
 

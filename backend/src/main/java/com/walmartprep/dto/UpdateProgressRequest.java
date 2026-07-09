@@ -7,5 +7,6 @@ import com.walmartprep.enums.ProgressStatus;
 
 @Data
 public class UpdateProgressRequest {
-    private ProgressStatus status; 
+    private ProgressStatus status;
+    private String confidence; // EASY, MEDIUM, HARD 
 }

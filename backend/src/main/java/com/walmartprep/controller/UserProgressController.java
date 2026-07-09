@@ -40,6 +40,6 @@ public class UserProgressController {
         if (email == null) {
             return ResponseEntity.status(401).body(com.walmartprep.dto.ApiResponse.error("Unauthorized"));
         }
-        return ResponseEntity.ok(com.walmartprep.dto.ApiResponse.success(userProgressService.updateProgress(email, questionId, request.getStatus()), "Progress updated successfully"));
+        return ResponseEntity.ok(com.walmartprep.dto.ApiResponse.success(userProgressService.updateProgress(email, questionId, request.getStatus(), request.getConfidence()), "Progress updated successfully"));
     }
 }

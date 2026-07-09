@@ -32,7 +32,7 @@ public class UserProgressService {
                 .collect(Collectors.toList());
     }
 
-    public UserProgressDTO updateProgress(String email, UUID questionId, com.walmartprep.enums.ProgressStatus status) {
+    public UserProgressDTO updateProgress(String email, UUID questionId, com.walmartprep.enums.ProgressStatus status, String confidence) {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
         
@@ -49,9 +49,17 @@ public class UserProgressService {
 
         progress.setStatus(status);
 
-        // Simple spaced repetition logic
+        // SRS Logic
         if (com.walmartprep.enums.ProgressStatus.SOLVED.equals(status)) {
-            progress.setNextRevisionDate(LocalDate.now().plusDays(3));
+            int days = 3; // Default
+            if ("EASY".equalsIgnoreCase(confidence)) {
+                days = 7;
+            } else if ("HARD".equalsIgnoreCase(confidence)) {
+                days = 1;
+            } else if ("MEDIUM".equalsIgnoreCase(confidence)) {
+                days = 3;
+            }
+            progress.setNextRevisionDate(LocalDate.now().plusDays(days));
         } else if (com.walmartprep.enums.ProgressStatus.REVISION_NEEDED.equals(status)) {
             progress.setNextRevisionDate(LocalDate.now().plusDays(1));
         } else {
