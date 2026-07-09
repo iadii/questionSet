@@ -10,8 +10,7 @@ import java.util.UUID;
 
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, UUID> {
-    Page<Question> findByCategory(String category, Pageable pageable);
+    Page<Question> findByCategory(com.walmartprep.enums.Category category, Pageable pageable);
     Page<Question> findByTopic(String topic, Pageable pageable);
-    Page<Question> findByCategoryAndTopic(String category, String topic, Pageable pageable);
-    Page<Question> findByIsWalmartPrevious(Boolean isWalmartPrevious, Pageable pageable);
+    Page<Question> findByCategoryAndTopic(com.walmartprep.enums.Category category, String topic, Pageable pageable);
 }

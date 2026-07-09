@@ -13,16 +13,32 @@ import org.springframework.stereotype.Component;
 import java.io.InputStream;
 import java.util.List;
 
+import com.walmartprep.entity.User;
+import com.walmartprep.repository.UserRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 @Component
 @RequiredArgsConstructor
 @Slf4j
 public class DataSeeder implements CommandLineRunner {
 
     private final QuestionRepository questionRepository;
-    private final ObjectMapper objectMapper;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final ObjectMapper objectMapper = new ObjectMapper()
+            .configure(com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+            .enable(com.fasterxml.jackson.databind.MapperFeature.ACCEPT_CASE_INSENSITIVE_ENUMS);
 
     @Override
     public void run(String... args) throws Exception {
+        if (userRepository.count() == 0) {
+            log.info("Creating default test user...");
+            User user = new User();
+            user.setName("Test User");
+            user.setEmail("test@example.com");
+            user.setPasswordHash(passwordEncoder.encode("password123"));
+            userRepository.save(user);
+        }
         if (questionRepository.count() == 0) {
             log.info("Database is empty. Seeding questions from JSON...");
             seedData("data/dsa.json");

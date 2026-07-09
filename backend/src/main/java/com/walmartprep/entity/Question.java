@@ -5,6 +5,8 @@ import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
+import com.walmartprep.enums.Difficulty;
+import com.walmartprep.enums.Category;
 
 import java.util.List;
 import java.util.UUID;
@@ -26,17 +28,16 @@ public class Question {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String difficulty;
+    private Difficulty difficulty;
 
     @Column(nullable = false)
     private String topic;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String category;
-
-    @Column(name = "is_walmart_previous")
-    private Boolean isWalmartPrevious = false;
+    private Category category;
 
     private Integer frequency = 0;
 

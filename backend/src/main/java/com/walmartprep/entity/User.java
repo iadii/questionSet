@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
+import com.walmartprep.enums.Role;
 
 @Data
 @Entity
@@ -33,6 +34,10 @@ public class User {
 
     @Column(name = "current_streak")
     private Integer currentStreak = 0;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role = Role.ROLE_USER;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
