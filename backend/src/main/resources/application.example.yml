@@ -27,5 +27,14 @@ spring:
     baseline-on-migrate: true
 
 jwt:
-  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
-  expiration: 86400000 # 1 day in milliseconds
+  secret: YOUR_JWT_SECRET_HERE
+  expiration: 3600000 # 1 hour
+  refresh-expiration: 604800000 # 7 days
+
+gemini:
+  api:
+    key: YOUR_API_KEY_HERE
+
+judge0:
+  api:
+    key: YOUR_JUDGE0_API_KEY_HERE

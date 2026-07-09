@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useInfiniteQuery, useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
 import { apiFetch } from "@/lib/api";
 import { Question, UserProgressDTO, PageResponse } from "@/types";
 
@@ -16,13 +16,26 @@ export default function DSASheetPage() {
   const [filterDifficulty, setFilterDifficulty] = useState<string>("All");
   const [showWalmartOnly, setShowWalmartOnly] = useState(false);
 
-  // Fetch all questions
-  const { data: questionPage, isLoading: questionsLoading } = useQuery<PageResponse<Question>>({
+  // Fetch questions with infinite pagination
+  const { 
+    data: questionsData, 
+    isLoading: questionsLoading,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage
+  } = useInfiniteQuery<PageResponse<Question>, Error>({
     queryKey: ["questions", "DSA"],
-    queryFn: () => apiFetch<PageResponse<Question>>("/questions?category=DSA&size=500", { requireAuth: true }),
+    queryFn: ({ pageParam }) => apiFetch<PageResponse<Question>>(`/questions?category=DSA&page=${pageParam}&size=20`, { requireAuth: true }),
+    initialPageParam: 0,
+    getNextPageParam: (lastPage) => {
+      if (lastPage.number < lastPage.totalPages - 1) {
+        return lastPage.number + 1;
+      }
+      return undefined;
+    }
   });
 
-  const allQuestions = questionPage?.content || [];
+  const allQuestions = questionsData?.pages.flatMap(page => page.content) || [];
   const dynamicTopics = Array.from(new Set(allQuestions.map((q) => q.topic))).sort();
 
   // Fetch progress
@@ -122,6 +135,18 @@ export default function DSASheetPage() {
             ))
           )}
         </div>
+        
+        {hasNextPage && (
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => fetchNextPage()}
+              disabled={isFetchingNextPage}
+              className="px-6 py-2.5 bg-white border border-gray-200 text-gray-700 font-semibold rounded-xl shadow-sm hover:bg-gray-50 transition-colors disabled:opacity-50"
+            >
+              {isFetchingNextPage ? "Loading more..." : "Load More Questions"}
+            </button>
+          </div>
+        )}
       </main>
     </div>
     </ProtectedRoute>

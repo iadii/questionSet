@@ -31,15 +31,23 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     private final CustomUserDetailsService userDetailsService;
+    private final JwtUtils jwtUtils;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         try {
-            String jwt = parseJwt(request);
+            String jwt = jwtUtils.getJwtFromCookies(request);
             if (jwt != null && validateJwtToken(jwt)) {
-                String email = Jwts.parser().verifyWith((javax.crypto.SecretKey) key()).build()
-                        .parseSignedClaims(jwt).getPayload().getSubject();
+                io.jsonwebtoken.Claims claims = Jwts.parser().verifyWith((javax.crypto.SecretKey) key()).build()
+                        .parseSignedClaims(jwt).getPayload();
+                
+                String type = claims.get("type", String.class);
+                if (!"access".equals(type)) {
+                    throw new RuntimeException("Invalid token type");
+                }
+
+                String email = claims.getSubject();
 
                 UserDetails userDetails = userDetailsService.loadUserByUsername(email);
                 
@@ -56,15 +64,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private String parseJwt(HttpServletRequest request) {
-        String headerAuth = request.getHeader("Authorization");
+    // parseJwt from Authorization header is no longer needed since we use cookies
 
-        if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer ")) {
-            return headerAuth.substring(7);
-        }
-
-        return null;
-    }
 
     private boolean validateJwtToken(String authToken) {
         try {

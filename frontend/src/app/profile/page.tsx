@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { apiFetch } from "@/lib/api";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Heatmap from "@/components/profile/Heatmap";
-import CodePlayground from "@/components/profile/CodePlayground";
+import InterviewWorkspace from "@/components/profile/InterviewWorkspace";
 import Link from "next/link";
 import { ArrowLeft, User } from "lucide-react";
 
@@ -86,10 +86,10 @@ export default function ProfilePage() {
           {/* Heatmap */}
           {profile?.heatmap && <Heatmap data={profile.heatmap} />}
 
-          {/* Playground */}
+          {/* Interview Workspace */}
           <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Practice Playground</h3>
-            <CodePlayground />
+            <h3 className="text-xl font-bold text-gray-900 mb-4">AI Interview Workspace</h3>
+            <InterviewWorkspace />
           </div>
 
         </main>

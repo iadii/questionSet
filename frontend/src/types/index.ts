@@ -1,10 +1,31 @@
+export enum Difficulty {
+  EASY = "EASY",
+  MEDIUM = "MEDIUM",
+  HARD = "HARD",
+}
+
+export enum Category {
+  DSA = "DSA",
+  LLD = "LLD",
+  HLD = "HLD",
+  BEHAVIORAL = "BEHAVIORAL",
+  CS_FUNDAMENTALS = "CS_FUNDAMENTALS",
+}
+
+export enum ProgressStatus {
+  NOT_STARTED = "NOT_STARTED",
+  ATTEMPTED = "ATTEMPTED",
+  SOLVED = "SOLVED",
+  REVISION_NEEDED = "REVISION_NEEDED",
+}
+
 export interface Question {
   id: string;
   title: string;
   description: string;
-  difficulty: "EASY" | "MEDIUM" | "HARD";
+  difficulty: Difficulty;
   topic: string;
-  category: "DSA" | "LLD" | "HLD" | "BEHAVIORAL" | "CS_FUNDAMENTALS";
+  category: Category;
   frequency: number;
   leetcodeUrl?: string;
   articleUrl?: string;
@@ -15,7 +36,7 @@ export interface Question {
 
 export interface UserProgressDTO {
   questionId: string;
-  status: "NOT_STARTED" | "ATTEMPTED" | "SOLVED" | "REVISION_NEEDED";
+  status: ProgressStatus;
   nextRevisionDate: string;
 }
 

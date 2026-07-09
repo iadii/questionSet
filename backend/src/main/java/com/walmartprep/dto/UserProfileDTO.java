@@ -7,6 +7,7 @@ import java.util.Map;
 public class UserProfileDTO {
     private String name;
     private String email;
+    private String targetCompany;
     private int totalSolved;
     private int easySolved;
     private int mediumSolved;

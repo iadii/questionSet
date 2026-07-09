@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMutation } from "@tanstack/react-query";
-import { apiFetch } from "@/lib/api";
+import { apiFetch, ApiError } from "@/lib/api";
+import { toast } from "react-hot-toast";
 
 export default function SignupPage() {
     const router = useRouter();
@@ -12,6 +13,7 @@ export default function SignupPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
     const signupMutation = useMutation({
         mutationFn: async () => {
@@ -22,16 +24,22 @@ export default function SignupPage() {
             });
         },
         onSuccess: () => {
-            router.push("/dashboard"); // Redirect to dashboard on success
+            toast.success("Account created successfully! Please log in.");
+            router.push("/login"); // Redirect to login on success
         },
         onError: (err: any) => {
-            setError(err.message);
+            if (err instanceof ApiError && err.validationErrors) {
+                setValidationErrors(err.validationErrors);
+            } else {
+                setError(err.message || "An unexpected error occurred.");
+            }
         }
     });
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setError("");
+        setValidationErrors({});
         signupMutation.mutate();
     };
 
@@ -58,28 +66,37 @@ export default function SignupPage() {
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
+                            {validationErrors.name && (
+                                <p className="mt-1 text-sm text-red-600">{validationErrors.name}</p>
+                            )}
                         </div>
-                        <div>
+                        <div className="pt-2">
                             <input
                                 name="email"
                                 type="email"
                                 required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                                 placeholder="Email address"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
+                            {validationErrors.email && (
+                                <p className="mt-1 text-sm text-red-600">{validationErrors.email}</p>
+                            )}
                         </div>
-                        <div>
+                        <div className="pt-2">
                             <input
                                 name="password"
                                 type="password"
                                 required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                                 placeholder="Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
+                            {validationErrors.password && (
+                                <p className="mt-1 text-sm text-red-600">{validationErrors.password}</p>
+                            )}
                         </div>
                     </div>
 

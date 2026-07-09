@@ -58,6 +58,7 @@ public class ProfileController {
         UserProfileDTO dto = new UserProfileDTO();
         dto.setName(user.getName());
         dto.setEmail(user.getEmail());
+        dto.setTargetCompany(user.getTargetCompany());
         dto.setTotalSolved(total);
         dto.setEasySolved(easy);
         dto.setMediumSolved(medium);
