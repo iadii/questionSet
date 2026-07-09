@@ -1,0 +1,573 @@
+[
+  {
+    "title": "Find the longest substring with at most K distinct characters",
+    "description": "Given a string s and an integer k, find the length of the longest substring that contains at most k distinct characters. This was asked in the Walmart OA 2024 batch.",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/",
+    "hints": [
+      "Use a sliding window with a HashMap to count character frequencies.",
+      "Expand right pointer. If distinct chars exceed k, shrink from left.",
+      "Track the maximum window size."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Count factors of a number",
+    "description": "Given a number N, count the total number of factors. Reported in Walmart OA 2024.",
+    "difficulty": "Easy",
+    "topic": "Math",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "Iterate from 1 to sqrt(N). If N % i == 0, count both i and N/i.",
+      "If i == N/i, count only once.",
+      "Time complexity: O(sqrt(N))."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Reverse a number and check if power of 2",
+    "description": "Given a number, reverse its digits and check if the reversed number is a power of 2. Walmart OA 2024.",
+    "difficulty": "Easy",
+    "topic": "Math",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "hints": [
+      "Reverse the number using modulo and division.",
+      "A number n is a power of 2 if n > 0 && (n & (n-1)) == 0.",
+      "Handle edge case: reversed number could have leading zeros removed."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Row and Column Operations on Matrix",
+    "description": "Given an m x n matrix and a series of row/column increment operations, compute the final matrix. Walmart OA 2025.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "Instead of applying each operation directly (O(m*n) per op), accumulate row and column increments.",
+      "Use two arrays: rowInc[m] and colInc[n].",
+      "Final value at (i,j) = original[i][j] + rowInc[i] + colInc[j]."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Number of ways to reach destination in a matrix",
+    "description": "Given an m x n grid with obstacles, find the number of unique paths from top-left to bottom-right. You can only move down or right. Walmart OA 2025.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/unique-paths-ii/",
+    "hints": [
+      "Use DP. dp[i][j] = number of ways to reach (i, j).",
+      "dp[i][j] = dp[i-1][j] + dp[i][j-1] if cell is not an obstacle.",
+      "Base case: dp[0][0] = 1 if not an obstacle."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Find maximum length subarray with sum equal to K",
+    "description": "Given an array of integers and a value K, find the maximum length of a subarray whose sum equals K. Walmart Coding Round 2024.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Use prefix sums + HashMap. Store the first occurrence of each prefix sum.",
+      "If prefixSum - K exists in the map, the subarray between those indices sums to K.",
+      "Track the maximum length found."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Coin Change variation - minimum coins with limited supply",
+    "description": "Given coins with limited supply and a target amount, find the minimum number of coins needed. Walmart OA 2024.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "This is a bounded knapsack variant of Coin Change.",
+      "Use DP with an additional loop for the count of each coin type.",
+      "dp[amount] = min coins to make this amount, considering supply limits."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Right View of Binary Tree",
+    "description": "Given a binary tree, print the right view (nodes visible when looking from the right side). Walmart Technical Round 2024.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-right-side-view/",
+    "hints": [
+      "Use BFS level order traversal. The last node of each level is the right view.",
+      "Alternatively, DFS: visit right child before left. Track max depth seen.",
+      "If current depth > max depth seen, this node is part of the right view."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Left Boundary Traversal of Binary Tree",
+    "description": "Print the left boundary of a binary tree (non-leaf nodes on the left side, all leaves, and non-leaf nodes on the right side in reverse). Walmart Technical Round 2024.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "Split into 3 parts: left boundary (top-down), leaf nodes (left-right), right boundary (bottom-up).",
+      "Left boundary: follow left child; if absent, follow right. Don't include leaves.",
+      "Leaf nodes: standard DFS, add only leaf nodes."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Construct Binary Tree from Inorder and Preorder",
+    "description": "Given inorder and preorder traversals of a binary tree, construct the tree. Walmart Technical Round 2025.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+    "hints": [
+      "The first element of preorder is the root.",
+      "Find root's position in inorder. Left side = left subtree, right side = right subtree.",
+      "Use HashMap for O(1) lookup in inorder."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Remove duplicates from sorted linked list",
+    "description": "Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Walmart Technical Round 2024.",
+    "difficulty": "Easy",
+    "topic": "Linked List",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/",
+    "hints": [
+      "Iterate through the list. If current.val == current.next.val, skip the next node.",
+      "current.next = current.next.next",
+      "Only advance current when no duplicate is removed."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Find latest log entry per user (SQL)",
+    "description": "Given a logs table (user_id, action, timestamp), write a SQL query to find the latest log entry for each user. Walmart SQL Round 2024.",
+    "difficulty": "Medium",
+    "topic": "SQL",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "Use window functions: ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY timestamp DESC).",
+      "Filter where row_number = 1.",
+      "Alternative: subquery with MAX(timestamp) GROUP BY user_id."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Longest Palindromic Substring (Walmart variant)",
+    "description": "Find the longest palindromic substring in a given string. Frequently asked in Walmart DSA rounds 2024-2025.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-palindromic-substring/",
+    "hints": [
+      "Expand Around Center: for each index, expand outward while chars match.",
+      "Check both odd-length (center = single char) and even-length (center = between two chars) palindromes.",
+      "Time: O(n^2), Space: O(1)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design LRU/LFU Cache (Walmart LLD Round)",
+    "description": "Implement an LRU or LFU Cache data structure. Walmart frequently asks this in LLD rounds. Must handle get() and put() in O(1).",
+    "difficulty": "Medium",
+    "topic": "Design",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 9,
+    "leetcodeUrl": "https://leetcode.com/problems/lru-cache/",
+    "hints": [
+      "LRU: HashMap + Doubly Linked List. Head = most recent, Tail = least recent.",
+      "LFU: HashMap + frequency map + Doubly Linked List per frequency.",
+      "On get: move to head (LRU) or increment frequency (LFU).",
+      "On put: evict from tail (LRU) or evict minimum frequency item (LFU)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Word Search in Grid",
+    "description": "Given an m x n board and a word, find if the word exists in the grid by moving to adjacent cells. Walmart 2025 Interview.",
+    "difficulty": "Medium",
+    "topic": "Graph",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/word-search/",
+    "hints": [
+      "DFS + Backtracking from each cell matching the first character.",
+      "Mark cells as visited during DFS (restore on backtrack).",
+      "Prune: if remaining board cells < remaining word length, return false."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Rate Limiter (Walmart LLD Round)",
+    "description": "Design a rate limiter to restrict the number of API requests per user per time window. Walmart LLD 2024.",
+    "difficulty": "Medium",
+    "topic": "System Design",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Token Bucket: refill tokens at a fixed rate. Each request consumes a token.",
+      "Sliding Window Log: store request timestamps. Count requests in last N seconds.",
+      "For interviews, implement Token Bucket with classes: RateLimiter, TokenBucket, Request."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Walmart Checkout System",
+    "description": "Design the checkout system for Walmart's e-commerce platform. Handle cart validation, pricing, promotions, tax calculation, and payment processing. Walmart HLD 2024.",
+    "difficulty": "Hard",
+    "topic": "System Design",
+    "category": "HLD",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "hints": [
+      "Services: Cart Service, Pricing Service, Promotion Engine, Tax Service, Payment Service, Order Service.",
+      "Inventory reservation: reserve stock during checkout with TTL. Release if payment fails.",
+      "Promotions: Rule engine for BOGO, percentage discounts, coupons. Apply in priority order.",
+      "Idempotent payment processing to handle retries without double-charging."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "OOPS - Explain SOLID Principles with examples",
+    "description": "Walmart behavioral/theory question. Explain each SOLID principle with a real-world Java example. Walmart Interview Round 2024.",
+    "difficulty": "Medium",
+    "topic": "OOP",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "hints": [
+      "S - Single Responsibility: A class should have only one reason to change.",
+      "O - Open/Closed: Open for extension, closed for modification. Use interfaces/abstract classes.",
+      "L - Liskov Substitution: Subtypes must be substitutable for their base types without altering correctness.",
+      "I - Interface Segregation: Many specific interfaces are better than one general-purpose interface.",
+      "D - Dependency Inversion: Depend on abstractions, not concretions."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "DBMS - Explain Normalization (1NF, 2NF, 3NF, BCNF)",
+    "description": "Explain database normalization forms with examples. Walmart MCQ/Theory Round 2024.",
+    "difficulty": "Medium",
+    "topic": "DBMS",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "1NF: Atomic values, no repeating groups. Each cell holds a single value.",
+      "2NF: 1NF + no partial dependencies. Every non-key attribute depends on the whole primary key.",
+      "3NF: 2NF + no transitive dependencies. Non-key attributes don't depend on other non-key attributes.",
+      "BCNF: 3NF + every determinant is a candidate key."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "OS - Explain Deadlock and its prevention",
+    "description": "What is a deadlock? What are the necessary conditions? How to prevent/avoid it? Walmart MCQ/Theory Round 2024-2025.",
+    "difficulty": "Medium",
+    "topic": "OS",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Four necessary conditions (Coffman): Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait.",
+      "Prevention: Break any one condition. E.g., resource ordering breaks circular wait.",
+      "Avoidance: Banker's Algorithm - check if granting a request leads to a safe state.",
+      "Detection: Use a wait-for graph. If a cycle exists, deadlock is present."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Networking - Explain TCP vs UDP",
+    "description": "Compare TCP and UDP protocols. When to use each? Walmart MCQ Round 2024.",
+    "difficulty": "Easy",
+    "topic": "Networking",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "TCP: Connection-oriented, reliable delivery, ordered, flow control, congestion control. Used for HTTP, FTP, Email.",
+      "UDP: Connectionless, unreliable, no ordering guarantee, faster. Used for DNS, video streaming, gaming.",
+      "TCP uses 3-way handshake (SYN, SYN-ACK, ACK) to establish connection.",
+      "UDP is preferred when speed matters more than reliability."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Java Collections - HashMap internals",
+    "description": "Explain how HashMap works internally in Java. What happens on collision? How does resizing work? Walmart Java Round 2024.",
+    "difficulty": "Medium",
+    "topic": "Java",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "hints": [
+      "HashMap uses an array of buckets. Key's hashCode() determines the bucket index.",
+      "Collision handling: Separate Chaining. Linked list at each bucket. Java 8+: converts to red-black tree when bucket size > 8.",
+      "Load factor (default 0.75): when size > capacity * loadFactor, resize to 2x and rehash.",
+      "equals() and hashCode() contract: if a.equals(b), then a.hashCode() == b.hashCode()."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Java Multithreading - Thread Pool and Executor Framework",
+    "description": "Explain the Executor framework in Java. What is ThreadPoolExecutor? How do you configure it? Walmart Java/LLD Round 2025.",
+    "difficulty": "Medium",
+    "topic": "Java",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "ExecutorService manages a pool of threads. Avoids the overhead of creating new threads per task.",
+      "ThreadPoolExecutor params: corePoolSize, maxPoolSize, keepAliveTime, workQueue, rejectionPolicy.",
+      "Types: newFixedThreadPool, newCachedThreadPool, newSingleThreadExecutor, newScheduledThreadPool.",
+      "Rejection policies: AbortPolicy (throw), CallerRunsPolicy (run in caller thread), DiscardPolicy, DiscardOldestPolicy."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "DBMS - Indexing and its types",
+    "description": "What is indexing? Types of indexes? When to use and when not to use? Walmart DBMS Round 2024.",
+    "difficulty": "Medium",
+    "topic": "DBMS",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Index is a data structure (B-Tree, Hash, etc.) that speeds up data retrieval.",
+      "Types: Clustered (one per table, determines physical order), Non-Clustered (separate structure, pointer to data).",
+      "B-Tree index: good for range queries. Hash index: good for equality lookups.",
+      "Don't index: small tables, columns with high write frequency, columns with low cardinality."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "OS - Process vs Thread",
+    "description": "Differentiate between processes and threads. When to use each? Walmart OS/Theory Round 2024.",
+    "difficulty": "Easy",
+    "topic": "OS",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Process: Independent, own memory space, heavyweight, IPC for communication.",
+      "Thread: Shares memory with parent process, lightweight, faster context switch.",
+      "Use processes for isolation (security, fault tolerance). Use threads for parallelism within an application.",
+      "Java: Thread class or Runnable interface. Threads share heap, each has its own stack."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "DBMS - ACID Properties with examples",
+    "description": "Explain ACID properties in database transactions. Walmart DBMS Round 2024-2025.",
+    "difficulty": "Easy",
+    "topic": "DBMS",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Atomicity: All or nothing. If any part fails, entire transaction rolls back. (Bank transfer example).",
+      "Consistency: DB moves from one valid state to another. Constraints are never violated.",
+      "Isolation: Concurrent transactions don't interfere. Isolation levels: Read Uncommitted, Read Committed, Repeatable Read, Serializable.",
+      "Durability: Once committed, changes persist even after system failure. Achieved via Write-Ahead Logging (WAL)."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "OOP - Design Patterns (Factory, Singleton, Observer, Strategy)",
+    "description": "Explain common design patterns with examples. Walmart LLD/Java Round 2024-2025.",
+    "difficulty": "Medium",
+    "topic": "OOP",
+    "category": "CS_FUNDAMENTALS",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "hints": [
+      "Singleton: One instance. Use for logging, config, DB connection pool. Thread-safe: double-checked locking or enum.",
+      "Factory: Create objects without specifying the exact class. Use when object creation logic is complex.",
+      "Observer: Publish-subscribe. Subject notifies all observers on state change. Use for event systems.",
+      "Strategy: Define a family of algorithms, encapsulate each, make them interchangeable. Use for sorting, payment methods."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  }
+]

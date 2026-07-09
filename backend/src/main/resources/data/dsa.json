@@ -1,0 +1,2176 @@
+[
+  {
+    "title": "Two Sum",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 9,
+    "leetcodeUrl": "https://leetcode.com/problems/two-sum/",
+    "hints": [
+      "A brute force way would be to search for all possible pairs of numbers but that would be O(n^2).",
+      "If we fix one number x, we need to find (target - x). Can we speed this lookup?",
+      "Use a HashMap to store each number's index as you iterate. Check if (target - current) exists in the map."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Best Time to Buy and Sell Stock",
+    "description": "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "hints": [
+      "Think about tracking the minimum price seen so far as you iterate.",
+      "At each day, calculate profit = price[i] - minPrice. Track the maximum profit.",
+      "This is a single-pass O(n) solution with O(1) space."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Contains Duplicate",
+    "description": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/contains-duplicate/",
+    "hints": [
+      "Use a HashSet to track seen numbers.",
+      "If you encounter a number already in the set, return true.",
+      "Alternatively, sort the array and check adjacent elements."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Maximum Subarray",
+    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-subarray/",
+    "hints": [
+      "This is a classic problem solvable by Kadane's Algorithm.",
+      "At each index, decide: extend the previous subarray or start a new one.",
+      "currentMax = max(nums[i], currentMax + nums[i]). Track the global max."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Product of Array Except Self",
+    "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/product-of-array-except-self/",
+    "hints": [
+      "Think about prefix and suffix products.",
+      "First pass: compute prefix products from left to right.",
+      "Second pass: compute suffix products from right to left and multiply with prefix."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "3Sum",
+    "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/3sum/",
+    "hints": [
+      "Sort the array first. Then fix one element and use two pointers for the remaining two.",
+      "Skip duplicate elements to avoid duplicate triplets.",
+      "Time complexity: O(n^2)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Sort Colors",
+    "description": "Given an array nums with n objects colored red, white, or blue (0, 1, 2), sort them in-place so that objects of the same color are adjacent.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/sort-colors/",
+    "hints": [
+      "This is the Dutch National Flag problem.",
+      "Use three pointers: low, mid, high.",
+      "Move 0s to the front, 2s to the back, 1s stay in the middle."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Subarray Sum Equals K",
+    "description": "Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-sum-equals-k/",
+    "hints": [
+      "Use prefix sums. If prefixSum[j] - prefixSum[i] == k, then subarray (i, j] sums to k.",
+      "Store prefix sum frequencies in a HashMap.",
+      "At each index, check if (currentSum - k) exists in the map."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Jump Game",
+    "description": "You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position. Return true if you can reach the last index.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/jump-game/",
+    "hints": [
+      "Use a greedy approach. Track the farthest index you can reach.",
+      "Iterate through the array. If current index > farthest reachable, return false.",
+      "Update farthest = max(farthest, i + nums[i])."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Merge Intervals",
+    "description": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-intervals/",
+    "hints": [
+      "Sort intervals by their start time.",
+      "Iterate and merge if current interval overlaps with the previous one.",
+      "Two intervals overlap if start of current <= end of previous."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Next Permutation",
+    "description": "Given an array of integers nums, find the next permutation of the array in lexicographic order.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/next-permutation/",
+    "hints": [
+      "Find the largest index i such that nums[i] < nums[i + 1]. If no such index exists, the permutation is the last permutation.",
+      "Find the largest index j greater than i such that nums[i] < nums[j].",
+      "Swap nums[i] and nums[j], then reverse the suffix starting at nums[i + 1]."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Container With Most Water",
+    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/container-with-most-water/",
+    "hints": [
+      "Use two pointers, one at the start and one at the end.",
+      "Calculate area = min(height[left], height[right]) * (right - left).",
+      "Move the pointer pointing to the shorter line inward."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Trapping Rain Water",
+    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+    "difficulty": "Hard",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/trapping-rain-water/",
+    "hints": [
+      "Water at each index = min(maxLeft, maxRight) - height[i].",
+      "Precompute maxLeft and maxRight arrays, or use two pointers.",
+      "Two pointer approach: maintain leftMax and rightMax, process the smaller side."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Longest Substring Without Repeating Characters",
+    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 9,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "hints": [
+      "Use a sliding window with a HashSet to track characters in the current window.",
+      "Expand the window by moving the right pointer. If a duplicate is found, shrink from the left.",
+      "Optimization: use a HashMap to store character -> last index, and jump the left pointer."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Longest Palindromic Substring",
+    "description": "Given a string s, return the longest palindromic substring in s.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-palindromic-substring/",
+    "hints": [
+      "Expand around center. Every palindrome has a center (single char or between two chars).",
+      "For each possible center, expand outward while characters match.",
+      "There are 2n - 1 centers. Time complexity: O(n^2)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Valid Anagram",
+    "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise.",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/valid-anagram/",
+    "hints": [
+      "Use a frequency count array of size 26 for lowercase letters.",
+      "Increment for characters in s, decrement for characters in t.",
+      "If all counts are 0, they are anagrams."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Group Anagrams",
+    "description": "Given an array of strings strs, group the anagrams together.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/group-anagrams/",
+    "hints": [
+      "Two strings are anagrams if their sorted versions are the same.",
+      "Use a HashMap where the key is the sorted string.",
+      "Alternatively, use a character count array as the key."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Longest Repeating Character Replacement",
+    "description": "You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. Return the length of the longest substring containing the same letter you can get after performing the above operation at most k times.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "hints": [
+      "Use a sliding window. Track the count of each character in the window.",
+      "The window is valid if (windowSize - maxCount) <= k.",
+      "If invalid, shrink the window from the left."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Minimum Window Substring",
+    "description": "Given two strings s and t, return the minimum window substring of s such that every character in t (including duplicates) is included in the window.",
+    "difficulty": "Hard",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-window-substring/",
+    "hints": [
+      "Use a sliding window with two pointers and a HashMap for character counts.",
+      "Expand the right pointer to find a valid window, then shrink the left to minimize.",
+      "Track how many unique characters from t are satisfied in the current window."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Reverse Linked List",
+    "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+    "difficulty": "Easy",
+    "topic": "Linked List",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-linked-list/",
+    "hints": [
+      "Use three pointers: prev, current, and next.",
+      "At each step, point current.next to prev, then advance all three pointers.",
+      "The recursive approach reverses the rest of the list and then fixes the pointers."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Merge Two Sorted Lists",
+    "description": "You are given the heads of two sorted linked lists. Merge the two lists into one sorted list.",
+    "difficulty": "Easy",
+    "topic": "Linked List",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "hints": [
+      "Use a dummy node and a current pointer. Compare heads of both lists.",
+      "Append the smaller node to current and advance that list's pointer.",
+      "After one list is exhausted, append the remainder of the other."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Linked List Cycle",
+    "description": "Given head, the head of a linked list, determine if the linked list has a cycle in it.",
+    "difficulty": "Easy",
+    "topic": "Linked List",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/linked-list-cycle/",
+    "hints": [
+      "Use Floyd's Cycle Detection (Tortoise and Hare).",
+      "Slow pointer moves 1 step, fast pointer moves 2 steps.",
+      "If they meet, there's a cycle. If fast reaches null, no cycle."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Remove Nth Node From End of List",
+    "description": "Given the head of a linked list, remove the nth node from the end of the list and return its head.",
+    "difficulty": "Medium",
+    "topic": "Linked List",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+    "hints": [
+      "Use two pointers with a gap of n nodes between them.",
+      "When the fast pointer reaches the end, the slow pointer is at the node before the target.",
+      "Use a dummy head to handle edge cases like removing the first node."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Reverse Nodes in k-Group",
+    "description": "Given the head of a linked list, reverse the nodes of the list k at a time.",
+    "difficulty": "Hard",
+    "topic": "Linked List",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+    "hints": [
+      "First, check if there are k nodes remaining. If not, don't reverse.",
+      "Reverse k nodes using the standard reversal technique.",
+      "Recursively process the rest and connect the reversed group."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Copy List with Random Pointer",
+    "description": "A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null. Construct a deep copy of the list.",
+    "difficulty": "Medium",
+    "topic": "Linked List",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+    "hints": [
+      "Approach 1: Use a HashMap mapping original nodes to copied nodes.",
+      "Approach 2: Interleave copied nodes with original nodes, then separate.",
+      "The interleaving approach uses O(1) extra space."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Valid Parentheses",
+    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    "difficulty": "Easy",
+    "topic": "Stack",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 9,
+    "leetcodeUrl": "https://leetcode.com/problems/valid-parentheses/",
+    "hints": [
+      "Use a stack. Push opening brackets onto the stack.",
+      "For closing brackets, check if the top of the stack matches.",
+      "At the end, the stack should be empty for a valid string."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Min Stack",
+    "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
+    "difficulty": "Medium",
+    "topic": "Stack",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/min-stack/",
+    "hints": [
+      "Use two stacks: one for elements, one for minimum values.",
+      "When pushing, also push onto the min stack if the value <= current min.",
+      "When popping, pop from min stack if the value equals current min."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Daily Temperatures",
+    "description": "Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature.",
+    "difficulty": "Medium",
+    "topic": "Stack",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/daily-temperatures/",
+    "hints": [
+      "Use a monotonic decreasing stack storing indices.",
+      "For each temperature, pop elements from the stack that are less than current.",
+      "The difference in indices gives the number of days to wait."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Largest Rectangle in Histogram",
+    "description": "Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.",
+    "difficulty": "Hard",
+    "topic": "Stack",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+    "hints": [
+      "Use a stack to track indices of bars in increasing height order.",
+      "When a shorter bar is encountered, calculate areas using the popped bar as the shortest.",
+      "Width extends from the current index back to the new stack top."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Implement Queue using Stacks",
+    "description": "Implement a first in first out (FIFO) queue using only two stacks.",
+    "difficulty": "Easy",
+    "topic": "Queue",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "leetcodeUrl": "https://leetcode.com/problems/implement-queue-using-stacks/",
+    "hints": [
+      "Use two stacks: input and output.",
+      "Push onto the input stack. For pop/peek, if the output stack is empty, transfer all from input.",
+      "This gives amortized O(1) for all operations."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Sliding Window Maximum",
+    "description": "Given an array nums and a sliding window of size k moving from left to right, return the maximum for each window position.",
+    "difficulty": "Hard",
+    "topic": "Queue",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/sliding-window-maximum/",
+    "hints": [
+      "Use a Deque (monotonic decreasing queue) to track potential maximums.",
+      "Remove elements from the front if they're out of the window.",
+      "Remove elements from the back if they're smaller than the current element."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Binary Tree Inorder Traversal",
+    "description": "Given the root of a binary tree, return the inorder traversal of its nodes' values.",
+    "difficulty": "Easy",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+    "hints": [
+      "Recursive approach: traverse left, visit root, traverse right.",
+      "Iterative approach: use a stack and push all left children first.",
+      "Morris Traversal allows O(1) space without recursion or stack."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Binary Tree Level Order Traversal",
+    "description": "Given the root of a binary tree, return the level order traversal of its nodes' values.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "hints": [
+      "Use BFS with a queue. Process all nodes at the current level before moving to the next.",
+      "Track level size at the start of each iteration.",
+      "Add each level's values as a separate list."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Maximum Depth of Binary Tree",
+    "description": "Given the root of a binary tree, return its maximum depth.",
+    "difficulty": "Easy",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "hints": [
+      "Use recursion: depth = 1 + max(depth(left), depth(right)).",
+      "Base case: if node is null, return 0.",
+      "BFS approach: count the number of levels."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Symmetric Tree",
+    "description": "Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).",
+    "difficulty": "Easy",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/symmetric-tree/",
+    "hints": [
+      "A tree is symmetric if the left subtree is a mirror of the right subtree.",
+      "Use a helper function isMirror(left, right) that compares nodes recursively.",
+      "Compare left.left with right.right and left.right with right.left."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Binary Tree Right Side View",
+    "description": "Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-right-side-view/",
+    "hints": [
+      "Use BFS and take the last node of each level.",
+      "Alternatively, use DFS with a modified preorder (root -> right -> left).",
+      "Track the maximum depth seen so far to know when to add a node."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "description": "Given two integer arrays preorder and inorder, construct and return the binary tree.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+    "hints": [
+      "The first element of preorder is always the root.",
+      "Find the root in inorder to split into left and right subtrees.",
+      "Use a HashMap for O(1) lookup of root position in inorder array."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Binary Tree Zigzag Level Order Traversal",
+    "description": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+    "hints": [
+      "Similar to level order traversal, but alternate the direction each level.",
+      "Use a flag to determine whether to add from left-to-right or right-to-left.",
+      "You can also use a deque and alternate adding to front/back."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Path Sum",
+    "description": "Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.",
+    "difficulty": "Easy",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/path-sum/",
+    "hints": [
+      "Use recursion. Subtract current node's value from targetSum.",
+      "At a leaf node, check if remaining sum is 0.",
+      "Return true if either left or right subtree has the path."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Diameter of Binary Tree",
+    "description": "Given the root of a binary tree, return the length of the diameter of the tree. The diameter is the length of the longest path between any two nodes.",
+    "difficulty": "Easy",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "hints": [
+      "The diameter through a node = height(left) + height(right).",
+      "Compute height recursively while updating a global max diameter.",
+      "The answer is the maximum diameter seen across all nodes."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    "hints": [
+      "If the current node is p or q, return it.",
+      "Recursively search left and right subtrees.",
+      "If both sides return non-null, current node is the LCA. Otherwise, return the non-null side."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Validate Binary Search Tree",
+    "description": "Given the root of a binary tree, determine if it is a valid binary search tree (BST).",
+    "difficulty": "Medium",
+    "topic": "BST",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "hints": [
+      "Use a helper with min and max bounds.",
+      "For each node, it must be within (min, max). Update bounds for children.",
+      "Alternatively, do an inorder traversal and check if it's sorted."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Kth Smallest Element in a BST",
+    "description": "Given the root of a binary search tree, and an integer k, return the kth smallest value of all the values of the nodes in the tree.",
+    "difficulty": "Medium",
+    "topic": "BST",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+    "hints": [
+      "Inorder traversal of a BST gives sorted order.",
+      "Do inorder traversal and return the kth element.",
+      "Use iterative approach with a stack for O(H + k) time."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Convert Sorted Array to Binary Search Tree",
+    "description": "Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.",
+    "difficulty": "Easy",
+    "topic": "BST",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
+    "hints": [
+      "Pick the middle element as root to ensure balance.",
+      "Recursively build left subtree from left half, right from right half.",
+      "This gives O(n) time and O(log n) space."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Top K Frequent Elements",
+    "description": "Given an integer array nums and an integer k, return the k most frequent elements.",
+    "difficulty": "Medium",
+    "topic": "Heap",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "hints": [
+      "Count frequencies with a HashMap.",
+      "Use a min-heap of size k to track the top k elements.",
+      "Alternatively, use Bucket Sort for O(n) time."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Kth Largest Element in an Array",
+    "description": "Given an integer array nums and an integer k, return the kth largest element in the array.",
+    "difficulty": "Medium",
+    "topic": "Heap",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    "hints": [
+      "Use a min-heap of size k. The root will be the kth largest.",
+      "Alternatively, use QuickSelect for average O(n) time.",
+      "Sorting gives O(n log n) as a baseline."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Merge K Sorted Lists",
+    "description": "You are given an array of k linked-lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list.",
+    "difficulty": "Hard",
+    "topic": "Heap",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "hints": [
+      "Use a min-heap to always pick the smallest element across all k lists.",
+      "Push the head of each list into the heap.",
+      "Pop the smallest, add it to result, and push its next node."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Find Median from Data Stream",
+    "description": "Design a data structure that supports adding integers and finding the median efficiently.",
+    "difficulty": "Hard",
+    "topic": "Heap",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "hints": [
+      "Use two heaps: a max-heap for the lower half and a min-heap for the upper half.",
+      "Balance the heaps so their sizes differ by at most 1.",
+      "Median is the top of the larger heap, or the average of both tops."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Number of Islands",
+    "description": "Given an m x n 2D binary grid which represents a map of '1's (land) and '0's (water), return the number of islands.",
+    "difficulty": "Medium",
+    "topic": "Graph",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 9,
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-islands/",
+    "hints": [
+      "Use DFS or BFS. When you find a '1', increment count and mark all connected '1's as visited.",
+      "You can mark visited cells by changing '1' to '0'.",
+      "This runs in O(m * n) time."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Clone Graph",
+    "description": "Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph.",
+    "difficulty": "Medium",
+    "topic": "Graph",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/clone-graph/",
+    "hints": [
+      "Use a HashMap to map original nodes to cloned nodes.",
+      "BFS or DFS to traverse. For each node, create a clone and clone its neighbors.",
+      "Check the map before creating a new clone to avoid duplicates."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Course Schedule",
+    "description": "There are numCourses courses. You are given an array prerequisites. Determine if it is possible to finish all courses.",
+    "difficulty": "Medium",
+    "topic": "Graph",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/course-schedule/",
+    "hints": [
+      "This is a cycle detection problem in a directed graph.",
+      "Use Topological Sort (Kahn's algorithm with in-degree) or DFS with coloring.",
+      "If all nodes are processed, there's no cycle."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Word Search",
+    "description": "Given an m x n grid of characters and a string word, return true if word exists in the grid. The word can be constructed from letters of sequentially adjacent cells.",
+    "difficulty": "Medium",
+    "topic": "Graph",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/word-search/",
+    "hints": [
+      "Use DFS/Backtracking from each cell that matches the first character.",
+      "Mark visited cells to avoid revisiting (backtrack by unmarking).",
+      "Prune early if the current path doesn't match the word prefix."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Rotting Oranges",
+    "description": "Given a grid where 0 is empty, 1 is fresh orange, and 2 is rotten, return the minimum number of minutes until no fresh orange remains.",
+    "difficulty": "Medium",
+    "topic": "Graph",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/rotting-oranges/",
+    "hints": [
+      "Use multi-source BFS. Add all rotten oranges to the queue initially.",
+      "Process level by level. Each level = 1 minute.",
+      "After BFS, check if any fresh oranges remain."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Dijkstra's Shortest Path",
+    "description": "Implement Dijkstra's algorithm to find the shortest path from a source to all other vertices in a weighted graph.",
+    "difficulty": "Medium",
+    "topic": "Graph",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/network-delay-time/",
+    "hints": [
+      "Use a priority queue (min-heap) to always process the closest unvisited node.",
+      "Initialize distances to infinity except the source (0).",
+      "Relax edges: if dist[u] + weight(u,v) < dist[v], update dist[v]."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Climbing Stairs",
+    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "difficulty": "Easy",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/climbing-stairs/",
+    "hints": [
+      "This is essentially a Fibonacci sequence problem.",
+      "dp[i] = dp[i-1] + dp[i-2].",
+      "Base cases: dp[1] = 1, dp[2] = 2."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "House Robber",
+    "description": "Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob without robbing two adjacent houses.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/house-robber/",
+    "hints": [
+      "At each house, choose: rob it (skip prev) or skip it (take prev max).",
+      "dp[i] = max(dp[i-1], dp[i-2] + nums[i]).",
+      "Can optimize to O(1) space with two variables."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "House Robber II",
+    "description": "All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/house-robber-ii/",
+    "hints": [
+      "Since first and last are adjacent, you can't rob both.",
+      "Run House Robber on nums[0..n-2] and nums[1..n-1].",
+      "Return the maximum of both results."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Coin Change",
+    "description": "Given coins of different denominations and a total amount, return the fewest number of coins needed to make up that amount.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "leetcodeUrl": "https://leetcode.com/problems/coin-change/",
+    "hints": [
+      "Use bottom-up DP. dp[i] = minimum coins to make amount i.",
+      "For each amount, try every coin: dp[i] = min(dp[i], dp[i - coin] + 1).",
+      "Initialize dp[0] = 0, and all others to infinity."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Longest Common Subsequence",
+    "description": "Given two strings text1 and text2, return the length of their longest common subsequence.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-common-subsequence/",
+    "hints": [
+      "Use 2D DP. If chars match, dp[i][j] = dp[i-1][j-1] + 1.",
+      "If they don't match, dp[i][j] = max(dp[i-1][j], dp[i][j-1]).",
+      "Build from bottom-right to top-left."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Word Break",
+    "description": "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/word-break/",
+    "hints": [
+      "Use DP. dp[i] = true if s[0..i-1] can be segmented.",
+      "For each position i, check all possible word endings j < i.",
+      "dp[i] = dp[j] && s[j..i] is in the dictionary."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Decode Ways",
+    "description": "A message containing letters from A-Z can be encoded using the mapping A=1, B=2, ..., Z=26. Given a string s of digits, return the number of ways to decode it.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/decode-ways/",
+    "hints": [
+      "Similar to Climbing Stairs but with constraints.",
+      "dp[i] depends on whether s[i] and s[i-1..i] form valid codes (1-26).",
+      "Handle edge cases: '0' can't be decoded alone."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Partition Equal Subset Sum",
+    "description": "Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/partition-equal-subset-sum/",
+    "hints": [
+      "If total sum is odd, return false.",
+      "This reduces to: can we find a subset with sum = totalSum / 2?",
+      "Use a 1D boolean DP array of size target + 1."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Longest Increasing Subsequence",
+    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "hints": [
+      "O(n^2) DP: dp[i] = length of LIS ending at index i.",
+      "For each i, check all j < i: if nums[j] < nums[i], dp[i] = max(dp[i], dp[j] + 1).",
+      "O(n log n) approach: maintain a tails array and use binary search."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Edit Distance",
+    "description": "Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2 (insert, delete, replace).",
+    "difficulty": "Medium",
+    "topic": "DP",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/edit-distance/",
+    "hints": [
+      "Use 2D DP. dp[i][j] = edit distance of word1[0..i-1] and word2[0..j-1].",
+      "If chars match, dp[i][j] = dp[i-1][j-1].",
+      "Otherwise, dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Activity Selection / Meeting Rooms",
+    "description": "Given an array of meeting time intervals, determine if a person could attend all meetings.",
+    "difficulty": "Easy",
+    "topic": "Greedy",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/meeting-rooms/",
+    "hints": [
+      "Sort meetings by start time.",
+      "Check if any meeting starts before the previous one ends.",
+      "If overlaps exist, return false."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Gas Station",
+    "description": "There are n gas stations along a circular route. Return the starting station index if you can travel around the circuit once, otherwise return -1.",
+    "difficulty": "Medium",
+    "topic": "Greedy",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/gas-station/",
+    "hints": [
+      "If total gas >= total cost, a solution exists.",
+      "Track current tank. If it goes negative, reset start to the next station.",
+      "Single pass O(n) solution."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Subsets",
+    "description": "Given an integer array nums of unique elements, return all possible subsets (the power set).",
+    "difficulty": "Medium",
+    "topic": "Recursion",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/subsets/",
+    "hints": [
+      "Use backtracking. At each element, either include it or exclude it.",
+      "Add the current subset to the result at every step.",
+      "Alternatively, use bit manipulation: each number from 0 to 2^n - 1 represents a subset."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Subsets II",
+    "description": "Given an integer array nums that may contain duplicates, return all possible subsets. The solution set must not contain duplicate subsets.",
+    "difficulty": "Medium",
+    "topic": "Backtracking",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/subsets-ii/",
+    "hints": [
+      "Sort the array first to handle duplicates.",
+      "In the backtracking loop, skip consecutive duplicate elements.",
+      "if (i > start && nums[i] == nums[i-1]) continue;"
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Permutations",
+    "description": "Given an array nums of distinct integers, return all the possible permutations.",
+    "difficulty": "Medium",
+    "topic": "Backtracking",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/permutations/",
+    "hints": [
+      "Use backtracking with a visited array.",
+      "At each level, try each unvisited element.",
+      "When the current permutation length equals n, add it to results."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "N-Queens",
+    "description": "Place n queens on an n x n chessboard such that no two queens attack each other.",
+    "difficulty": "Hard",
+    "topic": "Backtracking",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "leetcodeUrl": "https://leetcode.com/problems/n-queens/",
+    "hints": [
+      "Place queens row by row. For each row, try each column.",
+      "Check validity: no two queens share the same column, or diagonal.",
+      "Use sets to track occupied columns, diagonals, and anti-diagonals."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Implement Trie (Prefix Tree)",
+    "description": "A trie (pronounced as 'try') or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings.",
+    "difficulty": "Medium",
+    "topic": "Trie",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+    "hints": [
+      "Each node has a children map (size 26 for lowercase letters) and an isEnd flag.",
+      "Insert: traverse/create nodes character by character.",
+      "Search: traverse nodes. Return true only if isEnd is true at the last character."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Single Number",
+    "description": "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.",
+    "difficulty": "Easy",
+    "topic": "Bit Manipulation",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/single-number/",
+    "hints": [
+      "XOR of a number with itself is 0. XOR of a number with 0 is the number.",
+      "XOR all elements together. Pairs cancel out.",
+      "The result is the single number. O(n) time, O(1) space."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Counting Bits",
+    "description": "Given an integer n, return an array ans of length n + 1 such that ans[i] is the number of 1's in the binary representation of i.",
+    "difficulty": "Easy",
+    "topic": "Bit Manipulation",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "leetcodeUrl": "https://leetcode.com/problems/counting-bits/",
+    "hints": [
+      "dp[i] = dp[i >> 1] + (i & 1).",
+      "Right shift gives us a previously computed value.",
+      "The last bit (i & 1) tells if the number is odd."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Binary Search",
+    "description": "Given an array of integers nums sorted in ascending order, find the target value and return its index. If not found, return -1.",
+    "difficulty": "Easy",
+    "topic": "Binary Search",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/binary-search/",
+    "hints": [
+      "Use two pointers: left = 0, right = n - 1.",
+      "Calculate mid = left + (right - left) / 2 to avoid overflow.",
+      "Compare nums[mid] with target to decide which half to search."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Search in Rotated Sorted Array",
+    "description": "You are given an integer array nums sorted in ascending order (with distinct values) that is possibly rotated. Given a target, search for it.",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "leetcodeUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "hints": [
+      "Modified binary search. At each step, one half is always sorted.",
+      "Check if the target lies in the sorted half.",
+      "If yes, search that half. Otherwise, search the other half."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Find Minimum in Rotated Sorted Array",
+    "description": "Given a sorted rotated array of unique elements, return the minimum element.",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+    "hints": [
+      "Use binary search. Compare mid with right.",
+      "If nums[mid] > nums[right], minimum is in the right half.",
+      "Otherwise, minimum is in the left half (including mid)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Maximum Sum Subarray of Size K",
+    "description": "Given an array and an integer k, find the maximum sum of any contiguous subarray of size k.",
+    "difficulty": "Easy",
+    "topic": "Sliding Window",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-average-subarray-i/",
+    "hints": [
+      "Compute the sum of the first k elements.",
+      "Slide the window: add the next element, remove the first element of the previous window.",
+      "Track the maximum sum seen."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Minimum Size Subarray Sum",
+    "description": "Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target.",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+    "hints": [
+      "Use a variable-size sliding window.",
+      "Expand the right pointer until sum >= target.",
+      "Then shrink from the left to find the minimum window."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "LRU Cache",
+    "description": "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache. Implement get and put operations in O(1) time.",
+    "difficulty": "Medium",
+    "topic": "Design",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 9,
+    "leetcodeUrl": "https://leetcode.com/problems/lru-cache/",
+    "hints": [
+      "Use a HashMap + Doubly Linked List.",
+      "HashMap maps key to the linked list node for O(1) lookup.",
+      "Doubly linked list maintains order: most recent at head, least recent at tail."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design HashMap",
+    "description": "Design a HashMap without using any built-in hash table libraries.",
+    "difficulty": "Easy",
+    "topic": "Design",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/design-hashmap/",
+    "hints": [
+      "Use an array of buckets. Each bucket is a linked list.",
+      "Hash function: key % array_size.",
+      "Handle collisions with chaining (linked list at each bucket)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Insert Delete GetRandom O(1)",
+    "description": "Implement the RandomizedSet class with insert, remove, and getRandom operations all in O(1) average time.",
+    "difficulty": "Medium",
+    "topic": "Design",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+    "hints": [
+      "Use a dynamic array (ArrayList) + HashMap (val -> index).",
+      "Insert: add to end of array, put index in map.",
+      "Delete: swap element with last, pop last, update map."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "All O`one Data Structure",
+    "description": "Design a data structure to store the count of strings. It should support inc, dec, getMaxKey, and getMinKey operations in O(1).",
+    "difficulty": "Hard",
+    "topic": "Design",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/all-oone-data-structure/",
+    "hints": [
+      "Use a doubly linked list of count-buckets + HashMap.",
+      "Each bucket holds all strings with the same count.",
+      "Inc/Dec moves the string to the adjacent bucket."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Median of Two Sorted Arrays",
+    "description": "Given two sorted arrays nums1 and nums2 of size m and n, return the median of the two sorted arrays. The overall run time complexity should be O(log(m+n)).",
+    "difficulty": "Hard",
+    "topic": "Binary Search",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    "hints": [
+      "Binary search on the shorter array to find a partition.",
+      "Left partition should have all elements <= right partition.",
+      "Median is derived from the max of left and min of right."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Set Matrix Zeroes",
+    "description": "Given an m x n integer matrix, if an element is 0, set its entire row and column to 0's.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/set-matrix-zeroes/",
+    "hints": [
+      "Use the first row and first column as markers.",
+      "First pass: mark rows and columns that need to be zeroed.",
+      "Second pass: set zeros based on markers. Handle first row/column separately."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Rotate Image",
+    "description": "Given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise) in-place.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/rotate-image/",
+    "hints": [
+      "Transpose the matrix (swap rows and columns).",
+      "Then reverse each row.",
+      "This gives a 90-degree clockwise rotation."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Spiral Matrix",
+    "description": "Given an m x n matrix, return all elements of the matrix in spiral order.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/spiral-matrix/",
+    "hints": [
+      "Use four boundaries: top, bottom, left, right.",
+      "Traverse right, then down, then left, then up. Shrink boundaries after each direction.",
+      "Continue until boundaries cross."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Pascal's Triangle",
+    "description": "Given an integer numRows, return the first numRows of Pascal's triangle.",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "leetcodeUrl": "https://leetcode.com/problems/pascals-triangle/",
+    "hints": [
+      "Each row starts and ends with 1.",
+      "Middle elements: row[j] = prevRow[j-1] + prevRow[j].",
+      "Build row by row."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Longest Consecutive Sequence",
+    "description": "Given an unsorted array of integers, find the length of the longest consecutive elements sequence in O(n).",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-consecutive-sequence/",
+    "hints": [
+      "Put all numbers in a HashSet.",
+      "For each number, if num - 1 is NOT in the set, it's the start of a sequence.",
+      "Count consecutive elements from this start."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Find All Duplicates in an Array",
+    "description": "Given an integer array of length n where all integers are in the range [1, n] and each integer appears once or twice, return an array of all integers that appear twice.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "leetcodeUrl": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+    "hints": [
+      "Use the array itself as a hash map by negating values at index (num - 1).",
+      "If the value at index (num - 1) is already negative, num is a duplicate.",
+      "O(n) time, O(1) space."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "String to Integer (atoi)",
+    "description": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/string-to-integer-atoi/",
+    "hints": [
+      "Handle whitespace, sign (+/-), and digits carefully.",
+      "Stop at the first non-digit character.",
+      "Handle overflow by clamping to INT_MAX or INT_MIN."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Reverse Integer",
+    "description": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes overflow, return 0.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-integer/",
+    "hints": [
+      "Extract digits using modulo. Build reversed number.",
+      "Before adding a digit, check if result would overflow.",
+      "Check: result > INT_MAX / 10 or (result == INT_MAX / 10 && digit > 7)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Facebook"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Flatten Binary Tree to Linked List",
+    "description": "Given the root of a binary tree, flatten the tree into a linked list (in-place) in preorder.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+    "hints": [
+      "Process in reverse postorder (right, left, root).",
+      "Keep track of the previously processed node.",
+      "Set current.right = prev, current.left = null."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Maximum Width of Binary Tree",
+    "description": "Given the root of a binary tree, return the maximum width of the given tree.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
+    "hints": [
+      "Use BFS with node positions. Root is at position 0.",
+      "Left child position = 2 * parent, Right child = 2 * parent + 1.",
+      "Width of a level = rightmost position - leftmost position + 1."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Boundary Traversal of Binary Tree",
+    "description": "Given a binary tree, return its boundary traversal (left boundary, leaves, right boundary).",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "category": "DSA",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "leetcodeUrl": "https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/",
+    "hints": [
+      "Split into three parts: left boundary (top-down), leaves, right boundary (bottom-up).",
+      "Left boundary: follow left child, or right if left is absent.",
+      "Right boundary: follow right child, or left if right is absent."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Find the Duplicate Number",
+    "description": "Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n], prove that at least one duplicate must exist. Find the duplicate.",
+    "difficulty": "Medium",
+    "topic": "Binary Search",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/find-the-duplicate-number/",
+    "hints": [
+      "Floyd's Tortoise and Hare (Cycle Detection) works here.",
+      "Treat the array as a linked list where nums[i] is the next pointer.",
+      "Find the cycle, then find the entrance to the cycle."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Task Scheduler",
+    "description": "Given a list of tasks and a cooldown period n, find the minimum number of intervals needed to complete all tasks.",
+    "difficulty": "Medium",
+    "topic": "Greedy",
+    "category": "DSA",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "leetcodeUrl": "https://leetcode.com/problems/task-scheduler/",
+    "hints": [
+      "The most frequent task determines the structure.",
+      "Calculate idle slots needed based on the most frequent task.",
+      "Fill idle slots with other tasks. Answer = max(total tasks, formula result)."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Amazon"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "title": "Design URL Shortener (TinyURL)",
+    "description": "Design a scalable URL shortening service like TinyURL or Bitly. Handle billions of URLs, high read volume, and analytics.",
+    "difficulty": "Medium",
+    "topic": "URL Shortener",
+    "category": "HLD",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "hints": [
+      "Functional Requirements: shorten URL, redirect, custom alias, expiry, analytics.",
+      "Non-Functional: High availability, low latency reads, 100:1 read-to-write ratio.",
+      "Encoding: Base62 encoding of an auto-incrementing ID. 7-char string supports 3.5 trillion URLs.",
+      "Key Generation Service (KGS): Pre-generate unique keys offline to avoid collision.",
+      "Storage: NoSQL (DynamoDB/Cassandra) for key-value lookups. Cache hot URLs with Redis."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design WhatsApp / Messaging System",
+    "description": "Design a real-time messaging platform supporting one-on-one chats, group chats, media sharing, read receipts, and online status.",
+    "difficulty": "Hard",
+    "topic": "WhatsApp",
+    "category": "HLD",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Real-time communication via WebSocket connections. Fallback to long-polling.",
+      "Message flow: Sender -> Chat Server -> if recipient online, push via WebSocket. Else, store and forward.",
+      "Message storage: Cassandra (write-heavy, partition by chat_id). Message queue (Kafka) for async delivery.",
+      "Group chats: Fan-out on write (push to each member's queue) or fan-out on read (pull from group queue).",
+      "End-to-End Encryption: Signal Protocol. Keys exchanged during handshake. Server cannot read messages."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Netflix / Video Streaming",
+    "description": "Design a global video streaming service that serves millions of concurrent users with low latency.",
+    "difficulty": "Hard",
+    "topic": "Video Streaming",
+    "category": "HLD",
+    "isWalmartPrevious": false,
+    "frequency": 6,
+    "hints": [
+      "Video upload pipeline: Upload to S3 -> Transcoding service (FFmpeg) -> Multiple resolutions/codecs -> CDN distribution.",
+      "Content Delivery: Use CDN (CloudFront, Akamai) with edge caching. Geo-replicate popular content.",
+      "Adaptive Bitrate Streaming (ABR): Client adjusts quality based on bandwidth (HLS, DASH protocols).",
+      "Recommendation Engine: Collaborative filtering + Content-based filtering. ML pipeline for personalization.",
+      "Microservices: User Service, Video Service, Search Service, Recommendation Service, Billing Service."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Uber / Ride Sharing",
+    "description": "Design a ride-sharing platform supporting real-time matching, location tracking, fare estimation, and payments.",
+    "difficulty": "Hard",
+    "topic": "Uber",
+    "category": "HLD",
+    "isWalmartPrevious": false,
+    "frequency": 6,
+    "hints": [
+      "Location tracking: Drivers send GPS updates every 3-5 seconds. Store in-memory with QuadTree or GeoHash.",
+      "Matching: Find nearby drivers using spatial indexing. Rank by ETA, rating, vehicle type.",
+      "Supply Service stores driver locations. Demand Service stores ride requests. Match Service connects both.",
+      "Fare calculation: Base fare + time + distance + surge pricing (dynamic based on demand/supply ratio).",
+      "Scale: Use Kafka for event streaming, Redis for caching, PostGIS or H3 for geo-spatial queries."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design YouTube",
+    "description": "Design a video-sharing platform supporting video upload, transcoding, search, recommendations, and streaming.",
+    "difficulty": "Hard",
+    "topic": "YouTube",
+    "category": "HLD",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "hints": [
+      "Similar to Netflix but with user-generated content. Upload pipeline needs moderation.",
+      "Thumbnail generation during transcoding. Store metadata in SQL, video chunks in blob storage.",
+      "Search: Elasticsearch for full-text search on titles, descriptions, tags.",
+      "View count: Use eventual consistency. Aggregate counts asynchronously via Kafka + real-time counters.",
+      "Comments: Store in a tree structure. Use denormalization for read performance."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Twitter",
+    "description": "Design a social media platform supporting posting tweets, following users, timeline generation, and trending topics.",
+    "difficulty": "Hard",
+    "topic": "Twitter",
+    "category": "HLD",
+    "isWalmartPrevious": false,
+    "frequency": 6,
+    "hints": [
+      "Timeline generation: Fan-out on write (precompute timelines for followers) vs. Fan-out on read (pull at read time).",
+      "Hybrid approach: Fan-out on write for normal users, fan-out on read for celebrity users (high follower count).",
+      "Tweet storage: SQL for metadata, Redis for pre-computed timelines, CDN for media.",
+      "Search & Trending: Use Elasticsearch for search. Count hashtags in sliding windows for trending.",
+      "Scale: Partition tweets by user_id. Cache hot timelines. Use Kafka for async timeline fan-out."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Amazon E-Commerce (HLD)",
+    "description": "Design a large-scale e-commerce platform handling product catalog, search, cart, checkout, payments, and logistics.",
+    "difficulty": "Hard",
+    "topic": "E-Commerce",
+    "category": "HLD",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Microservices: Product Service, User Service, Cart Service, Order Service, Payment Service, Inventory Service, Notification Service.",
+      "Product search: Elasticsearch with faceted search (filters by price, brand, rating).",
+      "Inventory: Distributed inventory with reservation model. Decrement on order, increment on cancellation.",
+      "Flash Sales / Black Friday: Rate limiting, queue-based checkout, pre-warm caches, auto-scaling.",
+      "Payment: Use Saga pattern for distributed transactions. Compensate on failure."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Walmart Inventory Management System",
+    "description": "Design a scalable inventory management system for a global retailer like Walmart. Handle real-time stock updates, warehouse management, and supply chain coordination.",
+    "difficulty": "Hard",
+    "topic": "Inventory System",
+    "category": "HLD",
+    "isWalmartPrevious": true,
+    "frequency": 9,
+    "hints": [
+      "Requirements: Real-time stock visibility, multi-warehouse support, low-stock alerts, demand forecasting.",
+      "Data model: SKU-based inventory. Track quantity per (SKU, warehouse, location). Event-sourced updates.",
+      "Consistency: Strong consistency for stock decrements (avoid overselling). Use distributed locks or DB-level CAS.",
+      "Event-Driven: Use Kafka for inventory events (stock received, stock sold, stock transferred). CQRS for read/write separation.",
+      "Scale: Partition by warehouse/region. Cache hot SKUs in Redis. Batch sync with supplier systems."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Notification System",
+    "description": "Design a notification service that supports push notifications, SMS, email, and in-app notifications at scale.",
+    "difficulty": "Medium",
+    "topic": "Notification System",
+    "category": "HLD",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "Components: API Gateway, Notification Service, Message Queue, Workers (per channel), Template Engine.",
+      "Channels: Push (Firebase/APNS), SMS (Twilio), Email (SES), In-App (WebSocket).",
+      "Use message queues (Kafka/SQS) for reliability and retry. Dead letter queue for failed notifications.",
+      "Rate limiting per user to prevent spam. Priority queues for urgent vs. marketing notifications.",
+      "Deduplication: Use notification_id + user_id as idempotency key."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Payment System",
+    "description": "Design a payment processing system that handles transactions, refunds, settlements, and fraud detection.",
+    "difficulty": "Hard",
+    "topic": "Payment System",
+    "category": "HLD",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Requirements: Process payments, handle refunds, support multiple payment methods, detect fraud.",
+      "Flow: Order Service -> Payment Service -> Payment Gateway (Stripe/PayPal) -> Bank.",
+      "Idempotency: Use idempotency keys to prevent double charges. Store transaction state machine.",
+      "Saga Pattern: For distributed transactions across Order, Payment, and Inventory services.",
+      "Fraud Detection: ML-based scoring. Flag suspicious transactions for manual review."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Search Autocomplete / Typeahead",
+    "description": "Design a search autocomplete system that provides real-time suggestions as the user types.",
+    "difficulty": "Medium",
+    "topic": "Search System",
+    "category": "HLD",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "hints": [
+      "Use a Trie data structure for prefix-based lookups.",
+      "Store frequency counts at each node. Return top-k suggestions.",
+      "Cache popular prefixes in Redis for low latency.",
+      "Update frequencies asynchronously via a batch pipeline (MapReduce).",
+      "Shard the Trie by first character or hash prefix for horizontal scaling."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Distributed Cache (Redis)",
+    "description": "Design a distributed in-memory caching system like Redis or Memcached. Handle replication, partitioning, and eviction.",
+    "difficulty": "Hard",
+    "topic": "Distributed Cache",
+    "category": "HLD",
+    "isWalmartPrevious": false,
+    "frequency": 5,
+    "hints": [
+      "Partitioning: Consistent hashing to distribute keys across nodes. Virtual nodes for balance.",
+      "Eviction policies: LRU, LFU, TTL-based. Approximate LRU with sampling for performance.",
+      "Replication: Master-Slave replication for read scaling. Async replication with eventual consistency.",
+      "Failure handling: Sentinel for automatic failover. Gossip protocol for cluster health.",
+      "Client-side: Use client-side caching with cache invalidation messages."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  }
+]

@@ -1,0 +1,243 @@
+[
+  {
+    "title": "Design Parking Lot",
+    "description": "Design an object-oriented parking lot system. Must handle different vehicle types (car, truck, van, motorcycle), multiple floors, entry/exit gates, and billing.",
+    "difficulty": "Medium",
+    "topic": "Parking Lot",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Core entities: ParkingLot, ParkingFloor, ParkingSpot (Small, Medium, Large), Vehicle, Ticket, Payment.",
+      "Use Inheritance for Vehicle types and ParkingSpot types.",
+      "Consider the Strategy pattern for the billing system (hourly, flat, weekend rates).",
+      "Finding the nearest available spot: use a min-heap per floor, keyed by spot number.",
+      "Thread Safety: use synchronized blocks or ReentrantLock on spot allocation to handle concurrent entries."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design BookMyShow / Movie Ticket Booking System",
+    "description": "Design an online movie ticket booking system that handles theatre selection, seat reservation, and payments.",
+    "difficulty": "Medium",
+    "topic": "Booking System",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "Entities: Movie, Theatre, Screen, Show, Seat, Booking, Payment, User.",
+      "Seat locking: Use a temporary hold with TTL (e.g., 10 minutes) to prevent double-booking.",
+      "Concurrency: Optimistic locking on seat status. First successful CAS (Compare-And-Swap) wins.",
+      "Consider Observer pattern to notify users about seat availability changes."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design ATM Machine",
+    "description": "Design an ATM system that supports withdrawals, deposits, balance checks, and fund transfers. Handle multiple denominations and insufficient funds.",
+    "difficulty": "Medium",
+    "topic": "ATM",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "hints": [
+      "Entities: ATM, Account, Card, Transaction, CashDispenser, Bank.",
+      "Use State pattern for ATM states: Idle, CardInserted, PinEntered, AmountEntered, CashDispensed.",
+      "CashDispenser: Use Chain of Responsibility to dispense different denominations (2000, 500, 200, 100).",
+      "Validate: card, PIN, account balance before dispensing."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Elevator System",
+    "description": "Design an elevator system for a multi-floor building with multiple elevators. Handle concurrent requests efficiently.",
+    "difficulty": "Medium",
+    "topic": "Elevator",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "hints": [
+      "Entities: Building, Elevator, Floor, Request (internal/external), ElevatorController.",
+      "Use Strategy pattern for scheduling algorithms: FCFS, SCAN, LOOK.",
+      "State pattern for elevator: Moving Up, Moving Down, Idle, Door Open.",
+      "Controller assigns the nearest elevator or the one already moving in the request direction."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Snake and Ladder Game",
+    "description": "Design the classic Snake and Ladder board game. Support multiple players, custom board configurations, and dice rolling.",
+    "difficulty": "Easy",
+    "topic": "Snake and Ladder",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 4,
+    "hints": [
+      "Entities: Board, Cell, Snake, Ladder, Player, Dice, Game.",
+      "Board is a 1D/2D grid of 100 cells. Snakes move you down, Ladders move you up.",
+      "Use a Queue of players to manage turns.",
+      "Game loop: roll dice -> move player -> check for snake/ladder -> check win condition."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Hotel Management System",
+    "description": "Design a hotel management system supporting room booking, check-in/out, room service, and billing.",
+    "difficulty": "Medium",
+    "topic": "Hotel Management",
+    "category": "LLD",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "hints": [
+      "Entities: Hotel, Floor, Room (Single, Double, Suite), Guest, Booking, RoomService, Invoice.",
+      "Room states: Available, Booked, Occupied, Under Maintenance.",
+      "Use Factory pattern for creating different room types.",
+      "Billing: Composite pattern to aggregate room charges + services."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Library Management System",
+    "description": "Design a system to manage library operations including book cataloging, member management, borrowing, and fine calculation.",
+    "difficulty": "Easy",
+    "topic": "Library Management",
+    "category": "LLD",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "hints": [
+      "Entities: Library, Book, BookItem (physical copy), Member, Librarian, Lending, Fine.",
+      "A Book can have multiple BookItems (copies). Each BookItem tracks its status.",
+      "BookItem states: Available, Lent, Reserved, Lost.",
+      "Use Observer pattern: notify members when a reserved book becomes available."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design LRU Cache",
+    "description": "Implement an LRU (Least Recently Used) cache with O(1) get and put operations. Handle eviction when capacity is full.",
+    "difficulty": "Medium",
+    "topic": "Cache",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 8,
+    "hints": [
+      "Use a HashMap for O(1) key-to-node lookup + Doubly Linked List for O(1) reordering.",
+      "On get: move the accessed node to the head (most recently used).",
+      "On put: if key exists, update and move to head. If new, add to head. If capacity exceeded, remove tail.",
+      "The tail of the linked list is the LRU element."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Tic-Tac-Toe",
+    "description": "Design a Tic-Tac-Toe game. Support n x n board, two players, and determine the winner in O(1) per move.",
+    "difficulty": "Easy",
+    "topic": "Tic-Tac-Toe",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 5,
+    "hints": [
+      "Entities: Board, Player, Game.",
+      "O(1) win check: maintain row count, col count, diagonal count, anti-diagonal count per player.",
+      "On each move, increment the player's count for that row, col, and diagonal (if applicable).",
+      "If any count reaches n, that player wins."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design Rate Limiter",
+    "description": "Design a rate limiter that restricts the number of requests a client can make within a time window.",
+    "difficulty": "Medium",
+    "topic": "Rate Limiter",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 6,
+    "hints": [
+      "Common algorithms: Token Bucket, Sliding Window, Fixed Window, Leaky Bucket.",
+      "Token Bucket: tokens are added at a fixed rate. Each request consumes a token. If no tokens, reject.",
+      "Sliding Window Log: store timestamps. Count requests in the last N seconds.",
+      "For distributed systems, use Redis with atomic operations."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design E-Commerce System (Amazon/Walmart)",
+    "description": "Design an e-commerce platform. Handle product catalog, user accounts, shopping cart, checkout, order management, and inventory.",
+    "difficulty": "Hard",
+    "topic": "E-Commerce",
+    "category": "LLD",
+    "isWalmartPrevious": true,
+    "frequency": 7,
+    "hints": [
+      "Entities: User, Product, Category, ShoppingCart, CartItem, Order, OrderItem, Payment, Shipment, Address.",
+      "Order states: Placed, Confirmed, Shipped, Delivered, Cancelled, Returned.",
+      "Concurrency: Use optimistic locking on inventory. Decrement stock atomically on order placement.",
+      "Use Strategy pattern for different payment methods (Credit Card, UPI, Wallet)."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  },
+  {
+    "title": "Design File System",
+    "description": "Design an in-memory file system. Support creating, deleting, and searching files and directories.",
+    "difficulty": "Medium",
+    "topic": "File System",
+    "category": "LLD",
+    "isWalmartPrevious": false,
+    "frequency": 4,
+    "hints": [
+      "Use Composite pattern: File and Directory are both FileSystemEntry.",
+      "Directory contains a list of FileSystemEntry (children).",
+      "Path resolution: split path by '/' and traverse the tree.",
+      "Support ls, mkdir, addContentToFile, readContentFromFile."
+    ],
+    "companyTags": [
+      "Walmart"
+    ],
+    "articleUrl": null,
+    "videoUrl": null
+  }
+]
