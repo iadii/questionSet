@@ -189,20 +189,28 @@ export default function InterviewWorkspace({ question }: InterviewWorkspaceProps
         
         {/* Right Header Options */}
         <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a] border-b border-white/10 shrink-0">
-          <div className="flex bg-white/5 p-1 rounded-lg border border-white/10">
-            <button 
-              onClick={() => setRightMode("code")}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${rightMode === "code" ? "bg-white/10 text-white shadow-sm" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
-            >
-              <Code2 className="w-4 h-4" /> Code
-            </button>
-            <button 
-              onClick={() => setRightMode("whiteboard")}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${rightMode === "whiteboard" ? "bg-white/10 text-white shadow-sm" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
-            >
-              <PenTool className="w-4 h-4" /> Whiteboard
-            </button>
-          </div>
+          {question ? (
+            <div className="flex bg-white/5 p-1 rounded-lg border border-white/10">
+              <span className="flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-white/10 text-white shadow-sm">
+                {rightMode === "code" ? <><Code2 className="w-4 h-4" /> Code</> : <><PenTool className="w-4 h-4" /> Whiteboard</>}
+              </span>
+            </div>
+          ) : (
+            <div className="flex bg-white/5 p-1 rounded-lg border border-white/10">
+              <button 
+                onClick={() => setRightMode("code")}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${rightMode === "code" ? "bg-white/10 text-white shadow-sm" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
+              >
+                <Code2 className="w-4 h-4" /> Code
+              </button>
+              <button 
+                onClick={() => setRightMode("whiteboard")}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${rightMode === "whiteboard" ? "bg-white/10 text-white shadow-sm" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
+              >
+                <PenTool className="w-4 h-4" /> Whiteboard
+              </button>
+            </div>
+          )}
           
           {rightMode === "code" && (
             <div className="flex items-center gap-3">
