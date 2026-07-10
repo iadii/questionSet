@@ -82,7 +82,10 @@ export default function QuestionRow({
 
         {/* Info */}
         <div>
-          <Link href={`/dsa`} className="text-base font-semibold text-gray-200 hover:text-blue-400 transition-colors">
+          <Link 
+            href={`/workspace/${question.id}`}
+            className="text-base font-semibold text-gray-200 hover:text-blue-400 transition-colors"
+          >
             {question.title}
           </Link>
           <div className="flex flex-wrap items-center gap-2 mt-2">
@@ -108,7 +111,7 @@ export default function QuestionRow({
       {/* Action */}
       <div className="flex items-center sm:ml-auto ml-10">
         <Link
-          href={`/dsa`}
+          href={`/workspace/${question.id}`}
           className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/20 rounded-xl transition-colors"
         >
           Solve Problem

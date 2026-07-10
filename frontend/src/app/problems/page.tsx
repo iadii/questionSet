@@ -114,7 +114,10 @@ export default function ProblemsPage() {
                         )}
                       </td>
                       <td className="px-6 py-4 font-medium text-gray-200">
-                        <Link href={`/dsa`} className="hover:text-blue-400 transition-colors block">
+                        <Link 
+                          href={`/workspace/${q.id}`}
+                          className="hover:text-blue-400 transition-colors block"
+                        >
                           {idx + 1}. {q.title}
                         </Link>
                       </td>
