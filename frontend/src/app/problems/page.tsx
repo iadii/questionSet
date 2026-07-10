@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { apiFetch } from "@/lib/api";
 import ProtectedRoute from "@/components/ProtectedRoute";
+import FloatingNavbar from "@/components/FloatingNavbar";
 import { Question, PageResponse, UserProgressDTO } from "@/types";
 import Link from "next/link";
 import { Check, ChevronDown, CheckCircle2, Circle } from "lucide-react";
@@ -49,18 +50,9 @@ export default function ProblemsPage() {
     <ProtectedRoute>
       <div className="text-gray-300 pb-24">
         {/* Navbar */}
-        <nav className="border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold text-white tracking-tight">InterviewPrep</Link>
-            <div className="flex gap-6">
-              <Link href="/dashboard" className="text-gray-400 hover:text-white transition-colors">Dashboard</Link>
-              <Link href="/problems" className="text-blue-400 font-medium">Problems</Link>
-              <Link href="/profile" className="text-gray-400 hover:text-white transition-colors">Profile</Link>
-            </div>
-          </div>
-        </nav>
+        <FloatingNavbar />
 
-        <main className="max-w-6xl mx-auto px-6 py-10">
+        <main className="max-w-6xl mx-auto px-6 py-10 pt-32">
           
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>

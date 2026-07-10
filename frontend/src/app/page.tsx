@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useAuthStore } from '@/store/authStore';
 import { ArrowRight, Code2, Database, LayoutTemplate } from 'lucide-react';
+import FloatingNavbar from '@/components/FloatingNavbar';
 
 export default function Home() {
   const { isAuthenticated, logout } = useAuthStore();
@@ -26,50 +27,7 @@ export default function Home() {
     <div className="font-sans overflow-hidden relative">
       
       {/* Navbar */}
-      <nav className="w-full bg-[#050505]/40 backdrop-blur-xl border-b border-white/5 fixed top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            <div className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
-                  <Code2 className="w-4 h-4 text-white" />
-                </div>
-                InterviewPrep
-              </span>
-            </div>
-            <div className="flex items-center gap-6">
-              {isAuthenticated ? (
-                <>
-                  <Link href="/dashboard" className="text-gray-400 hover:text-white font-medium text-sm transition-colors">
-                    Dashboard
-                  </Link>
-                  <Link href="/profile" className="text-gray-400 hover:text-white font-medium text-sm transition-colors">
-                    Profile
-                  </Link>
-                  <button
-                    onClick={logout}
-                    className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
-                  >
-                    Log out
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link href="/login" className="text-gray-400 hover:text-white font-medium text-sm transition-colors">
-                    Log in
-                  </Link>
-                  <Link
-                    href="/signup"
-                    className="bg-white text-black hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)]"
-                  >
-                    Sign up
-                  </Link>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      </nav>
+      <FloatingNavbar />
 
       <main className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         

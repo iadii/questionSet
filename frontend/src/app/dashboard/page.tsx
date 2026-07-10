@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import ProtectedRoute from '@/components/ProtectedRoute';
+import FloatingNavbar from '@/components/FloatingNavbar';
 import { useQuery } from "@tanstack/react-query";
 import { apiFetch } from "@/lib/api";
 import { Question, PageResponse } from "@/types";
@@ -68,18 +69,9 @@ export default function DashboardPage() {
     <ProtectedRoute>
       <div className="text-gray-300 pb-24">
         {/* Navbar */}
-        <nav className="border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold text-white tracking-tight">InterviewPrep</Link>
-            <div className="flex gap-6">
-              <Link href="/dashboard" className="text-blue-400 font-medium">Dashboard</Link>
-              <Link href="/problems" className="text-gray-400 hover:text-white transition-colors">Problems</Link>
-              <Link href="/profile" className="text-gray-400 hover:text-white transition-colors">Profile</Link>
-            </div>
-          </div>
-        </nav>
+        <FloatingNavbar />
 
-        <main className="max-w-6xl mx-auto px-6 py-10 space-y-8">
+        <main className="max-w-6xl mx-auto px-6 py-10 pt-32 space-y-8">
           
           {/* Header */}
           <div className="flex justify-between items-end">
