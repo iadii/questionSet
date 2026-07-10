@@ -25,8 +25,8 @@ export default function ProblemsPage() {
   if (isQuestionsLoading || isProgressLoading) {
     return (
       <ProtectedRoute>
-        <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        <div className="flex items-center justify-center pt-32 pb-24">
+          <div className="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full"></div>
         </div>
       </ProtectedRoute>
     );
@@ -47,9 +47,9 @@ export default function ProblemsPage() {
 
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-[#0a0a0a] text-gray-300 pb-24">
-        {/* Simple Navbar */}
-        <nav className="border-b border-white/10 bg-[#0a0a0a] sticky top-0 z-50">
+      <div className="text-gray-300 pb-24">
+        {/* Navbar */}
+        <nav className="border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link href="/" className="text-xl font-bold text-white tracking-tight">InterviewPrep</Link>
             <div className="flex gap-6">
@@ -74,10 +74,10 @@ export default function ProblemsPage() {
                 onChange={(e) => setFilterDifficulty(e.target.value)}
                 className="bg-white/5 border border-white/10 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-4 py-2"
               >
-                <option value="All" className="bg-[#0a0a0a]">All Difficulties</option>
-                <option value="Easy" className="bg-[#0a0a0a] text-emerald-400">Easy</option>
-                <option value="Medium" className="bg-[#0a0a0a] text-amber-400">Medium</option>
-                <option value="Hard" className="bg-[#0a0a0a] text-rose-400">Hard</option>
+                <option value="All" className="bg-[#050505]">All Difficulties</option>
+                <option value="Easy" className="bg-[#050505] text-emerald-400">Easy</option>
+                <option value="Medium" className="bg-[#050505] text-amber-400">Medium</option>
+                <option value="Hard" className="bg-[#050505] text-rose-400">Hard</option>
               </select>
             </div>
           </div>

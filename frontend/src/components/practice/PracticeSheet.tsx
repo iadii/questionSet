@@ -86,7 +86,7 @@ export default function PracticeSheet({ category, title }: PracticeSheetProps) {
   if (questionsLoading) {
     return (
       <ProtectedRoute>
-        <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+        <div className="flex items-center justify-center pt-32 pb-24">
           <div className="animate-pulse flex flex-col items-center gap-4">
             <div className="w-10 h-10 border-4 border-white/10 border-t-blue-500 rounded-full animate-spin"></div>
             <p className="text-gray-400 font-medium">Loading Questions...</p>
@@ -98,10 +98,10 @@ export default function PracticeSheet({ category, title }: PracticeSheetProps) {
 
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden pb-24">
+      <div className="text-white relative overflow-hidden pb-24">
         
-        {/* Simple Navbar */}
-        <nav className="border-b border-white/10 bg-[#0a0a0a] sticky top-0 z-50">
+        {/* Navbar */}
+        <nav className="border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link href="/" className="text-xl font-bold text-white tracking-tight">InterviewPrep</Link>
             <div className="flex gap-6">

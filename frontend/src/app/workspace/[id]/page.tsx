@@ -22,7 +22,7 @@ export default function WorkspacePage() {
   if (isLoading) {
     return (
       <ProtectedRoute>
-        <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+        <div className="flex items-center justify-center pt-32 pb-24">
           <div className="flex flex-col items-center gap-4">
             <Loader2 className="w-10 h-10 text-blue-500 animate-spin" />
             <p className="text-gray-400 font-medium">Loading Workspace...</p>
@@ -35,8 +35,8 @@ export default function WorkspacePage() {
   if (error || !question) {
     return (
       <ProtectedRoute>
-        <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center text-center p-6">
-          <h2 className="text-2xl font-bold text-white mb-2">Question Not Found</h2>
+        <div className="flex flex-col items-center justify-center text-center p-6 pt-32">
+          <h1 className="text-2xl font-bold text-red-500 mb-2">Question not found</h1>
           <p className="text-gray-400 mb-6">The problem you're looking for doesn't exist or you don't have access.</p>
           <button 
             onClick={() => router.back()}
@@ -51,10 +51,10 @@ export default function WorkspacePage() {
 
   return (
     <ProtectedRoute>
-      <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white">
+      <div className="flex flex-col text-white h-screen">
         
-        {/* Compact Navbar */}
-        <nav className="border-b border-white/10 bg-[#0a0a0a] flex-none z-50">
+        {/* Workspace Navbar */}
+        <nav className="border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl flex-none z-50">
           <div className="w-full px-4 h-14 flex items-center gap-4">
             <button 
               onClick={() => router.back()}

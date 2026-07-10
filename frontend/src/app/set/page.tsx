@@ -48,10 +48,10 @@ export default function SetHubPage() {
 
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden pb-24">
+      <div className="text-white relative overflow-hidden pb-24">
         
-        {/* Simple Navbar */}
-        <nav className="border-b border-white/10 bg-[#0a0a0a] sticky top-0 z-50">
+        {/* Navbar */}
+        <nav className="border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link href="/" className="text-xl font-bold text-white tracking-tight">InterviewPrep</Link>
             <div className="flex gap-6">

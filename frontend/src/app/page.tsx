@@ -23,19 +23,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-gray-200 font-sans overflow-hidden relative selection:bg-blue-500/30">
+    <div className="font-sans overflow-hidden relative">
       
-      {/* Premium Subtle Background Noise & Gradient */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        {/* Soft radial glows */}
-        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[150px] mix-blend-screen" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-900/10 blur-[150px] mix-blend-screen" />
-      </div>
-
       {/* Navbar */}
-      <nav className="w-full bg-[#050505]/80 backdrop-blur-xl border-b border-white/5 fixed top-0 z-50">
+      <nav className="w-full bg-[#050505]/40 backdrop-blur-xl border-b border-white/5 fixed top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0 flex items-center">
@@ -69,7 +60,7 @@ export default function Home() {
                   </Link>
                   <Link
                     href="/signup"
-                    className="bg-white text-black hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold transition-all"
+                    className="bg-white text-black hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-semibold transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                   >
                     Sign up
                   </Link>
@@ -98,7 +89,7 @@ export default function Home() {
             
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white">
               The Engineering <br/>
-              <span className="text-blue-500">Interview Sandbox.</span>
+              <span className="text-blue-500 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Interview Sandbox.</span>
             </motion.h1>
             
             <motion.p variants={itemVariants} className="text-lg text-gray-400 max-w-lg leading-relaxed font-light">
@@ -108,7 +99,7 @@ export default function Home() {
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-4">
               <Link
                 href="/set"
-                className="group px-6 py-3.5 bg-white text-black hover:bg-gray-100 rounded-lg font-semibold text-base transition-all flex items-center justify-center gap-2"
+                className="group px-6 py-3.5 bg-white text-black hover:bg-gray-100 rounded-lg font-semibold text-base transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
                 Start Practicing
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -124,18 +115,37 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Hero Image / Workspace Mockup */}
-          <motion.div variants={itemVariants} className="lg:w-1/2 relative w-full aspect-square md:aspect-[4/3] lg:aspect-square">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-2xl blur-2xl transform rotate-3" />
-            <div className="relative h-full w-full rounded-2xl border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.8)] overflow-hidden bg-[#0a0a0a] ring-1 ring-white/5">
-              <Image 
-                src="/hero-mockup.png" 
-                alt="Interview Workspace IDE Mockup" 
-                fill 
-                className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
-                priority
-              />
-            </div>
+          {/* Hero Abstract Floating Code */}
+          <motion.div variants={itemVariants} className="lg:w-1/2 relative w-full h-[400px] flex items-center justify-center perspective-[1000px]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-purple-500/5 blur-3xl transform rotate-12" />
+            
+            <motion.div 
+              animate={{ 
+                y: [0, -15, 0],
+                rotateX: [10, 15, 10],
+                rotateY: [-10, -5, -10]
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="relative w-[110%] max-w-lg preserve-3d"
+            >
+              {/* No backgrounds, no borders. Just text floating in space. */}
+              <div className="font-mono text-sm sm:text-base leading-relaxed text-blue-300/80 tracking-tight whitespace-pre drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                <span className="text-purple-400">class</span> <span className="text-yellow-200">RateLimiter</span> {'{\n'}
+                {'  '} <span className="text-purple-400">private</span> <span className="text-blue-300">final int</span> <span className="text-gray-100">limit</span>;\n
+                {'  '} <span className="text-purple-400">private</span> <span className="text-yellow-200">Map</span>&lt;String, Long&gt; <span className="text-gray-100">window</span>;\n\n
+                
+                {'  '} <span className="text-purple-400">public</span> <span className="text-blue-300">boolean</span> <span className="text-yellow-100">allowRequest</span>(<span className="text-yellow-200">String</span> <span className="text-gray-100">ip</span>) {'{\n'}
+                {'    '} <span className="text-gray-400 italic">// Implement sliding window logic...</span>\n
+                {'    '} <span className="text-purple-400">long</span> <span className="text-gray-100">now</span> = System.<span className="text-yellow-100">currentTimeMillis</span>();\n
+                {'    '} <span className="text-purple-400">return</span> <span className="text-orange-300">true</span>;\n
+                {'  }\n'}
+                {'}'}
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
 
