@@ -13,7 +13,14 @@ export default function Heatmap({ data }: HeatmapProps) {
   const numWeeks = 52;
   const daysInGrid = numWeeks * 7;
   
-  const gridDays = [];
+  interface GridDay {
+    date: string;
+    count: number;
+    month: string;
+    isFirstDayOfMonth: boolean;
+  }
+  
+  const gridDays: GridDay[] = [];
   for (let i = daysInGrid - 1; i >= 0; i--) {
     const d = new Date(today);
     // Shift back by the number of days, plus adjust to end on the current day of the week
