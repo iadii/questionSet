@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Loader2 } from "lucide-react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { Send, Bot, User, Loader2, Mic, MicOff, Volume2, VolumeX } from "lucide-react";
 
 export interface ChatMessage {
   role: "ai" | "user";
@@ -17,6 +17,12 @@ interface ChatSidebarProps {
 export default function ChatSidebar({ messages, isThinking, onSendMessage }: ChatSidebarProps) {
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  // Voice State
+  const [isListening, setIsListening] = useState(false);
+  const [isTtsEnabled, setIsTtsEnabled] = useState(true);
+  const recognitionRef = useRef<any>(null);
+  const prevMessagesLengthRef = useRef(messages.length);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -24,7 +30,79 @@ export default function ChatSidebar({ messages, isThinking, onSendMessage }: Cha
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages, isThinking]);
+    
+    // Handle Text-to-Speech for new AI messages
+    if (messages.length > prevMessagesLengthRef.current) {
+      const lastMsg = messages[messages.length - 1];
+      if (lastMsg.role === "ai" && isTtsEnabled && "speechSynthesis" in window) {
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(lastMsg.text);
+        // Optional: configure voice/rate here
+        window.speechSynthesis.speak(utterance);
+      }
+      prevMessagesLengthRef.current = messages.length;
+    }
+  }, [messages, isThinking, isTtsEnabled]);
+  
+  // Initialize Speech Recognition
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        recognitionRef.current = new SpeechRecognition();
+        recognitionRef.current.continuous = true;
+        recognitionRef.current.interimResults = true;
+        
+        recognitionRef.current.onresult = (event: any) => {
+          let currentTranscript = "";
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            currentTranscript += event.results[i][0].transcript;
+          }
+          setInput(prev => {
+            // Append or replace? For simplicity, we just replace the input with the transcript
+            // or if we want continuous dictation, we'd need more complex state.
+            // Let's just set the input to the latest transcript chunk if it's final, 
+            // or we just replace the whole input field for this dictation session.
+            return currentTranscript; 
+          });
+        };
+        
+        recognitionRef.current.onerror = (event: any) => {
+          console.error("Speech recognition error", event.error);
+          setIsListening(false);
+        };
+        
+        recognitionRef.current.onend = () => {
+          setIsListening(false);
+        };
+      }
+    }
+    
+    return () => {
+      if (recognitionRef.current) {
+        recognitionRef.current.stop();
+      }
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+  
+  const toggleListening = () => {
+    if (isListening) {
+      recognitionRef.current?.stop();
+      setIsListening(false);
+    } else {
+      if (recognitionRef.current) {
+        setInput(""); // Clear input when starting to speak
+        recognitionRef.current.start();
+        setIsListening(true);
+      } else {
+        alert("Speech recognition is not supported in this browser.");
+      }
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,18 +112,33 @@ export default function ChatSidebar({ messages, isThinking, onSendMessage }: Cha
   };
 
   return (
-    <div className="flex flex-col h-full bg-white border-l border-gray-200">
-      <div className="p-4 border-b border-gray-200 bg-gray-50 flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-          <Bot className="w-5 h-5" />
+    <div className="flex flex-col h-full bg-[#0a0a0a] border-l border-white/10">
+      <div className="p-4 border-b border-white/10 bg-white/5 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 shadow-[0_0_10px_rgba(59,130,246,0.2)]">
+            <Bot className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="font-semibold text-white leading-tight">AI Interviewer</h3>
+            <p className="text-xs text-gray-400">Powered by Gemini</p>
+          </div>
         </div>
-        <div>
-          <h3 className="font-semibold text-gray-900 leading-tight">AI Interviewer</h3>
-          <p className="text-xs text-gray-500">Powered by Gemini</p>
-        </div>
+        
+        <button 
+          onClick={() => {
+            setIsTtsEnabled(!isTtsEnabled);
+            if (isTtsEnabled && "speechSynthesis" in window) {
+              window.speechSynthesis.cancel();
+            }
+          }}
+          className={`p-2 rounded-lg transition-colors border ${isTtsEnabled ? 'text-blue-400 bg-blue-500/10 border-blue-500/20' : 'text-gray-500 bg-white/5 border-white/10 hover:bg-white/10'}`}
+          title={isTtsEnabled ? "Mute AI Voice" : "Enable AI Voice"}
+        >
+          {isTtsEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
+        </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50/50">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#0a0a0a]">
         {messages.length === 0 && (
           <div className="text-center text-gray-400 text-sm mt-10">
             Write some code on the left, then ask me for a hint or feedback!
@@ -53,17 +146,17 @@ export default function ChatSidebar({ messages, isThinking, onSendMessage }: Cha
         )}
         
         {messages.map((msg, idx) => (
-          <div key={idx} className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}>
-            <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-              msg.role === "ai" ? "bg-blue-100 text-blue-600" : "bg-gray-200 text-gray-600"
-            }`}>
-              {msg.role === "ai" ? <Bot className="w-4 h-4" /> : <User className="w-4 h-4" />}
-            </div>
-            <div className={`max-w-[75%] rounded-2xl px-4 py-2 text-sm ${
-              msg.role === "user" 
-                ? "bg-blue-600 text-white rounded-tr-sm" 
-                : "bg-white border border-gray-200 text-gray-800 rounded-tl-sm shadow-sm"
-            }`}>
+          <div
+            key={idx}
+            className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+          >
+            <div
+              className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed shadow-sm ${
+                msg.role === "user"
+                  ? "bg-blue-600 text-white rounded-br-none shadow-[0_0_15px_rgba(37,99,235,0.2)]"
+                  : "bg-white/10 text-gray-200 rounded-bl-none border border-white/5"
+              }`}
+            >
               {msg.text}
             </div>
           </div>
@@ -71,35 +164,45 @@ export default function ChatSidebar({ messages, isThinking, onSendMessage }: Cha
 
         {isThinking && (
           <div className="flex gap-3">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-              <Bot className="w-4 h-4" />
-            </div>
-            <div className="bg-white border border-gray-200 rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm flex items-center gap-2">
-              <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
-              <span className="text-xs text-gray-500">Analyzing code...</span>
+            <div className="max-w-[85%] p-4 rounded-2xl bg-white/10 border border-white/5 rounded-bl-none shadow-sm flex items-center gap-3">
+              <Loader2 className="w-4 h-4 animate-spin text-blue-400" />
+              <span className="text-gray-400 text-sm font-medium">Analyzing...</span>
             </div>
           </div>
         )}
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="p-4 bg-white border-t border-gray-200">
-        <form onSubmit={handleSubmit} className="relative">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask for a hint..."
-            className="w-full pl-4 pr-12 py-3 bg-gray-100 border-transparent focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl text-sm transition-all"
-            disabled={isThinking}
-          />
+      <div className="p-4 bg-[#0a0a0a] border-t border-white/10">
+        <form onSubmit={handleSubmit} className="relative flex items-center gap-2">
           <button
-            type="submit"
-            disabled={!input.trim() || isThinking}
-            className="absolute right-2 top-2 p-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            type="button"
+            onClick={toggleListening}
+            className={`p-3 rounded-xl transition-colors flex-shrink-0 border ${
+              isListening ? "bg-rose-500/20 text-rose-400 border-rose-500/30 animate-pulse shadow-[0_0_15px_rgba(244,63,94,0.3)]" : "bg-white/5 text-gray-400 border-white/10 hover:bg-white/10 hover:text-white"
+            }`}
+            title={isListening ? "Stop listening" : "Start speaking"}
           >
-            <Send className="w-4 h-4" />
+            {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
           </button>
+          
+          <div className="relative flex-1">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder={isListening ? "Listening..." : "Ask for a hint..."}
+              className="w-full pl-4 pr-12 py-3 bg-white/5 border border-white/10 focus:bg-white/10 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 rounded-xl text-sm transition-all text-white placeholder-gray-500"
+              disabled={isThinking}
+            />
+            <button
+              type="submit"
+              disabled={!input.trim() || isThinking}
+              className="absolute right-2 top-2 p-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm"
+            >
+              <Send className="w-4 h-4" />
+            </button>
+          </div>
         </form>
       </div>
     </div>

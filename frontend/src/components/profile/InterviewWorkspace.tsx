@@ -12,6 +12,7 @@ export default function InterviewWorkspace() {
   const [language, setLanguage] = useState("java");
   const [output, setOutput] = useState("");
   const [isRunning, setIsRunning] = useState(false);
+  const [diagramElements, setDiagramElements] = useState<any[]>([]);
   
   // Workspace Mode State
   const [mode, setMode] = useState<"code" | "whiteboard">("code");
@@ -69,20 +70,20 @@ export default function InterviewWorkspace() {
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
       
       {/* Main Workspace Area (Takes 3/5 width on large screens) */}
-      <div className="lg:col-span-3 bg-gray-900 rounded-2xl overflow-hidden shadow-xl border border-gray-800 flex flex-col h-[650px]">
+      <div className="lg:col-span-3 bg-[#0a0a0a] rounded-2xl overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)] border border-white/10 flex flex-col h-[650px]">
         
         {/* Header Options */}
-        <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700">
-          <div className="flex bg-gray-950 p-1 rounded-lg">
+        <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a] border-b border-white/10">
+          <div className="flex bg-white/5 p-1 rounded-lg border border-white/10">
             <button 
               onClick={() => setMode("code")}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${mode === "code" ? "bg-gray-800 text-white shadow-sm" : "text-gray-400 hover:text-gray-200 hover:bg-gray-900"}`}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${mode === "code" ? "bg-white/10 text-white shadow-sm" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
             >
               <Code2 className="w-4 h-4" /> Code
             </button>
             <button 
               onClick={() => setMode("whiteboard")}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${mode === "whiteboard" ? "bg-gray-800 text-white shadow-sm" : "text-gray-400 hover:text-gray-200 hover:bg-gray-900"}`}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${mode === "whiteboard" ? "bg-white/10 text-white shadow-sm" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
             >
               <PenTool className="w-4 h-4" /> Whiteboard
             </button>
@@ -91,7 +92,7 @@ export default function InterviewWorkspace() {
           {mode === "code" && (
             <div className="flex items-center gap-3">
               <select 
-                className="bg-gray-700 text-gray-200 text-sm rounded-lg px-3 py-1.5 outline-none border border-gray-600 focus:border-blue-500"
+                className="bg-black text-gray-300 text-sm rounded-lg px-3 py-1.5 outline-none border border-white/10 focus:border-blue-500"
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
               >
@@ -103,7 +104,7 @@ export default function InterviewWorkspace() {
               <button 
                 onClick={handleRun}
                 disabled={isRunning}
-                className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-1.5 rounded-lg text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-lg text-sm font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed border border-emerald-500/30"
               >
                 <Play className="w-4 h-4" />
                 {isRunning ? "Running..." : "Run Code"}
@@ -130,20 +131,20 @@ export default function InterviewWorkspace() {
               />
             </div>
             
-            <div className="h-40 bg-gray-950 border-t border-gray-800 p-4 overflow-y-auto">
-              <h4 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Terminal Output</h4>
+            <div className="h-40 bg-[#0a0a0a] border-t border-white/10 p-4 overflow-y-auto">
+              <h4 className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Terminal Output</h4>
               <pre className="text-gray-300 text-sm font-mono whitespace-pre-wrap">{output}</pre>
             </div>
           </>
         ) : (
-          <div className="flex-1 min-h-0 relative">
-            <Whiteboard />
+          <div className="flex-1 min-h-0 relative bg-black">
+            <Whiteboard onChange={(elements) => setDiagramElements(elements as any[])} />
           </div>
         )}
       </div>
 
       {/* AI Chat Side (Takes 2/5 width) */}
-      <div className="lg:col-span-2 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 h-[650px]">
+      <div className="lg:col-span-2 bg-[#0a0a0a] rounded-2xl overflow-hidden shadow-sm border border-white/10 h-[650px]">
         <ChatSidebar 
           messages={messages} 
           isThinking={isThinking} 

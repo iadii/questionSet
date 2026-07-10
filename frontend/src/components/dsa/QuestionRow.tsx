@@ -1,153 +1,120 @@
 import { Question } from "@/types";
-import { CheckCircle2, Circle, ExternalLink, FileText, PlayCircle } from "lucide-react";
+import { CheckCircle2, Circle, ExternalLink, RefreshCw, Building2 } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 import clsx from "clsx";
 
 interface QuestionRowProps {
   question: Question;
-  status: string | undefined;
-  onToggleStatus: (id: string, currentStatus?: string, confidence?: string) => void;
-  isPending: boolean;
+  status?: string;
+  onToggleStatus: (confidence?: string) => void;
+  isUpdatePending: boolean;
 }
 
 export default function QuestionRow({
   question,
   status,
   onToggleStatus,
-  isPending,
+  isUpdatePending,
 }: QuestionRowProps) {
   const isSolved = status === "SOLVED";
+  const isRevisionNeeded = status === "REVISION_NEEDED";
+  const [showConfidence, setShowConfidence] = useState(false);
+
+  const getDifficultyColor = (diff: string) => {
+    switch (diff) {
+      case "EASY": return "bg-emerald-500/20 text-emerald-300 border-emerald-500/30";
+      case "MEDIUM": return "bg-amber-500/20 text-amber-300 border-amber-500/30";
+      case "HARD": return "bg-rose-500/20 text-rose-300 border-rose-500/30";
+      default: return "bg-gray-500/20 text-gray-300 border-gray-500/30";
+    }
+  };
+
+  const handleStatusClick = () => {
+    if (isSolved || isRevisionNeeded) {
+      onToggleStatus();
+    } else {
+      setShowConfidence(true);
+    }
+  };
+
+  const handleConfidenceSelect = (confidence: string) => {
+    onToggleStatus(confidence);
+    setShowConfidence(false);
+  };
 
   return (
-    <tr className="group hover:bg-gray-50/80 transition-colors border-b border-gray-100 last:border-0 relative">
-      {/* Status Toggle */}
-      <td className="pl-6 pr-3 py-4 w-14">
-        <div className="relative flex items-center justify-center group/status">
-          <button
-            onClick={() => onToggleStatus(question.id, status, "MEDIUM")}
-            disabled={isPending}
-            className="flex items-center justify-center text-gray-300 hover:text-emerald-500 transition-colors disabled:opacity-50"
-          >
-            {isSolved ? (
-              <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-            ) : status === "REVISION_NEEDED" ? (
-              <Circle className="w-5 h-5 text-orange-500 fill-orange-100" />
-            ) : (
-              <Circle className="w-5 h-5" />
-            )}
-          </button>
-          
-          {/* SRS Confidence popover (shows on hover of the status button) */}
-          <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden group-hover/status:flex items-center gap-1 bg-white border border-gray-200 shadow-lg rounded-lg p-1 z-20">
-            <button onClick={(e) => { e.stopPropagation(); onToggleStatus(question.id, status, "EASY"); }} className="px-2 py-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded">EASY</button>
-            <button onClick={(e) => { e.stopPropagation(); onToggleStatus(question.id, status, "MEDIUM"); }} className="px-2 py-1 text-[10px] font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 rounded">MED</button>
-            <button onClick={(e) => { e.stopPropagation(); onToggleStatus(question.id, status, "HARD"); }} className="px-2 py-1 text-[10px] font-bold text-rose-700 bg-rose-50 hover:bg-rose-100 rounded">HARD</button>
-          </div>
+    <div className="group flex flex-col sm:flex-row sm:items-center justify-between p-4 hover:bg-white/5 transition-colors gap-4">
+      <div className="flex items-start gap-4">
+        {/* Status Button */}
+        <div className="pt-1">
+          {showConfidence ? (
+            <div className="flex flex-col gap-1 bg-white/10 p-1.5 rounded-lg border border-white/20 animate-in fade-in zoom-in duration-200">
+              <span className="text-[10px] uppercase font-bold text-gray-400 text-center mb-1">How was it?</span>
+              <div className="flex gap-1">
+                <button onClick={() => handleConfidenceSelect('EASY')} className="px-2 py-1 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-bold rounded">Easy</button>
+                <button onClick={() => handleConfidenceSelect('MEDIUM')} className="px-2 py-1 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-xs font-bold rounded">Med</button>
+                <button onClick={() => handleConfidenceSelect('HARD')} className="px-2 py-1 bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-bold rounded">Hard</button>
+              </div>
+            </div>
+          ) : (
+            <button
+              onClick={handleStatusClick}
+              disabled={isUpdatePending}
+              className={clsx(
+                "transition-all duration-200 flex-shrink-0 focus:outline-none",
+                isUpdatePending && "opacity-50 cursor-wait",
+                isSolved && "text-emerald-400 hover:text-emerald-300",
+                isRevisionNeeded && "text-orange-400 hover:text-orange-300",
+                !isSolved && !isRevisionNeeded && "text-gray-500 hover:text-gray-300"
+              )}
+            >
+              {isRevisionNeeded ? (
+                <RefreshCw className="w-6 h-6" />
+              ) : isSolved ? (
+                <CheckCircle2 className="w-6 h-6 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+              ) : (
+                <Circle className="w-6 h-6" />
+              )}
+            </button>
+          )}
         </div>
-      </td>
 
-      {/* Title & Tags */}
-      <td className="px-3 py-4">
-        <div className="flex flex-col gap-1.5">
-          <div className="flex items-center gap-2">
-            <span className={clsx(
-              "text-sm font-semibold transition-colors",
-              isSolved ? "text-gray-400 line-through decoration-gray-300" : "text-gray-900 group-hover:text-blue-600"
-            )}>
-              {question.title}
+        {/* Info */}
+        <div>
+          <Link href={`/dsa`} className="text-base font-semibold text-gray-200 hover:text-blue-400 transition-colors">
+            {question.title}
+          </Link>
+          <div className="flex flex-wrap items-center gap-2 mt-2">
+            <span className={clsx("px-2 py-0.5 rounded-md text-[11px] font-bold border tracking-wide", getDifficultyColor(question.difficulty))}>
+              {question.difficulty}
             </span>
-            {question.companyTags?.includes("Walmart") && (
-              <span className="shrink-0 text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 font-bold border border-blue-100">
-                Walmart
+            {question.companyTags && question.companyTags.length > 0 && (
+              <span className="flex items-center gap-1 text-[11px] font-medium text-gray-400 bg-white/5 px-2 py-0.5 rounded-md border border-white/10">
+                <Building2 className="w-3 h-3" />
+                {question.companyTags[0]}
+                {question.companyTags.length > 1 && ` +${question.companyTags.length - 1}`}
+              </span>
+            )}
+            {isRevisionNeeded && (
+              <span className="text-[11px] font-bold text-orange-400 bg-orange-500/10 px-2 py-0.5 rounded-md border border-orange-500/20">
+                Needs Review
               </span>
             )}
           </div>
-          {question.companyTags && question.companyTags.length > 0 && (
-            <div className="flex gap-1.5">
-              {question.companyTags.filter(t => t !== "Walmart").slice(0, 3).map((tag) => (
-                <span key={tag} className="text-[10px] px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded border border-gray-200">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
-      </td>
+      </div>
 
-      {/* Difficulty */}
-      <td className="px-3 py-4 w-24">
-        <span className={clsx(
-          "inline-flex items-center gap-1.5 text-xs font-semibold px-2 py-1 rounded-md",
-          question.difficulty === "EASY" ? "bg-emerald-50 text-emerald-700" :
-          question.difficulty === "MEDIUM" ? "bg-amber-50 text-amber-700" :
-          "bg-rose-50 text-rose-700"
-        )}>
-          <span className={clsx(
-            "w-1.5 h-1.5 rounded-full",
-            question.difficulty === "EASY" ? "bg-emerald-500" :
-            question.difficulty === "MEDIUM" ? "bg-amber-500" :
-            "bg-rose-500"
-          )} />
-          {question.difficulty === "EASY" ? "Easy" :
-           question.difficulty === "MEDIUM" ? "Medium" : "Hard"}
-        </span>
-      </td>
-
-      {/* Frequency */}
-      <td className="px-3 py-4 w-20 text-center">
-        <div className="flex items-center justify-center gap-0.5 group/freq relative cursor-help">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <div
-              key={i}
-              className={clsx(
-                "w-1 h-3.5 rounded-full transition-colors",
-                i < Math.min(Math.ceil(question.frequency / 2), 5)
-                  ? "bg-orange-400"
-                  : "bg-gray-200"
-              )}
-            />
-          ))}
-          {/* Tooltip */}
-          <div className="absolute bottom-full mb-2 hidden group-hover/freq:block bg-gray-900 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap z-10">
-            Frequency: {question.frequency}/10
-          </div>
-        </div>
-      </td>
-
-      {/* Resources */}
-      <td className="px-3 py-4 w-32">
-        <div className="flex items-center justify-center gap-3">
-          {question.articleUrl ? (
-            <a href={question.articleUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors" title="Read Article">
-              <FileText className="w-4 h-4" />
-            </a>
-          ) : (
-            <FileText className="w-4 h-4 text-gray-200" />
-          )}
-          {question.videoUrl ? (
-            <a href={question.videoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors" title="Watch Video">
-              <PlayCircle className="w-4 h-4" />
-            </a>
-          ) : (
-            <PlayCircle className="w-4 h-4 text-gray-200" />
-          )}
-        </div>
-      </td>
-
-      {/* Action / Practice */}
-      <td className="pr-6 pl-3 py-4 w-28 text-right">
-        {question.leetcodeUrl ? (
-          <a
-            href={question.leetcodeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs font-semibold text-gray-500 hover:text-gray-900 bg-white hover:bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-lg transition-all shadow-sm"
-          >
-            Solve <ExternalLink className="w-3 h-3" />
-          </a>
-        ) : (
-          <span className="text-xs text-gray-300 px-3 py-1.5">—</span>
-        )}
-      </td>
-    </tr>
+      {/* Action */}
+      <div className="flex items-center sm:ml-auto ml-10">
+        <Link
+          href={`/dsa`}
+          className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/20 rounded-xl transition-colors"
+        >
+          Solve Problem
+          <ExternalLink className="w-4 h-4" />
+        </Link>
+      </div>
+    </div>
   );
 }

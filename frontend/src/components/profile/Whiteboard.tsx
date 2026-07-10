@@ -17,10 +17,17 @@ const Excalidraw = dynamic(
   }
 );
 
-export default function Whiteboard() {
+interface WhiteboardProps {
+  onChange?: (elements: readonly any[]) => void;
+}
+
+export default function Whiteboard({ onChange }: WhiteboardProps) {
   return (
     <div className="h-full w-full relative">
-      <Excalidraw theme="dark" />
+      <Excalidraw 
+        theme="dark" 
+        onChange={onChange ? (elements) => onChange(elements) : undefined} 
+      />
     </div>
   );
 }

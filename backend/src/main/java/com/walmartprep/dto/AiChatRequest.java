@@ -7,4 +7,6 @@ public class AiChatRequest {
     private String code;
     private String language;
     private String message;
+    private String mode; // "code" or "whiteboard"
+    private String diagramJson;
 }

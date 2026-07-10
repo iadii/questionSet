@@ -26,17 +26,35 @@ public class AiService {
     private final RestTemplate restTemplate = new RestTemplate();
 
     public AiChatResponse getInterviewFeedback(AiChatRequest request) {
-        String prompt = String.format(
-            "You are a technical interviewer at a top tech company (like FAANG or Walmart). " +
-            "The candidate is solving a coding problem. " +
-            "Here is their current code:\n```%s\n%s\n```\n\n" +
-            "Here is the candidate's message or question to you:\n\"%s\"\n\n" +
-            "Instructions: \n" +
-            "- Be concise, professional, and encouraging.\n" +
-            "- Give hints and guide them, but DO NOT provide the direct code solution.\n" +
-            "- If they ask if it's optimal, ask them about time and space complexity.",
-            request.getLanguage(), request.getCode(), request.getMessage()
-        );
+        String prompt = "";
+        
+        if ("whiteboard".equalsIgnoreCase(request.getMode())) {
+            prompt = String.format(
+                "You are a Staff Engineer / System Design Interviewer at a top tech company. " +
+                "The candidate is drawing a system architecture on a whiteboard. " +
+                "Here is the JSON representation of their Excalidraw canvas:\n```json\n%s\n```\n\n" +
+                "Here is the candidate's message or question to you:\n\"%s\"\n\n" +
+                "Instructions: \n" +
+                "- Be concise and professional. Reply in plain text (no markdown formatting if possible, just text, or keep it light).\n" +
+                "- Parse the JSON elements (look at the 'text' fields, shapes, and connections) to understand their architecture.\n" +
+                "- Critique their design for scalability, single points of failure, or database choices based on their question.\n" +
+                "- If their drawing is empty, tell them to draw something first.",
+                request.getDiagramJson() != null ? request.getDiagramJson() : "[]",
+                request.getMessage()
+            );
+        } else {
+            prompt = String.format(
+                "You are a technical interviewer at a top tech company (like FAANG or Walmart). " +
+                "The candidate is solving a coding problem. " +
+                "Here is their current code:\n```%s\n%s\n```\n\n" +
+                "Here is the candidate's message or question to you:\n\"%s\"\n\n" +
+                "Instructions: \n" +
+                "- Be concise, professional, and encouraging.\n" +
+                "- Give hints and guide them, but DO NOT provide the direct code solution.\n" +
+                "- If they ask if it's optimal, ask them about time and space complexity.",
+                request.getLanguage(), request.getCode(), request.getMessage()
+            );
+        }
 
         Map<String, Object> requestBody = new HashMap<>();
         Map<String, Object> part = new HashMap<>();
