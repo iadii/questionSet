@@ -1,7 +1,7 @@
 [
   {
     "title": "Two Sum",
-    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.\n\n**Example 1:**\n```\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n```\n\n**Example 2:**\n```\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n```\n\n**Constraints:**\n- `2 <= nums.length <= 10^4`\n- `-10^9 <= nums[i] <= 10^9`\n- `-10^9 <= target <= 10^9`\n- **Only one valid answer exists.**",
     "difficulty": "Easy",
     "topic": "Arrays",
     "category": "DSA",
@@ -24,7 +24,7 @@
   },
   {
     "title": "Best Time to Buy and Sell Stock",
-    "description": "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.",
+    "description": "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.\n\n**Example 1:**\n```\nInput: prices = [7,1,5,3,6,4]\nOutput: 5\nExplanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.\n```\n\n**Example 2:**\n```\nInput: prices = [7,6,4,3,1]\nOutput: 0\nExplanation: In this case, no transactions are done and the max profit = 0.\n```\n\n**Constraints:**\n- `1 <= prices.length <= 10^5`\n- `0 <= prices[i] <= 10^4`",
     "difficulty": "Easy",
     "topic": "Arrays",
     "category": "DSA",
@@ -47,7 +47,7 @@
   },
   {
     "title": "Contains Duplicate",
-    "description": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+    "description": "Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.\n\n**Example 1:**\n```\nInput: nums = [1,2,3,1]\nOutput: true\nExplanation: The element 1 occurs at the indices 0 and 3.\n```\n\n**Example 2:**\n```\nInput: nums = [1,2,3,4]\nOutput: false\nExplanation: All elements are distinct.\n```\n\n**Example 3:**\n```\nInput: nums = [1,1,1,3,3,4,3,2,4,2]\nOutput: true\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10^5`\n- `-10^9 <= nums[i] <= 10^9`",
     "difficulty": "Easy",
     "topic": "Arrays",
     "category": "DSA",
@@ -70,7 +70,7 @@
   },
   {
     "title": "Maximum Subarray",
-    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+    "description": "Given an integer array `nums`, find the subarray with the largest sum, and return *its sum*.\n\n**Example 1:**\n```\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n```\n\n**Example 2:**\n```\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n```\n\n**Example 3:**\n```\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10^5`\n- `-10^4 <= nums[i] <= 10^4`\n\n**Follow up:** If you have figured out the `O(n)` solution, try coding another solution using the **divide and conquer** approach, which is more subtle.",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -93,7 +93,7 @@
   },
   {
     "title": "Product of Array Except Self",
-    "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].",
+    "description": "Given an integer array `nums`, return *an array* `answer` *such that* `answer[i]` *is equal to the product of all the elements of* `nums` *except* `nums[i]`.\n\nThe product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.\n\nYou must write an algorithm that runs in `O(n)` time and without using the division operation.\n\n**Example 1:**\n```\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\n```\n\n**Example 2:**\n```\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n```\n\n**Constraints:**\n- `2 <= nums.length <= 10^5`\n- `-30 <= nums[i] <= 30`\n- The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.\n\n**Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array **does not** count as extra space for space complexity analysis.)",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -116,7 +116,7 @@
   },
   {
     "title": "3Sum",
-    "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
+    "description": "Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.\n\nNotice that the solution set must not contain duplicate triplets.\n\n**Example 1:**\n```\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation:\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\n```\n\n**Example 2:**\n```\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n```\n\n**Example 3:**\n```\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n```\n\n**Constraints:**\n- `3 <= nums.length <= 3000`\n- `-10^5 <= nums[i] <= 10^5`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -139,7 +139,7 @@
   },
   {
     "title": "Sort Colors",
-    "description": "Given an array nums with n objects colored red, white, or blue (0, 1, 2), sort them in-place so that objects of the same color are adjacent.",
+    "description": "Given an array `nums` with `n` objects colored red, white, or blue, sort them **in-place** so that objects of the same color are adjacent, with the colors in the order red, white, and blue.\n\nWe will use the integers `0`, `1`, and `2` to represent the color red, white, and blue, respectively.\n\nYou must solve this problem without using the library's sort function.\n\n**Example 1:**\n```\nInput: nums = [2,0,2,1,1,0]\nOutput: [0,0,1,1,2,2]\n```\n\n**Example 2:**\n```\nInput: nums = [2,0,1]\nOutput: [0,1,2]\n```\n\n**Constraints:**\n- `n == nums.length`\n- `1 <= n <= 300`\n- `nums[i]` is either `0`, `1`, or `2`.\n\n**Follow up:** Could you come up with a one-pass algorithm using only constant extra space?",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -162,7 +162,7 @@
   },
   {
     "title": "Subarray Sum Equals K",
-    "description": "Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.",
+    "description": "Given an array of integers `nums` and an integer `k`, return *the total number of subarrays whose sum equals to* `k`.\n\nA subarray is a contiguous **non-empty** sequence of elements within an array.\n\n**Example 1:**\n```\nInput: nums = [1,1,1], k = 2\nOutput: 2\n```\n\n**Example 2:**\n```\nInput: nums = [1,2,3], k = 3\nOutput: 2\n```\n\n**Constraints:**\n- `1 <= nums.length <= 2 * 10^4`\n- `-1000 <= nums[i] <= 1000`\n- `-10^7 <= k <= 10^7`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -185,7 +185,7 @@
   },
   {
     "title": "Jump Game",
-    "description": "You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position. Return true if you can reach the last index.",
+    "description": "You are given an integer array `nums`. You are initially positioned at the array's **first index**, and each element in the array represents your maximum jump length at that position.\n\nReturn `true` *if you can reach the last index, or* `false` *otherwise*.\n\n**Example 1:**\n```\nInput: nums = [2,3,1,1,4]\nOutput: true\nExplanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.\n```\n\n**Example 2:**\n```\nInput: nums = [3,2,1,0,4]\nOutput: false\nExplanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10^4`\n- `0 <= nums[i] <= 10^5`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -208,7 +208,7 @@
   },
   {
     "title": "Merge Intervals",
-    "description": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals.",
+    "description": "Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge all overlapping intervals, and return *an array of the non-overlapping intervals that cover all the intervals in the input*.\n\n**Example 1:**\n```\nInput: intervals = [[1,3],[2,6],[8,10],[15,18]]\nOutput: [[1,6],[8,10],[15,18]]\nExplanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].\n```\n\n**Example 2:**\n```\nInput: intervals = [[1,4],[4,5]]\nOutput: [[1,5]]\nExplanation: Intervals [1,4] and [4,5] are considered overlapping.\n```\n\n**Constraints:**\n- `1 <= intervals.length <= 10^4`\n- `intervals[i].length == 2`\n- `0 <= start_i <= end_i <= 10^4`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -231,7 +231,7 @@
   },
   {
     "title": "Next Permutation",
-    "description": "Given an array of integers nums, find the next permutation of the array in lexicographic order.",
+    "description": "A **permutation** of an array of integers is an arrangement of its members into a sequence or linear order.\n\nThe **next permutation** of an array of integers is the next lexicographically greater permutation of its integer. If such arrangement is not possible, the array must be rearranged as the lowest possible order (i.e., sorted in ascending order).\n\nThe replacement must be **in place** and use only constant extra memory.\n\n**Example 1:**\n```\nInput: nums = [1,2,3]\nOutput: [1,3,2]\n```\n\n**Example 2:**\n```\nInput: nums = [3,2,1]\nOutput: [1,2,3]\n```\n\n**Example 3:**\n```\nInput: nums = [1,1,5]\nOutput: [1,5,1]\n```\n\n**Constraints:**\n- `1 <= nums.length <= 100`\n- `0 <= nums[i] <= 100`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -254,7 +254,7 @@
   },
   {
     "title": "Container With Most Water",
-    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+    "description": "You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `i-th` line are `(i, 0)` and `(i, height[i])`.\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn *the maximum amount of water a container can store*.\n\n**Notice** that you may not slant the container.\n\n**Example 1:**\n```\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water the container can contain is 49.\n```\n\n**Example 2:**\n```\nInput: height = [1,1]\nOutput: 1\n```\n\n**Constraints:**\n- `n == height.length`\n- `2 <= n <= 10^5`\n- `0 <= height[i] <= 10^4`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -277,7 +277,7 @@
   },
   {
     "title": "Trapping Rain Water",
-    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+    "description": "Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.\n\n**Example 1:**\n```\nInput: height = [0,1,0,2,1,0,1,3,2,1,2,1]\nOutput: 6\nExplanation: The elevation map [0,1,0,2,1,0,1,3,2,1,2,1] can trap 6 units of rain water.\n```\n\n**Example 2:**\n```\nInput: height = [4,2,0,3,2,5]\nOutput: 9\n```\n\n**Constraints:**\n- `n == height.length`\n- `1 <= n <= 2 * 10^4`\n- `0 <= height[i] <= 10^5`",
     "difficulty": "Hard",
     "topic": "Arrays",
     "category": "DSA",
@@ -300,7 +300,7 @@
   },
   {
     "title": "Longest Substring Without Repeating Characters",
-    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "description": "Given a string `s`, find the length of the **longest substring** without repeating characters.\n\n**Example 1:**\n```\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\n```\n\n**Example 2:**\n```\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n```\n\n**Example 3:**\n```\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n```\n\n**Constraints:**\n- `0 <= s.length <= 5 * 10^4`\n- `s` consists of English letters, digits, symbols and spaces.",
     "difficulty": "Medium",
     "topic": "Strings",
     "category": "DSA",
@@ -323,7 +323,7 @@
   },
   {
     "title": "Longest Palindromic Substring",
-    "description": "Given a string s, return the longest palindromic substring in s.",
+    "description": "Given a string `s`, return *the longest palindromic substring* in `s`.\n\n**Example 1:**\n```\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n```\n\n**Example 2:**\n```\nInput: s = \"cbbd\"\nOutput: \"bb\"\n```\n\n**Constraints:**\n- `1 <= s.length <= 1000`\n- `s` consist of only digits and English letters.",
     "difficulty": "Medium",
     "topic": "Strings",
     "category": "DSA",
@@ -346,7 +346,7 @@
   },
   {
     "title": "Valid Anagram",
-    "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise.",
+    "description": "Given two strings `s` and `t`, return `true` *if* `t` *is an anagram of* `s`, *and* `false` *otherwise*.\n\nAn **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.\n\n**Example 1:**\n```\nInput: s = \"anagram\", t = \"nagaram\"\nOutput: true\n```\n\n**Example 2:**\n```\nInput: s = \"rat\", t = \"car\"\nOutput: false\n```\n\n**Constraints:**\n- `1 <= s.length, t.length <= 5 * 10^4`\n- `s` and `t` consist of lowercase English letters.\n\n**Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?",
     "difficulty": "Easy",
     "topic": "Strings",
     "category": "DSA",
@@ -369,7 +369,7 @@
   },
   {
     "title": "Group Anagrams",
-    "description": "Given an array of strings strs, group the anagrams together.",
+    "description": "Given an array of strings `strs`, group **the anagrams** together. You can return the answer in **any order**.\n\nAn **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.\n\n**Example 1:**\n```\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n```\n\n**Example 2:**\n```\nInput: strs = [\"\"]\nOutput: [[\"\"]]\n```\n\n**Example 3:**\n```\nInput: strs = [\"a\"]\nOutput: [[\"a\"]]\n```\n\n**Constraints:**\n- `1 <= strs.length <= 10^4`\n- `0 <= strs[i].length <= 100`\n- `strs[i]` consists of lowercase English letters.",
     "difficulty": "Medium",
     "topic": "Strings",
     "category": "DSA",
@@ -392,7 +392,7 @@
   },
   {
     "title": "Longest Repeating Character Replacement",
-    "description": "You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. Return the length of the longest substring containing the same letter you can get after performing the above operation at most k times.",
+    "description": "You are given a string `s` and an integer `k`. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most `k` times.\n\nReturn *the length of the longest substring containing the same letter you can get after performing the above operations*.\n\n**Example 1:**\n```\nInput: s = \"ABAB\", k = 2\nOutput: 4\nExplanation: Replace the two 'A's with two 'B's or vice versa.\n```\n\n**Example 2:**\n```\nInput: s = \"AABABBA\", k = 1\nOutput: 4\nExplanation: Replace the one 'A' in the middle with 'B' and form \"AABBBBA\". The substring \"BBBB\" has the longest repeating letters, which is 4.\n```\n\n**Constraints:**\n- `1 <= s.length <= 10^5`\n- `s` consists of only uppercase English letters.\n- `0 <= k <= s.length`",
     "difficulty": "Medium",
     "topic": "Strings",
     "category": "DSA",
@@ -415,7 +415,7 @@
   },
   {
     "title": "Minimum Window Substring",
-    "description": "Given two strings s and t, return the minimum window substring of s such that every character in t (including duplicates) is included in the window.",
+    "description": "Given two strings `s` and `t` of lengths `m` and `n` respectively, return *the minimum window substring of* `s` *such that every character in* `t` *(including duplicates) is included in the window*. If there is no such substring, return the empty string `\"\"`.\n\nThe testcases will be generated such that the answer is **unique**.\n\n**Example 1:**\n```\nInput: s = \"ADOBECODEBANC\", t = \"ABC\"\nOutput: \"BANC\"\nExplanation: The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t.\n```\n\n**Example 2:**\n```\nInput: s = \"a\", t = \"a\"\nOutput: \"a\"\nExplanation: The entire string s is the minimum window.\n```\n\n**Example 3:**\n```\nInput: s = \"a\", t = \"aa\"\nOutput: \"\"\nExplanation: Both 'a's from t must be included in the window. Since the largest window of s only has one 'a', return empty string.\n```\n\n**Constraints:**\n- `m == s.length`\n- `n == t.length`\n- `1 <= m, n <= 10^5`\n- `s` and `t` consist of uppercase and lowercase English letters.\n\n**Follow up:** Could you find an algorithm that runs in `O(m + n)` time?",
     "difficulty": "Hard",
     "topic": "Strings",
     "category": "DSA",
@@ -438,7 +438,7 @@
   },
   {
     "title": "Reverse Linked List",
-    "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+    "description": "Given the `head` of a singly linked list, reverse the list, and return *the reversed list*.\n\n**Example 1:**\n```\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n```\n\n**Example 2:**\n```\nInput: head = [1,2]\nOutput: [2,1]\n```\n\n**Example 3:**\n```\nInput: head = []\nOutput: []\n```\n\n**Constraints:**\n- The number of nodes in the list is the range `[0, 5000]`.\n- `-5000 <= Node.val <= 5000`\n\n**Follow up:** A linked list can be reversed either iteratively or recursively. Could you implement both?",
     "difficulty": "Easy",
     "topic": "Linked List",
     "category": "DSA",
@@ -460,7 +460,7 @@
   },
   {
     "title": "Merge Two Sorted Lists",
-    "description": "You are given the heads of two sorted linked lists. Merge the two lists into one sorted list.",
+    "description": "You are given the heads of two sorted linked lists `list1` and `list2`.\n\nMerge the two lists into one **sorted** list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn *the head of the merged linked list*.\n\n**Example 1:**\n```\nInput: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]\n```\n\n**Example 2:**\n```\nInput: list1 = [], list2 = []\nOutput: []\n```\n\n**Example 3:**\n```\nInput: list1 = [], list2 = [0]\nOutput: [0]\n```\n\n**Constraints:**\n- The number of nodes in both lists is in the range `[0, 50]`.\n- `-100 <= Node.val <= 100`\n- Both `list1` and `list2` are sorted in **non-decreasing** order.",
     "difficulty": "Easy",
     "topic": "Linked List",
     "category": "DSA",
@@ -482,7 +482,7 @@
   },
   {
     "title": "Linked List Cycle",
-    "description": "Given head, the head of a linked list, determine if the linked list has a cycle in it.",
+    "description": "Given `head`, the head of a linked list, determine if the linked list has a cycle in it.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the `next` pointer. Internally, `pos` is used to denote the index of the node that tail's `next` pointer is connected to. **Note that `pos` is not passed as a parameter**.\n\nReturn `true` *if there is a cycle in the linked list*. Otherwise, return `false`.\n\n**Example 1:**\n```\nInput: head = [3,2,0,-4], pos = 1\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).\n```\n\n**Example 2:**\n```\nInput: head = [1,2], pos = 0\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 0th node.\n```\n\n**Example 3:**\n```\nInput: head = [1], pos = -1\nOutput: false\nExplanation: There is no cycle in the linked list.\n```\n\n**Constraints:**\n- The number of the nodes in the list is in the range `[0, 10^4]`.\n- `-10^5 <= Node.val <= 10^5`\n- `pos` is `-1` or a **valid index** in the linked-list.\n\n**Follow up:** Can you solve it using `O(1)` (i.e. constant) memory?",
     "difficulty": "Easy",
     "topic": "Linked List",
     "category": "DSA",
@@ -504,7 +504,7 @@
   },
   {
     "title": "Remove Nth Node From End of List",
-    "description": "Given the head of a linked list, remove the nth node from the end of the list and return its head.",
+    "description": "Given the `head` of a linked list, remove the `n-th` node from the end of the list and return its head.\n\n**Example 1:**\n```\nInput: head = [1,2,3,4,5], n = 2\nOutput: [1,2,3,5]\n```\n\n**Example 2:**\n```\nInput: head = [1], n = 1\nOutput: []\n```\n\n**Example 3:**\n```\nInput: head = [1,2], n = 1\nOutput: [1]\n```\n\n**Constraints:**\n- The number of nodes in the list is `sz`.\n- `1 <= sz <= 30`\n- `0 <= Node.val <= 100`\n- `1 <= n <= sz`\n\n**Follow up:** Could you do this in one pass?",
     "difficulty": "Medium",
     "topic": "Linked List",
     "category": "DSA",
@@ -526,7 +526,7 @@
   },
   {
     "title": "Reverse Nodes in k-Group",
-    "description": "Given the head of a linked list, reverse the nodes of the list k at a time.",
+    "description": "Given the `head` of a linked list, reverse the nodes of the list `k` at a time, and return *the modified list*.\n\n`k` is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of `k` then left-out nodes, in the end, should remain as it is.\n\nYou may not alter the values in the list's nodes, only nodes themselves may be changed.\n\n**Example 1:**\n```\nInput: head = [1,2,3,4,5], k = 2\nOutput: [2,1,4,3,5]\n```\n\n**Example 2:**\n```\nInput: head = [1,2,3,4,5], k = 3\nOutput: [3,2,1,4,5]\n```\n\n**Constraints:**\n- The number of nodes in the list is `n`.\n- `1 <= k <= n <= 5000`\n- `0 <= Node.val <= 1000`\n\n**Follow up:** Can you solve the problem in `O(1)` extra memory space?",
     "difficulty": "Hard",
     "topic": "Linked List",
     "category": "DSA",
@@ -548,7 +548,7 @@
   },
   {
     "title": "Copy List with Random Pointer",
-    "description": "A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null. Construct a deep copy of the list.",
+    "description": "A linked list of length `n` is given such that each node contains an additional random pointer, which could point to any node in the list, or `null`.\n\nConstruct a **deep copy** of the list. The deep copy should consist of exactly `n` **brand new** nodes, where each new node has its value set to the value of its corresponding original node. Both the `next` and `random` pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state.\n\nReturn *the head of the copied linked list*.\n\n**Example 1:**\n```\nInput: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]\nOutput: [[7,null],[13,0],[11,4],[10,2],[1,0]]\n```\n\n**Example 2:**\n```\nInput: head = [[1,1],[2,1]]\nOutput: [[1,1],[2,1]]\n```\n\n**Constraints:**\n- `0 <= n <= 1000`\n- `-10^4 <= Node.val <= 10^4`\n- `Node.random` is `null` or is pointing to some node in the linked list.",
     "difficulty": "Medium",
     "topic": "Linked List",
     "category": "DSA",
@@ -570,7 +570,7 @@
   },
   {
     "title": "Valid Parentheses",
-    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    "description": "Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.\n\nAn input string is valid if:\n1. Open brackets must be closed by the same type of brackets.\n2. Open brackets must be closed in the correct order.\n3. Every close bracket has a corresponding open bracket of the same type.\n\n**Example 1:**\n```\nInput: s = \"()\"\nOutput: true\n```\n\n**Example 2:**\n```\nInput: s = \"()[]{}\"\nOutput: true\n```\n\n**Example 3:**\n```\nInput: s = \"(]\"\nOutput: false\n```\n\n**Constraints:**\n- `1 <= s.length <= 10^4`\n- `s` consists of parentheses only `'()[]{}'`.",
     "difficulty": "Easy",
     "topic": "Stack",
     "category": "DSA",
@@ -592,7 +592,7 @@
   },
   {
     "title": "Min Stack",
-    "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
+    "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.\n\nImplement the `MinStack` class:\n- `MinStack()` initializes the stack object.\n- `void push(int val)` pushes the element `val` onto the stack.\n- `void pop()` removes the element on the top of the stack.\n- `int top()` gets the top element of the stack.\n- `int getMin()` retrieves the minimum element in the stack.\n\nYou must implement a solution with `O(1)` time complexity for each function.\n\n**Example 1:**\n```\nInput: [\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"]\n       [[],[-2],[0],[-3],[],[],[],[]]\nOutput: [null,null,null,null,-3,null,0,-2]\n```\n\n**Constraints:**\n- `-2^31 <= val <= 2^31 - 1`\n- Methods `pop`, `top` and `getMin` operations will always be called on **non-empty** stacks.\n- At most `3 * 10^4` calls will be made to `push`, `pop`, `top`, and `getMin`.",
     "difficulty": "Medium",
     "topic": "Stack",
     "category": "DSA",
@@ -614,7 +614,7 @@
   },
   {
     "title": "Daily Temperatures",
-    "description": "Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature.",
+    "description": "Given an array of integers `temperatures` represents the daily temperatures, return *an array* `answer` *such that* `answer[i]` *is the number of days you have to wait after the* `i-th` *day to get a warmer temperature*. If there is no future day for which this is possible, keep `answer[i] == 0` instead.\n\n**Example 1:**\n```\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\n```\n\n**Example 2:**\n```\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\n```\n\n**Example 3:**\n```\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n```\n\n**Constraints:**\n- `1 <= temperatures.length <= 10^5`\n- `30 <= temperatures[i] <= 100`",
     "difficulty": "Medium",
     "topic": "Stack",
     "category": "DSA",
@@ -636,7 +636,7 @@
   },
   {
     "title": "Largest Rectangle in Histogram",
-    "description": "Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.",
+    "description": "Given an array of integers `heights` representing the histogram's bar height where the width of each bar is `1`, return *the area of the largest rectangle in the histogram*.\n\n**Example 1:**\n```\nInput: heights = [2,1,5,6,2,3]\nOutput: 10\nExplanation: The largest rectangle has an area of 10 units (formed by heights[2] and heights[3]).\n```\n\n**Example 2:**\n```\nInput: heights = [2,4]\nOutput: 4\n```\n\n**Constraints:**\n- `1 <= heights.length <= 10^5`\n- `0 <= heights[i] <= 10^4`",
     "difficulty": "Hard",
     "topic": "Stack",
     "category": "DSA",
@@ -658,7 +658,7 @@
   },
   {
     "title": "Implement Queue using Stacks",
-    "description": "Implement a first in first out (FIFO) queue using only two stacks.",
+    "description": "Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (`push`, `peek`, `pop`, and `empty`).\n\nImplement the `MyQueue` class:\n- `void push(int x)` Pushes element x to the back of the queue.\n- `int pop()` Removes the element from the front of the queue and returns it.\n- `int peek()` Returns the element at the front of the queue.\n- `boolean empty()` Returns `true` if the queue is empty, `false` otherwise.\n\n**Example 1:**\n```\nInput: [\"MyQueue\",\"push\",\"push\",\"peek\",\"pop\",\"empty\"]\n       [[],[1],[2],[],[],[]]\nOutput: [null,null,null,1,1,false]\n```\n\n**Constraints:**\n- `1 <= x <= 9`\n- At most `100` calls will be made to `push`, `pop`, `peek`, and `empty`.\n- All the calls to `pop` and `peek` are valid.",
     "difficulty": "Easy",
     "topic": "Queue",
     "category": "DSA",
@@ -680,7 +680,7 @@
   },
   {
     "title": "Sliding Window Maximum",
-    "description": "Given an array nums and a sliding window of size k moving from left to right, return the maximum for each window position.",
+    "description": "You are given an array of integers `nums`, there is a sliding window of size `k` which is moving from the very left of the array to the very right. You can only see the `k` numbers in the window. Each time the sliding window moves right by one position.\n\nReturn *the max sliding window*.\n\n**Example 1:**\n```\nInput: nums = [1,3,-1,-3,5,3,6,7], k = 3\nOutput: [3,3,5,5,6,7]\nExplanation:\nWindow position                Max\n---------------               -----\n[1  3  -1] -3  5  3  6  7       3\n 1 [3  -1  -3] 5  3  6  7       3\n 1  3 [-1  -3  5] 3  6  7       5\n 1  3  -1 [-3  5  3] 6  7       5\n 1  3  -1  -3 [5  3  6] 7       6\n 1  3  -1  -3  5 [3  6  7]      7\n```\n\n**Example 2:**\n```\nInput: nums = [1], k = 1\nOutput: [1]\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10^5`\n- `-10^4 <= nums[i] <= 10^4`\n- `1 <= k <= nums.length`",
     "difficulty": "Hard",
     "topic": "Queue",
     "category": "DSA",
@@ -702,7 +702,7 @@
   },
   {
     "title": "Binary Tree Inorder Traversal",
-    "description": "Given the root of a binary tree, return the inorder traversal of its nodes' values.",
+    "description": "Given the `root` of a binary tree, return *the inorder traversal of its nodes' values*.\n\n**Example 1:**\n```\nInput: root = [1,null,2,3]\nOutput: [1,3,2]\n```\n\n**Example 2:**\n```\nInput: root = []\nOutput: []\n```\n\n**Example 3:**\n```\nInput: root = [1]\nOutput: [1]\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[0, 100]`.\n- `-100 <= Node.val <= 100`\n\n**Follow up:** Recursive solution is trivial, could you do it iteratively?",
     "difficulty": "Easy",
     "topic": "Trees",
     "category": "DSA",
@@ -725,7 +725,7 @@
   },
   {
     "title": "Binary Tree Level Order Traversal",
-    "description": "Given the root of a binary tree, return the level order traversal of its nodes' values.",
+    "description": "Given the `root` of a binary tree, return *the level order traversal of its nodes' values*. (i.e., from left to right, level by level).\n\n**Example 1:**\n```\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[9,20],[15,7]]\n```\n\n**Example 2:**\n```\nInput: root = [1]\nOutput: [[1]]\n```\n\n**Example 3:**\n```\nInput: root = []\nOutput: []\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-1000 <= Node.val <= 1000`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -748,7 +748,7 @@
   },
   {
     "title": "Maximum Depth of Binary Tree",
-    "description": "Given the root of a binary tree, return its maximum depth.",
+    "description": "Given the `root` of a binary tree, return *its maximum depth*.\n\nA binary tree's **maximum depth** is the number of nodes along the longest path from the root node down to the farthest leaf node.\n\n**Example 1:**\n```\nInput: root = [3,9,20,null,null,15,7]\nOutput: 3\n```\n\n**Example 2:**\n```\nInput: root = [1,null,2]\nOutput: 2\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[0, 10^4]`.\n- `-100 <= Node.val <= 100`",
     "difficulty": "Easy",
     "topic": "Trees",
     "category": "DSA",
@@ -771,7 +771,7 @@
   },
   {
     "title": "Symmetric Tree",
-    "description": "Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).",
+    "description": "Given the `root` of a binary tree, *check whether it is a mirror of itself* (i.e., symmetric around its center).\n\n**Example 1:**\n```\nInput: root = [1,2,2,3,4,4,3]\nOutput: true\n```\n\n**Example 2:**\n```\nInput: root = [1,2,2,null,3,null,3]\nOutput: false\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[1, 1000]`.\n- `-100 <= Node.val <= 100`\n\n**Follow up:** Could you solve it both recursively and iteratively?",
     "difficulty": "Easy",
     "topic": "Trees",
     "category": "DSA",
@@ -794,7 +794,7 @@
   },
   {
     "title": "Binary Tree Right Side View",
-    "description": "Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.",
+    "description": "Given the `root` of a binary tree, imagine yourself standing on the **right side** of it, return *the values of the nodes you can see ordered from top to bottom*.\n\n**Example 1:**\n```\nInput: root = [1,2,3,null,5,null,4]\nOutput: [1,3,4]\n```\n\n**Example 2:**\n```\nInput: root = [1,null,3]\nOutput: [1,3]\n```\n\n**Example 3:**\n```\nInput: root = []\nOutput: []\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[0, 100]`.\n- `-100 <= Node.val <= 100`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -817,7 +817,7 @@
   },
   {
     "title": "Construct Binary Tree from Preorder and Inorder Traversal",
-    "description": "Given two integer arrays preorder and inorder, construct and return the binary tree.",
+    "description": "Given two integer arrays `preorder` and `inorder` where `preorder` is the preorder traversal of a binary tree and `inorder` is the inorder traversal of the same tree, construct and return *the binary tree*.\n\n**Example 1:**\n```\nInput: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]\nOutput: [3,9,20,null,null,15,7]\n```\n\n**Example 2:**\n```\nInput: preorder = [-1], inorder = [-1]\nOutput: [-1]\n```\n\n**Constraints:**\n- `1 <= preorder.length <= 3000`\n- `inorder.length == preorder.length`\n- `-3000 <= preorder[i], inorder[i] <= 3000`\n- `preorder` and `inorder` consist of **unique** values.\n- Each value of `inorder` also appears in `preorder`.\n- `preorder` is **guaranteed** to be the preorder traversal of the tree.\n- `inorder` is **guaranteed** to be the inorder traversal of the tree.",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -840,7 +840,7 @@
   },
   {
     "title": "Binary Tree Zigzag Level Order Traversal",
-    "description": "Given the root of a binary tree, return the zigzag level order traversal of its nodes' values.",
+    "description": "Given the `root` of a binary tree, return *the zigzag level order traversal of its nodes' values*. (i.e., from left to right, then right to left for the next level and alternate between).\n\n**Example 1:**\n```\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[20,9],[15,7]]\n```\n\n**Example 2:**\n```\nInput: root = [1]\nOutput: [[1]]\n```\n\n**Example 3:**\n```\nInput: root = []\nOutput: []\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-100 <= Node.val <= 100`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -863,7 +863,7 @@
   },
   {
     "title": "Path Sum",
-    "description": "Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.",
+    "description": "Given the `root` of a binary tree and an integer `targetSum`, return `true` if the tree has a **root-to-leaf** path such that adding up all the values along the path equals `targetSum`.\n\nA **leaf** is a node with no children.\n\n**Example 1:**\n```\nInput: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22\nOutput: true\nExplanation: The root-to-leaf path with the target sum is 5 -> 4 -> 11 -> 2.\n```\n\n**Example 2:**\n```\nInput: root = [1,2,3], targetSum = 5\nOutput: false\n```\n\n**Example 3:**\n```\nInput: root = [], targetSum = 0\nOutput: false\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[0, 5000]`.\n- `-1000 <= Node.val <= 1000`\n- `-1000 <= targetSum <= 1000`",
     "difficulty": "Easy",
     "topic": "Trees",
     "category": "DSA",
@@ -886,7 +886,7 @@
   },
   {
     "title": "Diameter of Binary Tree",
-    "description": "Given the root of a binary tree, return the length of the diameter of the tree. The diameter is the length of the longest path between any two nodes.",
+    "description": "Given the `root` of a binary tree, return *the length of the **diameter** of the tree*.\n\nThe **diameter** of a binary tree is the **length** of the longest path between any two nodes in a tree. This path may or may not pass through the `root`.\n\nThe length of a path between two nodes is represented by the number of edges between them.\n\n**Example 1:**\n```\nInput: root = [1,2,3,4,5]\nOutput: 3\nExplanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].\n```\n\n**Example 2:**\n```\nInput: root = [1,2]\nOutput: 1\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[1, 10^4]`.\n- `-100 <= Node.val <= 100`",
     "difficulty": "Easy",
     "topic": "Trees",
     "category": "DSA",
@@ -909,7 +909,7 @@
   },
   {
     "title": "Lowest Common Ancestor of a Binary Tree",
-    "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.",
+    "description": "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.\n\nAccording to the definition of LCA on Wikipedia: \"The lowest common ancestor is defined between two nodes `p` and `q` as the lowest node in `T` that has both `p` and `q` as descendants (where we allow **a node to be a descendant of itself**).\"\n\n**Example 1:**\n```\nInput: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1\nOutput: 3\nExplanation: The LCA of nodes 5 and 1 is 3.\n```\n\n**Example 2:**\n```\nInput: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4\nOutput: 5\nExplanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself.\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[2, 10^5]`.\n- `-10^9 <= Node.val <= 10^9`\n- All `Node.val` are **unique**.\n- `p != q`\n- `p` and `q` will exist in the tree.",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -932,7 +932,7 @@
   },
   {
     "title": "Validate Binary Search Tree",
-    "description": "Given the root of a binary tree, determine if it is a valid binary search tree (BST).",
+    "description": "Given the `root` of a binary tree, *determine if it is a valid binary search tree (BST)*.\n\nA **valid BST** is defined as follows:\n- The left subtree of a node contains only nodes with keys **less than** the node's key.\n- The right subtree of a node contains only nodes with keys **greater than** the node's key.\n- Both the left and right subtrees must also be binary search trees.\n\n**Example 1:**\n```\nInput: root = [2,1,3]\nOutput: true\n```\n\n**Example 2:**\n```\nInput: root = [5,1,4,null,null,3,6]\nOutput: false\nExplanation: The root node's value is 5 but its right child's value is 4.\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[1, 10^4]`.\n- `-2^31 <= Node.val <= 2^31 - 1`",
     "difficulty": "Medium",
     "topic": "BST",
     "category": "DSA",
@@ -954,7 +954,7 @@
   },
   {
     "title": "Kth Smallest Element in a BST",
-    "description": "Given the root of a binary search tree, and an integer k, return the kth smallest value of all the values of the nodes in the tree.",
+    "description": "Given the `root` of a binary search tree, and an integer `k`, return *the* `k-th` *smallest value (**1-indexed**) of all the values of the nodes in the tree*.\n\n**Example 1:**\n```\nInput: root = [3,1,4,null,2], k = 1\nOutput: 1\n```\n\n**Example 2:**\n```\nInput: root = [5,3,6,2,4,null,null,1], k = 3\nOutput: 3\n```\n\n**Constraints:**\n- The number of nodes in the tree is `n`.\n- `1 <= k <= n <= 10^4`\n- `0 <= Node.val <= 10^4`\n\n**Follow up:** If the BST is modified often (i.e., we can do insert and delete operations) and you need to find the kth smallest frequently, how would you optimize?",
     "difficulty": "Medium",
     "topic": "BST",
     "category": "DSA",
@@ -976,7 +976,7 @@
   },
   {
     "title": "Convert Sorted Array to Binary Search Tree",
-    "description": "Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.",
+    "description": "Given an integer array `nums` where the elements are sorted in **ascending order**, convert *it to a **height-balanced** binary search tree*.\n\n**Example 1:**\n```\nInput: nums = [-10,-3,0,5,9]\nOutput: [0,-3,9,-10,null,5]\nExplanation: [0,-10,5,null,-3,null,9] is also accepted.\n```\n\n**Example 2:**\n```\nInput: nums = [1,3]\nOutput: [3,1]\nExplanation: [1,null,3] and [3,1] are both height-balanced BSTs.\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10^4`\n- `-10^4 <= nums[i] <= 10^4`\n- `nums` is sorted in a **strictly increasing** order.",
     "difficulty": "Easy",
     "topic": "BST",
     "category": "DSA",
@@ -998,7 +998,7 @@
   },
   {
     "title": "Top K Frequent Elements",
-    "description": "Given an integer array nums and an integer k, return the k most frequent elements.",
+    "description": "Given an integer array `nums` and an integer `k`, return *the* `k` *most frequent elements*. You may return the answer in **any order**.\n\n**Example 1:**\n```\nInput: nums = [1,1,1,2,2,3], k = 2\nOutput: [1,2]\n```\n\n**Example 2:**\n```\nInput: nums = [1], k = 1\nOutput: [1]\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10^5`\n- `-10^4 <= nums[i] <= 10^4`\n- `k` is in the range `[1, the number of unique elements in the array]`.\n- It is **guaranteed** that the answer is **unique**.\n\n**Follow up:** Your algorithm's time complexity must be better than `O(n log n)`, where n is the array's size.",
     "difficulty": "Medium",
     "topic": "Heap",
     "category": "DSA",
@@ -1020,7 +1020,7 @@
   },
   {
     "title": "Kth Largest Element in an Array",
-    "description": "Given an integer array nums and an integer k, return the kth largest element in the array.",
+    "description": "Given an integer array `nums` and an integer `k`, return *the* `k-th` *largest element in the array*.\n\nNote that it is the `k-th` largest element in the sorted order, not the `k-th` distinct element.\n\nCan you solve it without sorting?\n\n**Example 1:**\n```\nInput: nums = [3,2,1,5,6,4], k = 2\nOutput: 5\n```\n\n**Example 2:**\n```\nInput: nums = [3,2,3,1,2,4,5,5,6], k = 4\nOutput: 4\n```\n\n**Constraints:**\n- `1 <= k <= nums.length <= 10^5`\n- `-10^4 <= nums[i] <= 10^4`",
     "difficulty": "Medium",
     "topic": "Heap",
     "category": "DSA",
@@ -1042,7 +1042,7 @@
   },
   {
     "title": "Merge K Sorted Lists",
-    "description": "You are given an array of k linked-lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list.",
+    "description": "You are given an array of `k` linked-lists `lists`, each linked-list is sorted in ascending order.\n\n*Merge all the linked-lists into one sorted linked-list and return it.*\n\n**Example 1:**\n```\nInput: lists = [[1,4,5],[1,3,4],[2,6]]\nOutput: [1,1,2,3,4,4,5,6]\nExplanation: The linked-lists are:\n[1->4->5, 1->3->4, 2->6]\nmerging them into one sorted list: 1->1->2->3->4->4->5->6\n```\n\n**Example 2:**\n```\nInput: lists = []\nOutput: []\n```\n\n**Constraints:**\n- `k == lists.length`\n- `0 <= k <= 10^4`\n- `0 <= lists[i].length <= 500`\n- `-10^4 <= lists[i][j] <= 10^4`\n- `lists[i]` is sorted in **ascending order**.\n- The sum of `lists[i].length` will not exceed `10^4`.",
     "difficulty": "Hard",
     "topic": "Heap",
     "category": "DSA",
@@ -1064,7 +1064,7 @@
   },
   {
     "title": "Find Median from Data Stream",
-    "description": "Design a data structure that supports adding integers and finding the median efficiently.",
+    "description": "The **median** is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.\n\nImplement the `MedianFinder` class:\n- `MedianFinder()` initializes the `MedianFinder` object.\n- `void addNum(int num)` adds the integer `num` from the data stream to the data structure.\n- `double findMedian()` returns the median of all elements so far.\n\n**Example 1:**\n```\nInput: [\"MedianFinder\",\"addNum\",\"addNum\",\"findMedian\",\"addNum\",\"findMedian\"]\n       [[],[1],[2],[],[3],[]]\nOutput: [null,null,null,1.5,null,2.0]\n```\n\n**Constraints:**\n- `-10^5 <= num <= 10^5`\n- There will be at least one element in the data structure before calling `findMedian`.\n- At most `5 * 10^4` calls will be made to `addNum` and `findMedian`.\n\n**Follow up:** If all integer numbers from the stream are in the range `[0, 100]`, how would you optimize your solution?",
     "difficulty": "Hard",
     "topic": "Heap",
     "category": "DSA",
@@ -1086,7 +1086,7 @@
   },
   {
     "title": "Number of Islands",
-    "description": "Given an m x n 2D binary grid which represents a map of '1's (land) and '0's (water), return the number of islands.",
+    "description": "Given an `m x n` 2D binary grid `grid` which represents a map of `'1'`s (land) and `'0'`s (water), return *the number of islands*.\n\nAn **island** is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n**Example 1:**\n```\nInput: grid = [\n  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\nOutput: 1\n```\n\n**Example 2:**\n```\nInput: grid = [\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\nOutput: 3\n```\n\n**Constraints:**\n- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 300`\n- `grid[i][j]` is `'0'` or `'1'`.",
     "difficulty": "Medium",
     "topic": "Graph",
     "category": "DSA",
@@ -1109,7 +1109,7 @@
   },
   {
     "title": "Clone Graph",
-    "description": "Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph.",
+    "description": "Given a reference of a node in a **connected** undirected graph. Return a **deep copy** (clone) of the graph.\n\nEach node in the graph contains a value (`int`) and a list (`List[Node]`) of its neighbors.\n\n**Example 1:**\n```\nInput: adjList = [[2,4],[1,3],[2,4],[1,3]]\nOutput: [[2,4],[1,3],[2,4],[1,3]]\nExplanation: There are 4 nodes in the graph. Node 1's neighbors are Node 2 and Node 4. Node 2's neighbors are Node 1 and Node 3, etc.\n```\n\n**Example 2:**\n```\nInput: adjList = [[]]\nOutput: [[]]\nExplanation: The graph consists of 1 node with no neighbors.\n```\n\n**Constraints:**\n- The number of nodes in the graph is in the range `[0, 100]`.\n- `1 <= Node.val <= 100`\n- `Node.val` is unique for each node.\n- There are no repeated edges and no self-loops in the graph.",
     "difficulty": "Medium",
     "topic": "Graph",
     "category": "DSA",
@@ -1132,7 +1132,7 @@
   },
   {
     "title": "Course Schedule",
-    "description": "There are numCourses courses. You are given an array prerequisites. Determine if it is possible to finish all courses.",
+    "description": "There are a total of `numCourses` courses you have to take, labeled from `0` to `numCourses - 1`. You are given an array `prerequisites` where `prerequisites[i] = [a_i, b_i]` indicates that you **must** take course `b_i` first if you want to take course `a_i`.\n\nReturn `true` if you can finish all courses. Otherwise, return `false`.\n\n**Example 1:**\n```\nInput: numCourses = 2, prerequisites = [[1,0]]\nOutput: true\nExplanation: There are 2 courses to take. To take course 1 you should have finished course 0. So it is possible.\n```\n\n**Example 2:**\n```\nInput: numCourses = 2, prerequisites = [[1,0],[0,1]]\nOutput: false\nExplanation: There are 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.\n```\n\n**Constraints:**\n- `1 <= numCourses <= 2000`\n- `0 <= prerequisites.length <= 5000`\n- `prerequisites[i].length == 2`\n- `0 <= a_i, b_i < numCourses`\n- All the pairs `prerequisites[i]` are **unique**.",
     "difficulty": "Medium",
     "topic": "Graph",
     "category": "DSA",
@@ -1155,7 +1155,7 @@
   },
   {
     "title": "Word Search",
-    "description": "Given an m x n grid of characters and a string word, return true if word exists in the grid. The word can be constructed from letters of sequentially adjacent cells.",
+    "description": "Given an `m x n` grid of characters `board` and a string `word`, return `true` *if* `word` *exists in the grid*.\n\nThe word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.\n\n**Example 1:**\n```\nInput: board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCCED\"\nOutput: true\n```\n\n**Example 2:**\n```\nInput: board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"SEE\"\nOutput: true\n```\n\n**Example 3:**\n```\nInput: board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCB\"\nOutput: false\n```\n\n**Constraints:**\n- `m == board.length`\n- `n == board[i].length`\n- `1 <= m, n <= 6`\n- `1 <= word.length <= 15`\n- `board` and `word` consists of only lowercase and uppercase English letters.",
     "difficulty": "Medium",
     "topic": "Graph",
     "category": "DSA",
@@ -1178,7 +1178,7 @@
   },
   {
     "title": "Rotting Oranges",
-    "description": "Given a grid where 0 is empty, 1 is fresh orange, and 2 is rotten, return the minimum number of minutes until no fresh orange remains.",
+    "description": "You are given an `m x n` `grid` where each cell can have one of three values:\n- `0` representing an empty cell,\n- `1` representing a fresh orange, or\n- `2` representing a rotten orange.\n\nEvery minute, any fresh orange that is **4-directionally adjacent** to a rotten orange becomes rotten.\n\nReturn *the minimum number of minutes that must elapse until no cell has a fresh orange*. If this is impossible, return `-1`.\n\n**Example 1:**\n```\nInput: grid = [[2,1,1],[1,1,0],[0,1,1]]\nOutput: 4\n```\n\n**Example 2:**\n```\nInput: grid = [[2,1,1],[0,1,1],[1,0,1]]\nOutput: -1\nExplanation: The orange in the bottom left corner (row 2, column 0) is never rotten.\n```\n\n**Example 3:**\n```\nInput: grid = [[0,2]]\nOutput: 0\nExplanation: Since there are no fresh oranges at minute 0, the answer is 0.\n```\n\n**Constraints:**\n- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 10`\n- `grid[i][j]` is `0`, `1`, or `2`.",
     "difficulty": "Medium",
     "topic": "Graph",
     "category": "DSA",
@@ -1201,7 +1201,7 @@
   },
   {
     "title": "Dijkstra's Shortest Path",
-    "description": "Implement Dijkstra's algorithm to find the shortest path from a source to all other vertices in a weighted graph.",
+    "description": "Given a weighted directed graph with `V` vertices and `E` edges, and a source vertex `src`, find the shortest distance from `src` to all vertices using **Dijkstra's algorithm**. The graph doesn't contain any negative weight edges.\n\n**Example 1:**\n```\nInput: V = 3, E = 3, edges = [[0,1,1],[0,2,6],[1,2,3]], src = 0\nOutput: [0,1,4]\nExplanation: Shortest distance from 0 to 0 is 0, from 0 to 1 is 1, from 0 to 2 is 4 (0->1->2).\n```\n\n**Example 2:**\n```\nInput: V = 2, E = 1, edges = [[0,1,9]], src = 0\nOutput: [0,9]\n```\n\n**Constraints:**\n- `1 <= V <= 1000`\n- `1 <= E <= V*(V-1)/2`\n- `0 <= weight <= 10^4`",
     "difficulty": "Medium",
     "topic": "Graph",
     "category": "DSA",
@@ -1224,7 +1224,7 @@
   },
   {
     "title": "Climbing Stairs",
-    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "description": "You are climbing a staircase. It takes `n` steps to reach the top.\n\nEach time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?\n\n**Example 1:**\n```\nInput: n = 2\nOutput: 2\nExplanation: There are two ways to climb to the top.\n1. 1 step + 1 step\n2. 2 steps\n```\n\n**Example 2:**\n```\nInput: n = 3\nOutput: 3\nExplanation: There are three ways to climb to the top.\n1. 1 step + 1 step + 1 step\n2. 1 step + 2 steps\n3. 2 steps + 1 step\n```\n\n**Constraints:**\n- `1 <= n <= 45`",
     "difficulty": "Easy",
     "topic": "DP",
     "category": "DSA",
@@ -1247,7 +1247,7 @@
   },
   {
     "title": "House Robber",
-    "description": "Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob without robbing two adjacent houses.",
+    "description": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and **it will automatically contact the police if two adjacent houses were broken into on the same night**.\n\nGiven an integer array `nums` representing the amount of money of each house, return *the maximum amount of money you can rob tonight **without alerting the police***.\n\n**Example 1:**\n```\nInput: nums = [1,2,3,1]\nOutput: 4\nExplanation: Rob house 1 (money = 1) and then rob house 3 (money = 3). Total amount = 1 + 3 = 4.\n```\n\n**Example 2:**\n```\nInput: nums = [2,7,9,3,1]\nOutput: 12\nExplanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1). Total amount = 2 + 9 + 1 = 12.\n```\n\n**Constraints:**\n- `1 <= nums.length <= 100`\n- `0 <= nums[i] <= 400`",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1270,7 +1270,7 @@
   },
   {
     "title": "House Robber II",
-    "description": "All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one.",
+    "description": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are **arranged in a circle**. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and **it will automatically contact the police if two adjacent houses were broken into on the same night**.\n\nGiven an integer array `nums` representing the amount of money of each house, return *the maximum amount of money you can rob tonight **without alerting the police***.\n\n**Example 1:**\n```\nInput: nums = [2,3,2]\nOutput: 3\nExplanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses.\n```\n\n**Example 2:**\n```\nInput: nums = [1,2,3,1]\nOutput: 4\nExplanation: Rob house 1 (money = 1) and then rob house 3 (money = 3). Total amount = 1 + 3 = 4.\n```\n\n**Example 3:**\n```\nInput: nums = [1,2,3]\nOutput: 3\n```\n\n**Constraints:**\n- `1 <= nums.length <= 100`\n- `0 <= nums[i] <= 1000`",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1293,7 +1293,7 @@
   },
   {
     "title": "Coin Change",
-    "description": "Given coins of different denominations and a total amount, return the fewest number of coins needed to make up that amount.",
+    "description": "You are given an integer array `coins` representing coins of different denominations and an integer `amount` representing a total amount of money.\n\nReturn *the fewest number of coins that you need to make up that amount*. If that amount of money cannot be made up by any combination of the coins, return `-1`.\n\nYou may assume that you have an infinite number of each kind of coin.\n\n**Example 1:**\n```\nInput: coins = [1,5,10,25], amount = 11\nOutput: 3\nExplanation: 11 = 5 + 5 + 1\n```\n\n**Example 2:**\n```\nInput: coins = [2], amount = 3\nOutput: -1\n```\n\n**Example 3:**\n```\nInput: coins = [1], amount = 0\nOutput: 0\n```\n\n**Constraints:**\n- `1 <= coins.length <= 12`\n- `1 <= coins[i] <= 2^31 - 1`\n- `0 <= amount <= 10^4`",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1316,7 +1316,7 @@
   },
   {
     "title": "Longest Common Subsequence",
-    "description": "Given two strings text1 and text2, return the length of their longest common subsequence.",
+    "description": "Given two strings `text1` and `text2`, return *the length of their longest common subsequence*. If there is no common subsequence, return `0`.\n\nA **subsequence** of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.\n\n**Example 1:**\n```\nInput: text1 = \"abcde\", text2 = \"ace\"\nOutput: 3\nExplanation: The longest common subsequence is \"ace\" and its length is 3.\n```\n\n**Example 2:**\n```\nInput: text1 = \"abc\", text2 = \"abc\"\nOutput: 3\nExplanation: The longest common subsequence is \"abc\" and its length is 3.\n```\n\n**Example 3:**\n```\nInput: text1 = \"abc\", text2 = \"def\"\nOutput: 0\nExplanation: There is no such common subsequence, so the result is 0.\n```\n\n**Constraints:**\n- `1 <= text1.length, text2.length <= 1000`\n- `text1` and `text2` consist of only lowercase English characters.",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1339,7 +1339,7 @@
   },
   {
     "title": "Word Break",
-    "description": "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.",
+    "description": "Given a string `s` and a dictionary of strings `wordDict`, return `true` if `s` can be segmented into a space-separated sequence of one or more dictionary words.\n\n**Note** that the same word in the dictionary may be reused multiple times in the segmentation.\n\n**Example 1:**\n```\nInput: s = \"leetcode\", wordDict = [\"leet\",\"code\"]\nOutput: true\nExplanation: Return true because \"leetcode\" can be segmented as \"leet code\".\n```\n\n**Example 2:**\n```\nInput: s = \"applepenapple\", wordDict = [\"apple\",\"pen\"]\nOutput: true\nExplanation: Return true because \"applepenapple\" can be segmented as \"apple pen apple\". Note that you are allowed to reuse a dictionary word.\n```\n\n**Example 3:**\n```\nInput: s = \"catsandog\", wordDict = [\"cats\",\"dog\",\"sand\",\"and\",\"cat\"]\nOutput: false\n```\n\n**Constraints:**\n- `1 <= s.length <= 300`\n- `1 <= wordDict.length <= 1000`\n- `1 <= wordDict[i].length <= 20`\n- `s` and `wordDict[i]` consist of only lowercase English letters.\n- All the strings of `wordDict` are **unique**.",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1362,7 +1362,7 @@
   },
   {
     "title": "Decode Ways",
-    "description": "A message containing letters from A-Z can be encoded using the mapping A=1, B=2, ..., Z=26. Given a string s of digits, return the number of ways to decode it.",
+    "description": "A message containing letters from `A-Z` can be **encoded** into numbers using the following mapping:\n```\n'A' -> \"1\"\n'B' -> \"2\"\n...\n'Z' -> \"26\"\n```\n\nTo **decode** an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways).\n\nGiven a string `s` containing only digits, return *the number of ways to **decode** it*.\n\n**Example 1:**\n```\nInput: s = \"12\"\nOutput: 2\nExplanation: \"12\" could be decoded as \"AB\" (1 2) or \"L\" (12).\n```\n\n**Example 2:**\n```\nInput: s = \"226\"\nOutput: 3\nExplanation: \"226\" could be decoded as \"BZ\" (2 26), \"VF\" (22 6), or \"BBF\" (2 2 6).\n```\n\n**Example 3:**\n```\nInput: s = \"06\"\nOutput: 0\nExplanation: \"06\" cannot be mapped to \"F\" because of the leading zero.\n```\n\n**Constraints:**\n- `1 <= s.length <= 100`\n- `s` contains only digits and may contain leading zero(s).",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1385,7 +1385,7 @@
   },
   {
     "title": "Partition Equal Subset Sum",
-    "description": "Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal.",
+    "description": "Given an integer array `nums`, return `true` *if you can partition the array into two subsets such that the sum of the elements in both subsets is equal* or `false` *otherwise*.\n\n**Example 1:**\n```\nInput: nums = [1,5,11,5]\nOutput: true\nExplanation: The array can be partitioned as [1, 5, 5] and [11].\n```\n\n**Example 2:**\n```\nInput: nums = [1,2,3,5]\nOutput: false\nExplanation: The array cannot be partitioned into equal sum subsets.\n```\n\n**Constraints:**\n- `1 <= nums.length <= 200`\n- `1 <= nums[i] <= 100`",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1408,7 +1408,7 @@
   },
   {
     "title": "Longest Increasing Subsequence",
-    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "description": "Given an integer array `nums`, return *the length of the longest **strictly increasing subsequence***.\n\n**Example 1:**\n```\nInput: nums = [10,9,2,5,3,7,101,18]\nOutput: 4\nExplanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.\n```\n\n**Example 2:**\n```\nInput: nums = [0,1,0,3,2,3]\nOutput: 4\n```\n\n**Example 3:**\n```\nInput: nums = [7,7,7,7,7,7,7]\nOutput: 1\n```\n\n**Constraints:**\n- `1 <= nums.length <= 2500`\n- `-10^4 <= nums[i] <= 10^4`\n\n**Follow up:** Can you come up with an algorithm that runs in `O(n log(n))` time complexity?",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1431,7 +1431,7 @@
   },
   {
     "title": "Edit Distance",
-    "description": "Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2 (insert, delete, replace).",
+    "description": "Given two strings `word1` and `word2`, return *the minimum number of operations required to convert* `word1` *to* `word2`.\n\nYou have the following three operations permitted on a word:\n- Insert a character\n- Delete a character\n- Replace a character\n\n**Example 1:**\n```\nInput: word1 = \"horse\", word2 = \"ros\"\nOutput: 3\nExplanation:\nhorse -> rorse (replace 'h' with 'r')\nrorse -> rose (remove 'r')\nrose -> ros (remove 'e')\n```\n\n**Example 2:**\n```\nInput: word1 = \"intention\", word2 = \"execution\"\nOutput: 5\nExplanation:\nintention -> inention (remove 't')\ninention -> enention (replace 'i' with 'e')\nenention -> exention (replace 'n' with 'x')\nexention -> exection (replace 'n' with 'c')\nexection -> execution (insert 'u')\n```\n\n**Constraints:**\n- `0 <= word1.length, word2.length <= 500`\n- `word1` and `word2` consist of lowercase English letters.",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -1454,7 +1454,7 @@
   },
   {
     "title": "Activity Selection / Meeting Rooms",
-    "description": "Given an array of meeting time intervals, determine if a person could attend all meetings.",
+    "description": "Given an array of meeting time `intervals` where `intervals[i] = [start_i, end_i]`, determine if a person could attend all meetings.\n\n**Example 1:**\n```\nInput: intervals = [[0,30],[5,10],[15,20]]\nOutput: false\nExplanation: The meeting [0,30] overlaps with [5,10] and [15,20].\n```\n\n**Example 2:**\n```\nInput: intervals = [[7,10],[2,4]]\nOutput: true\nExplanation: No meetings overlap.\n```\n\n**Constraints:**\n- `0 <= intervals.length <= 10^4`\n- `intervals[i].length == 2`\n- `0 <= start_i < end_i <= 10^6`",
     "difficulty": "Easy",
     "topic": "Greedy",
     "category": "DSA",
@@ -1475,7 +1475,7 @@
   },
   {
     "title": "Gas Station",
-    "description": "There are n gas stations along a circular route. Return the starting station index if you can travel around the circuit once, otherwise return -1.",
+    "description": "There are `n` gas stations along a circular route, where the amount of gas at the `i-th` station is `gas[i]`.\n\nYou have a car with an unlimited gas tank and it costs `cost[i]` of gas to travel from the `i-th` station to its next `(i + 1)-th` station. You begin the journey with an empty tank at one of the gas stations.\n\nGiven two integer arrays `gas` and `cost`, return *the starting gas station's index if you can travel around the circuit once in the clockwise direction*, otherwise return `-1`. If there exists a solution, it is **guaranteed** to be **unique**.\n\n**Example 1:**\n```\nInput: gas = [1,2,3,4,5], cost = [3,4,5,1,2]\nOutput: 3\nExplanation: Start at station 3 (index 3) and fill up with 4 unit of gas. Your tank = 0 + 4 = 4. Travel to station 4. Your tank = 4 - 1 + 5 = 8. Travel to station 0. Your tank = 8 - 2 + 1 = 7. Travel to station 1. Your tank = 7 - 3 + 2 = 6. Travel to station 2. Your tank = 6 - 4 + 3 = 5. Travel to station 3. The cost is 5. Your gas is just enough to travel back to station 3. Therefore, return 3 as the starting index.\n```\n\n**Example 2:**\n```\nInput: gas = [2,3,4], cost = [3,4,3]\nOutput: -1\n```\n\n**Constraints:**\n- `n == gas.length == cost.length`\n- `1 <= n <= 10^5`\n- `0 <= gas[i], cost[i] <= 10^4`",
     "difficulty": "Medium",
     "topic": "Greedy",
     "category": "DSA",
@@ -1496,7 +1496,7 @@
   },
   {
     "title": "Subsets",
-    "description": "Given an integer array nums of unique elements, return all possible subsets (the power set).",
+    "description": "Given an integer array `nums` of **unique** elements, return *all possible subsets (the power set)*.\n\nThe solution set **must not** contain duplicate subsets. Return the solution in **any order**.\n\n**Example 1:**\n```\nInput: nums = [1,2,3]\nOutput: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]\n```\n\n**Example 2:**\n```\nInput: nums = [0]\nOutput: [[],[0]]\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10`\n- `-10 <= nums[i] <= 10`\n- All the numbers of `nums` are **unique**.",
     "difficulty": "Medium",
     "topic": "Recursion",
     "category": "DSA",
@@ -1518,7 +1518,7 @@
   },
   {
     "title": "Subsets II",
-    "description": "Given an integer array nums that may contain duplicates, return all possible subsets. The solution set must not contain duplicate subsets.",
+    "description": "Given an integer array `nums` that may contain duplicates, return *all possible subsets (the power set)*.\n\nThe solution set **must not** contain duplicate subsets. Return the solution in **any order**.\n\n**Example 1:**\n```\nInput: nums = [1,2,2]\nOutput: [[],[1],[1,2],[1,2,2],[2],[2,2]]\n```\n\n**Example 2:**\n```\nInput: nums = [0]\nOutput: [[],[0]]\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10`\n- `-10 <= nums[i] <= 10`",
     "difficulty": "Medium",
     "topic": "Backtracking",
     "category": "DSA",
@@ -1540,7 +1540,7 @@
   },
   {
     "title": "Permutations",
-    "description": "Given an array nums of distinct integers, return all the possible permutations.",
+    "description": "Given an array `nums` of distinct integers, return *all the possible permutations*. You can return the answer in **any order**.\n\n**Example 1:**\n```\nInput: nums = [1,2,3]\nOutput: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]\n```\n\n**Example 2:**\n```\nInput: nums = [0,1]\nOutput: [[0,1],[1,0]]\n```\n\n**Example 3:**\n```\nInput: nums = [1]\nOutput: [[1]]\n```\n\n**Constraints:**\n- `1 <= nums.length <= 6`\n- `-10 <= nums[i] <= 10`\n- All the integers of `nums` are **unique**.",
     "difficulty": "Medium",
     "topic": "Backtracking",
     "category": "DSA",
@@ -1562,7 +1562,7 @@
   },
   {
     "title": "N-Queens",
-    "description": "Place n queens on an n x n chessboard such that no two queens attack each other.",
+    "description": "The **n-queens** puzzle is the problem of placing `n` queens on an `n x n` chessboard such that no two queens attack each other.\n\nGiven an integer `n`, return *all distinct solutions to the **n-queens puzzle***. You may return the answer in **any order**.\n\nEach solution contains a distinct board configuration of the n-queens' placement, where `'Q'` and `'.'` both indicate a queen and an empty space, respectively.\n\n**Example 1:**\n```\nInput: n = 4\nOutput: [[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]]\nExplanation: There exist two distinct solutions to the 4-queens puzzle.\n```\n\n**Example 2:**\n```\nInput: n = 1\nOutput: [[\"Q\"]]\n```\n\n**Constraints:**\n- `1 <= n <= 9`",
     "difficulty": "Hard",
     "topic": "Backtracking",
     "category": "DSA",
@@ -1584,7 +1584,7 @@
   },
   {
     "title": "Implement Trie (Prefix Tree)",
-    "description": "A trie (pronounced as 'try') or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings.",
+    "description": "A **trie** (pronounced as \"try\") or **prefix tree** is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.\n\nImplement the Trie class:\n- `Trie()` Initializes the trie object.\n- `void insert(String word)` Inserts the string `word` into the trie.\n- `boolean search(String word)` Returns `true` if the string `word` is in the trie (i.e., was inserted before), and `false` otherwise.\n- `boolean startsWith(String prefix)` Returns `true` if there is a previously inserted string `word` that has the prefix `prefix`, and `false` otherwise.\n\n**Example 1:**\n```\nInput: [\"Trie\",\"insert\",\"search\",\"search\",\"startsWith\",\"insert\",\"search\"]\n       [[],[\"apple\"],[\"apple\"],[\"app\"],[\"app\"],[\"app\"],[\"app\"]]\nOutput: [null,null,true,false,true,null,true]\n```\n\n**Constraints:**\n- `1 <= word.length, prefix.length <= 2000`\n- `word` and `prefix` consist only of lowercase English letters.\n- At most `3 * 10^4` calls **in total** will be made to `insert`, `search`, and `startsWith`.",
     "difficulty": "Medium",
     "topic": "Trie",
     "category": "DSA",
@@ -1606,7 +1606,7 @@
   },
   {
     "title": "Single Number",
-    "description": "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.",
+    "description": "Given a **non-empty** array of integers `nums`, every element appears *twice* except for one. Find that single one.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.\n\n**Example 1:**\n```\nInput: nums = [2,2,1]\nOutput: 1\n```\n\n**Example 2:**\n```\nInput: nums = [4,1,2,1,2]\nOutput: 4\n```\n\n**Example 3:**\n```\nInput: nums = [1]\nOutput: 1\n```\n\n**Constraints:**\n- `1 <= nums.length <= 3 * 10^4`\n- `-3 * 10^4 <= nums[i] <= 3 * 10^4`\n- Each element in the array appears twice except for one element which appears only once.",
     "difficulty": "Easy",
     "topic": "Bit Manipulation",
     "category": "DSA",
@@ -1628,7 +1628,7 @@
   },
   {
     "title": "Counting Bits",
-    "description": "Given an integer n, return an array ans of length n + 1 such that ans[i] is the number of 1's in the binary representation of i.",
+    "description": "Given an integer `n`, return *an array* `ans` *of length* `n + 1` *such that for each* `i` (`0 <= i <= n`), `ans[i]` *is the **number of*** `1`***'s** in the binary representation of* `i`.\n\n**Example 1:**\n```\nInput: n = 2\nOutput: [0,1,1]\nExplanation:\n0 --> 0\n1 --> 1\n2 --> 10\n```\n\n**Example 2:**\n```\nInput: n = 5\nOutput: [0,1,1,2,1,2]\nExplanation:\n0 --> 0\n1 --> 1\n2 --> 10\n3 --> 11\n4 --> 100\n5 --> 101\n```\n\n**Constraints:**\n- `0 <= n <= 10^5`\n\n**Follow up:** Can you do it in `O(n)` time and `O(n)` space?",
     "difficulty": "Easy",
     "topic": "Bit Manipulation",
     "category": "DSA",
@@ -1650,7 +1650,7 @@
   },
   {
     "title": "Binary Search",
-    "description": "Given an array of integers nums sorted in ascending order, find the target value and return its index. If not found, return -1.",
+    "description": "Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return `-1`.\n\nYou must write an algorithm with `O(log n)` runtime complexity.\n\n**Example 1:**\n```\nInput: nums = [-1,0,3,5,9,12], target = 9\nOutput: 4\nExplanation: 9 exists in nums and its index is 4.\n```\n\n**Example 2:**\n```\nInput: nums = [-1,0,3,5,9,12], target = 2\nOutput: -1\nExplanation: 2 does not exist in nums so return -1.\n```\n\n**Constraints:**\n- `1 <= nums.length <= 10^4`\n- `-10^4 < nums[i], target < 10^4`\n- All the integers in `nums` are **unique**.\n- `nums` is sorted in ascending order.",
     "difficulty": "Easy",
     "topic": "Binary Search",
     "category": "DSA",
@@ -1673,7 +1673,7 @@
   },
   {
     "title": "Search in Rotated Sorted Array",
-    "description": "You are given an integer array nums sorted in ascending order (with distinct values) that is possibly rotated. Given a target, search for it.",
+    "description": "There is an integer array `nums` sorted in ascending order (with **distinct** values).\n\nPrior to being passed to your function, `nums` is **possibly rotated** at an unknown pivot index `k` (`1 <= k < nums.length`) such that the resulting array is `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]` (**0-indexed**).\n\nGiven the array `nums` **after** the possible rotation and an integer `target`, return *the index of* `target` *if it is in* `nums`, *or* `-1` *if it is not in* `nums`.\n\nYou must write an algorithm with `O(log n)` runtime complexity.\n\n**Example 1:**\n```\nInput: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4\n```\n\n**Example 2:**\n```\nInput: nums = [4,5,6,7,0,1,2], target = 3\nOutput: -1\n```\n\n**Example 3:**\n```\nInput: nums = [1], target = 0\nOutput: -1\n```\n\n**Constraints:**\n- `1 <= nums.length <= 5000`\n- `-10^4 <= nums[i] <= 10^4`\n- All values of `nums` are **unique**.\n- `nums` is an ascending array that is possibly rotated.\n- `-10^4 <= target <= 10^4`",
     "difficulty": "Medium",
     "topic": "Binary Search",
     "category": "DSA",
@@ -1696,7 +1696,7 @@
   },
   {
     "title": "Find Minimum in Rotated Sorted Array",
-    "description": "Given a sorted rotated array of unique elements, return the minimum element.",
+    "description": "Suppose an array of length `n` sorted in ascending order is **rotated** between `1` and `n` times. For example, the array `nums = [0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`.\n\nGiven the sorted rotated array `nums` of **unique** elements, return *the minimum element of this array*.\n\nYou must write an algorithm that runs in `O(log n)` time.\n\n**Example 1:**\n```\nInput: nums = [3,4,5,1,2]\nOutput: 1\nExplanation: The original array was [1,2,3,4,5] rotated 3 times.\n```\n\n**Example 2:**\n```\nInput: nums = [4,5,6,7,0,1,2]\nOutput: 0\nExplanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.\n```\n\n**Example 3:**\n```\nInput: nums = [11,13,15,17]\nOutput: 11\nExplanation: The original array was [11,13,15,17] and it was rotated 4 times.\n```\n\n**Constraints:**\n- `n == nums.length`\n- `1 <= n <= 5000`\n- `-5000 <= nums[i] <= 5000`\n- All the integers of `nums` are **unique**.\n- `nums` is sorted and rotated between `1` and `n` times.",
     "difficulty": "Medium",
     "topic": "Binary Search",
     "category": "DSA",
@@ -1719,7 +1719,7 @@
   },
   {
     "title": "Maximum Sum Subarray of Size K",
-    "description": "Given an array and an integer k, find the maximum sum of any contiguous subarray of size k.",
+    "description": "Given an array of positive integers `nums` and a positive integer `k`, find the maximum sum of any contiguous subarray of size `k`.\n\n**Example 1:**\n```\nInput: nums = [2,1,5,1,3,2], k = 3\nOutput: 9\nExplanation: Subarray with maximum sum is [5,1,3].\n```\n\n**Example 2:**\n```\nInput: nums = [2,3,4,1,5], k = 2\nOutput: 7\nExplanation: Subarray with maximum sum is [3,4].\n```\n\n**Constraints:**\n- `1 <= k <= nums.length <= 10^5`\n- `1 <= nums[i] <= 10^4`",
     "difficulty": "Easy",
     "topic": "Sliding Window",
     "category": "DSA",
@@ -1741,7 +1741,7 @@
   },
   {
     "title": "Minimum Size Subarray Sum",
-    "description": "Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target.",
+    "description": "Given an array of positive integers `nums` and a positive integer `target`, return *the **minimal length** of a subarray whose sum is greater than or equal to* `target`. If there is no such subarray, return `0` instead.\n\n**Example 1:**\n```\nInput: target = 7, nums = [2,3,1,2,4,3]\nOutput: 2\nExplanation: The subarray [4,3] has the minimal length under the problem constraint.\n```\n\n**Example 2:**\n```\nInput: target = 4, nums = [1,4,4]\nOutput: 1\n```\n\n**Example 3:**\n```\nInput: target = 11, nums = [1,1,1,1,1,1,1,1]\nOutput: 0\n```\n\n**Constraints:**\n- `1 <= target <= 10^9`\n- `1 <= nums.length <= 10^5`\n- `1 <= nums[i] <= 10^4`\n\n**Follow up:** If you have figured out the `O(n)` solution, try coding another solution of which the time complexity is `O(n log(n))`.",
     "difficulty": "Medium",
     "topic": "Sliding Window",
     "category": "DSA",
@@ -1763,7 +1763,7 @@
   },
   {
     "title": "LRU Cache",
-    "description": "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache. Implement get and put operations in O(1) time.",
+    "description": "Design a data structure that follows the constraints of a **Least Recently Used (LRU) cache**.\n\nImplement the `LRUCache` class:\n- `LRUCache(int capacity)` Initialize the LRU cache with **positive** size `capacity`.\n- `int get(int key)` Return the value of the `key` if the key exists, otherwise return `-1`.\n- `void put(int key, int value)` Update the value of the `key` if the `key` exists. Otherwise, add the `key-value` pair to the cache. If the number of keys exceeds the `capacity` from this operation, **evict** the least recently used key.\n\nThe functions `get` and `put` must each run in `O(1)` average time complexity.\n\n**Example 1:**\n```\nInput: [\"LRUCache\",\"put\",\"put\",\"get\",\"put\",\"get\",\"put\",\"get\",\"get\",\"get\"]\n       [[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]\nOutput: [null,null,null,1,null,-1,null,-1,3,4]\n```\n\n**Constraints:**\n- `1 <= capacity <= 3000`\n- `0 <= key <= 10^4`\n- `0 <= value <= 10^5`\n- At most `2 * 10^5` calls will be made to `get` and `put`.",
     "difficulty": "Medium",
     "topic": "Design",
     "category": "DSA",
@@ -1786,7 +1786,7 @@
   },
   {
     "title": "Design HashMap",
-    "description": "Design a HashMap without using any built-in hash table libraries.",
+    "description": "Design a HashMap without using any built-in hash table libraries.\n\nImplement the `MyHashMap` class:\n- `MyHashMap()` initializes the object with an empty map.\n- `void put(int key, int value)` inserts a `(key, value)` pair into the HashMap. If the `key` already exists in the map, update the corresponding `value`.\n- `int get(int key)` returns the `value` to which the specified `key` is mapped, or `-1` if this map contains no mapping for the `key`.\n- `void remove(key)` removes the `key` and its corresponding `value` if the map contains the mapping for the `key`.\n\n**Example 1:**\n```\nInput: [\"MyHashMap\",\"put\",\"put\",\"get\",\"get\",\"put\",\"get\",\"remove\",\"get\"]\n       [[],[1,1],[2,2],[1],[3],[2,1],[2],[2],[2]]\nOutput: [null,null,null,1,-1,null,1,null,-1]\n```\n\n**Constraints:**\n- `0 <= key, value <= 10^6`\n- At most `10^4` calls will be made to `put`, `get`, and `remove`.",
     "difficulty": "Easy",
     "topic": "Design",
     "category": "DSA",
@@ -1809,7 +1809,7 @@
   },
   {
     "title": "Insert Delete GetRandom O(1)",
-    "description": "Implement the RandomizedSet class with insert, remove, and getRandom operations all in O(1) average time.",
+    "description": "Implement the `RandomizedSet` class:\n- `RandomizedSet()` Initializes the `RandomizedSet` object.\n- `bool insert(int val)` Inserts an item `val` into the set if not present. Returns `true` if the item was not present, `false` otherwise.\n- `bool remove(int val)` Removes an item `val` from the set if present. Returns `true` if the item was present, `false` otherwise.\n- `int getRandom()` Returns a random element from the current set of elements. Each element must have the **same probability** of being returned.\n\nYou must implement the functions of the class such that each function works in **average** `O(1)` time complexity.\n\n**Example 1:**\n```\nInput: [\"RandomizedSet\",\"insert\",\"remove\",\"insert\",\"getRandom\",\"remove\",\"insert\",\"getRandom\"]\n       [[],[1],[2],[2],[],[1],[2],[]]\nOutput: [null,true,false,true,2,true,false,2]\n```\n\n**Constraints:**\n- `-2^31 <= val <= 2^31 - 1`\n- At most `2 * 10^5` calls will be made to `insert`, `remove`, and `getRandom`.\n- There will be **at least one** element in the data structure when `getRandom` is called.",
     "difficulty": "Medium",
     "topic": "Design",
     "category": "DSA",
@@ -1832,7 +1832,7 @@
   },
   {
     "title": "All O`one Data Structure",
-    "description": "Design a data structure to store the count of strings. It should support inc, dec, getMaxKey, and getMinKey operations in O(1).",
+    "description": "Design a data structure to store the strings' count with the ability to return the strings with minimum and maximum counts.\n\nImplement the `AllOne` class:\n- `AllOne()` Initializes the object of the data structure.\n- `inc(String key)` Increments the count of the string `key` by `1`. If `key` does not exist in the data structure, insert it with count `1`.\n- `dec(String key)` Decrements the count of the string `key` by `1`. If the count of `key` is `0` after the decrement, remove it from the data structure.\n- `getMaxKey()` Returns one of the keys with the maximal count. If no element exists, return an empty string `\"\"`.\n- `getMinKey()` Returns one of the keys with the minimum count. If no element exists, return an empty string `\"\"`.\n\nEach function must run in `O(1)` average time complexity.\n\n**Example 1:**\n```\nInput: [\"AllOne\",\"inc\",\"inc\",\"getMaxKey\",\"getMinKey\",\"inc\",\"getMaxKey\",\"getMinKey\"]\n       [[],[\"hello\"],[\"hello\"],[],[],[\"leet\"],[],[]]\nOutput: [null,null,null,\"hello\",\"hello\",null,\"hello\",\"leet\"]\n```\n\n**Constraints:**\n- `1 <= key.length <= 10`\n- `key` consists of lowercase English letters.\n- It is guaranteed that for each call to `dec`, `key` is existing in the data structure.",
     "difficulty": "Hard",
     "topic": "Design",
     "category": "DSA",
@@ -1855,7 +1855,7 @@
   },
   {
     "title": "Median of Two Sorted Arrays",
-    "description": "Given two sorted arrays nums1 and nums2 of size m and n, return the median of the two sorted arrays. The overall run time complexity should be O(log(m+n)).",
+    "description": "Given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively, return **the median** of the two sorted arrays.\n\nThe overall run time complexity should be `O(log (m+n))`.\n\n**Example 1:**\n```\nInput: nums1 = [1,3], nums2 = [2]\nOutput: 2.00000\nExplanation: merged array = [1,2,3] and median is 2.\n```\n\n**Example 2:**\n```\nInput: nums1 = [1,2], nums2 = [3,4]\nOutput: 2.50000\nExplanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.\n```\n\n**Constraints:**\n- `nums1.length == m`\n- `nums2.length == n`\n- `0 <= m <= 1000`\n- `0 <= n <= 1000`\n- `1 <= m + n <= 2000`\n- `-10^6 <= nums1[i], nums2[i] <= 10^6`",
     "difficulty": "Hard",
     "topic": "Binary Search",
     "category": "DSA",
@@ -1878,7 +1878,7 @@
   },
   {
     "title": "Set Matrix Zeroes",
-    "description": "Given an m x n integer matrix, if an element is 0, set its entire row and column to 0's.",
+    "description": "Given an `m x n` integer matrix `matrix`, if an element is `0`, set its entire row and column to `0`'s.\n\nYou must do it **in place**.\n\n**Example 1:**\n```\nInput: matrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: [[1,0,1],[0,0,0],[1,0,1]]\n```\n\n**Example 2:**\n```\nInput: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n```\n\n**Constraints:**\n- `m == matrix.length`\n- `n == matrix[0].length`\n- `1 <= m, n <= 200`\n- `-2^31 <= matrix[i][j] <= 2^31 - 1`\n\n**Follow up:** Could you devise a constant space solution?",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -1901,7 +1901,7 @@
   },
   {
     "title": "Rotate Image",
-    "description": "Given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise) in-place.",
+    "description": "You are given an `n x n` 2D `matrix` representing an image, rotate the image by **90** degrees (clockwise).\n\nYou have to rotate the image **in-place**, which means you have to modify the input 2D matrix directly. **DO NOT** allocate another 2D matrix and do the rotation.\n\n**Example 1:**\n```\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]\n```\n\n**Example 2:**\n```\nInput: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\nOutput: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n```\n\n**Constraints:**\n- `n == matrix.length == matrix[i].length`\n- `1 <= n <= 20`\n- `-1000 <= matrix[i][j] <= 1000`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -1924,7 +1924,7 @@
   },
   {
     "title": "Spiral Matrix",
-    "description": "Given an m x n matrix, return all elements of the matrix in spiral order.",
+    "description": "Given an `m x n` `matrix`, return *all elements of the* `matrix` *in spiral order*.\n\n**Example 1:**\n```\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n```\n\n**Example 2:**\n```\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n```\n\n**Constraints:**\n- `m == matrix.length`\n- `n == matrix[i].length`\n- `1 <= m, n <= 10`\n- `-100 <= matrix[i][j] <= 100`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -1947,7 +1947,7 @@
   },
   {
     "title": "Pascal's Triangle",
-    "description": "Given an integer numRows, return the first numRows of Pascal's triangle.",
+    "description": "Given an integer `numRows`, return the first `numRows` of **Pascal's triangle**.\n\nIn **Pascal's triangle**, each number is the sum of the two numbers directly above it.\n\n**Example 1:**\n```\nInput: numRows = 5\nOutput: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]\n```\n\n**Example 2:**\n```\nInput: numRows = 1\nOutput: [[1]]\n```\n\n**Constraints:**\n- `1 <= numRows <= 30`",
     "difficulty": "Easy",
     "topic": "Arrays",
     "category": "DSA",
@@ -1970,7 +1970,7 @@
   },
   {
     "title": "Longest Consecutive Sequence",
-    "description": "Given an unsorted array of integers, find the length of the longest consecutive elements sequence in O(n).",
+    "description": "Given an unsorted array of integers `nums`, return *the length of the longest consecutive elements sequence*.\n\nYou must write an algorithm that runs in `O(n)` time.\n\n**Example 1:**\n```\nInput: nums = [100,4,200,1,3,2]\nOutput: 4\nExplanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.\n```\n\n**Example 2:**\n```\nInput: nums = [0,3,7,2,5,8,4,6,0,1]\nOutput: 9\n```\n\n**Constraints:**\n- `0 <= nums.length <= 10^5`\n- `-10^9 <= nums[i] <= 10^9`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -1993,7 +1993,7 @@
   },
   {
     "title": "Find All Duplicates in an Array",
-    "description": "Given an integer array of length n where all integers are in the range [1, n] and each integer appears once or twice, return an array of all integers that appear twice.",
+    "description": "Given an integer array `nums` of length `n` where all the integers of `nums` are in the range `[1, n]` and each integer appears **once** or **twice**, return *an array of all the integers that appears **twice***.\n\nYou must write an algorithm that runs in `O(n)` time and uses only constant extra space.\n\n**Example 1:**\n```\nInput: nums = [4,3,2,7,8,2,3,1]\nOutput: [2,3]\n```\n\n**Example 2:**\n```\nInput: nums = [1,1,2]\nOutput: [1]\n```\n\n**Example 3:**\n```\nInput: nums = [1]\nOutput: []\n```\n\n**Constraints:**\n- `n == nums.length`\n- `1 <= n <= 10^5`\n- `1 <= nums[i] <= n`\n- Each element in `nums` appears **once** or **twice**.",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -2016,7 +2016,7 @@
   },
   {
     "title": "String to Integer (atoi)",
-    "description": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.",
+    "description": "Implement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer.\n\nThe algorithm for `myAtoi(string s)` is as follows:\n1. **Whitespace:** Ignore any leading whitespace (`\" \"`).\n2. **Signedness:** Determine the sign by checking if the next character is `'-'` or `'+'`, assuming positivity if neither present.\n3. **Conversion:** Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored.\n4. **Rounding:** If the integer is out of the 32-bit signed integer range `[-2^31, 2^31 - 1]`, then round the integer to remain in the range.\n\n**Example 1:**\n```\nInput: s = \"42\"\nOutput: 42\n```\n\n**Example 2:**\n```\nInput: s = \"   -042\"\nOutput: -42\n```\n\n**Example 3:**\n```\nInput: s = \"1337c0d3\"\nOutput: 1337\n```\n\n**Constraints:**\n- `0 <= s.length <= 200`\n- `s` consists of English letters (lower-case and upper-case), digits (`0-9`), `' '`, `'+'`, `'-'`, and `'.'`.",
     "difficulty": "Medium",
     "topic": "Strings",
     "category": "DSA",
@@ -2039,7 +2039,7 @@
   },
   {
     "title": "Reverse Integer",
-    "description": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes overflow, return 0.",
+    "description": "Given a signed 32-bit integer `x`, return `x` *with its digits reversed*. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0`.\n\n**Assume the environment does not allow you to store 64-bit integers (signed or unsigned).**\n\n**Example 1:**\n```\nInput: x = 123\nOutput: 321\n```\n\n**Example 2:**\n```\nInput: x = -123\nOutput: -321\n```\n\n**Example 3:**\n```\nInput: x = 120\nOutput: 21\n```\n\n**Constraints:**\n- `-2^31 <= x <= 2^31 - 1`",
     "difficulty": "Medium",
     "topic": "Strings",
     "category": "DSA",
@@ -2062,7 +2062,7 @@
   },
   {
     "title": "Flatten Binary Tree to Linked List",
-    "description": "Given the root of a binary tree, flatten the tree into a linked list (in-place) in preorder.",
+    "description": "Given the `root` of a binary tree, flatten the tree into a \"linked list\":\n- The \"linked list\" should use the same `TreeNode` class where the `right` child pointer points to the next node in the list and the `left` child pointer is always `null`.\n- The \"linked list\" should be in the same order as a **pre-order traversal** of the binary tree.\n\n**Example 1:**\n```\nInput: root = [1,2,5,3,4,null,6]\nOutput: [1,null,2,null,3,null,4,null,5,null,6]\n```\n\n**Example 2:**\n```\nInput: root = []\nOutput: []\n```\n\n**Example 3:**\n```\nInput: root = [0]\nOutput: [0]\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-100 <= Node.val <= 100`\n\n**Follow up:** Can you flatten the tree in-place (with `O(1)` extra space)?",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -2085,7 +2085,7 @@
   },
   {
     "title": "Maximum Width of Binary Tree",
-    "description": "Given the root of a binary tree, return the maximum width of the given tree.",
+    "description": "Given the `root` of a binary tree, return *the **maximum width** of the given tree*.\n\nThe **maximum width** of a tree is the maximum **width** among all levels.\n\nThe **width** of one level is defined as the length between the end-nodes (the leftmost and rightmost non-null nodes), where the null nodes between the end-nodes that would be present in a complete binary tree extending down to that level are also counted into the length calculation.\n\n**Example 1:**\n```\nInput: root = [1,3,2,5,3,null,9]\nOutput: 4\nExplanation: The maximum width exists in the third level with length 4 (5,3,null,9).\n```\n\n**Example 2:**\n```\nInput: root = [1,3,2,5,null,null,9,6,null,7]\nOutput: 7\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[1, 3000]`.\n- `-100 <= Node.val <= 100`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -2108,7 +2108,7 @@
   },
   {
     "title": "Boundary Traversal of Binary Tree",
-    "description": "Given a binary tree, return its boundary traversal (left boundary, leaves, right boundary).",
+    "description": "Given a binary tree, return the values of its **boundary** in **anti-clockwise** direction starting from the root.\n\nThe boundary includes:\n1. The **left boundary** (nodes on the path from root to the left-most node).\n2. The **leaves** (all leaf nodes from left to right).\n3. The **right boundary** (nodes on the path from root to the right-most node, reversed).\n\n**Example 1:**\n```\nInput: root = [1,2,3,4,5,6,7,null,null,8,9,null,null,null,null]\nOutput: [1,2,4,8,9,6,7,3]\n```\n\n**Example 2:**\n```\nInput: root = [1,2,null,4,9,6,5,null,null,null,null,7,8]\nOutput: [1,2,4,6,7,8,5,9]\n```\n\n**Constraints:**\n- The number of nodes in the tree is in the range `[1, 10^4]`.\n- `-1000 <= Node.val <= 1000`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -2131,7 +2131,7 @@
   },
   {
     "title": "Find the Duplicate Number",
-    "description": "Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n], prove that at least one duplicate must exist. Find the duplicate.",
+    "description": "Given an array of integers `nums` containing `n + 1` integers where each integer is in the range `[1, n]` inclusive.\n\nThere is only **one repeated number** in `nums`, return *this repeated number*.\n\nYou must solve the problem **without** modifying the array `nums` and uses only constant extra space.\n\n**Example 1:**\n```\nInput: nums = [1,3,4,2,2]\nOutput: 2\n```\n\n**Example 2:**\n```\nInput: nums = [3,1,3,4,2]\nOutput: 3\n```\n\n**Example 3:**\n```\nInput: nums = [3,3,3,3,3]\nOutput: 3\n```\n\n**Constraints:**\n- `1 <= n <= 10^5`\n- `nums.length == n + 1`\n- `1 <= nums[i] <= n`\n- All the integers in `nums` appear only **once** except for precisely one integer which appears **two or more** times.\n\n**Follow up:** Can you solve the problem in `O(n)` runtime without modifying the input array and using `O(1)` space?",
     "difficulty": "Medium",
     "topic": "Binary Search",
     "category": "DSA",
@@ -2154,7 +2154,7 @@
   },
   {
     "title": "Task Scheduler",
-    "description": "Given a list of tasks and a cooldown period n, find the minimum number of intervals needed to complete all tasks.",
+    "description": "You are given an array of CPU tasks, each represented by letters `A` to `Z`, and a cooling interval `n`. Each cycle or interval allows the completion of one task. Tasks can be completed in any order, but there's a constraint: **identical tasks must be separated by at least `n` intervals** due to cooling time.\n\nReturn the *minimum number of intervals* the CPU will take to finish all the given tasks.\n\n**Example 1:**\n```\nInput: tasks = [\"A\",\"A\",\"A\",\"B\",\"B\",\"B\"], n = 2\nOutput: 8\nExplanation: A possible sequence is: A -> B -> idle -> A -> B -> idle -> A -> B. After completing task A, you must wait two intervals before doing A again.\n```\n\n**Example 2:**\n```\nInput: tasks = [\"A\",\"C\",\"A\",\"B\",\"D\",\"B\"], n = 1\nOutput: 6\nExplanation: A possible sequence is: A -> B -> A -> C -> D -> B. With a cooling interval of 1, you can redo a task after just 1 other task.\n```\n\n**Example 3:**\n```\nInput: tasks = [\"A\",\"A\",\"A\",\"B\",\"B\",\"B\"], n = 3\nOutput: 10\nExplanation: A possible sequence is: A -> B -> idle -> idle -> A -> B -> idle -> idle -> A -> B.\n```\n\n**Constraints:**\n- `1 <= tasks.length <= 10^4`\n- `tasks[i]` is an uppercase English letter.\n- `0 <= n <= 100`",
     "difficulty": "Medium",
     "topic": "Greedy",
     "category": "DSA",
