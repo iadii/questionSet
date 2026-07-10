@@ -1,7 +1,7 @@
 [
   {
     "title": "Find the longest substring with at most K distinct characters",
-    "description": "Given a string s and an integer k, find the length of the longest substring that contains at most k distinct characters. This was asked in the Walmart OA 2024 batch.",
+    "description": "Given a string s and an integer k, find the length of the longest substring that contains at most k distinct characters. This was asked in the Walmart OA 2024 batch.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Sliding Window",
     "category": "DSA",
@@ -23,7 +23,7 @@
   },
   {
     "title": "Count factors of a number",
-    "description": "Given a number N, count the total number of factors. Reported in Walmart OA 2024.",
+    "description": "Given a number N, count the total number of factors. Reported in Walmart OA 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "Math",
     "category": "DSA",
@@ -43,7 +43,7 @@
   },
   {
     "title": "Reverse a number and check if power of 2",
-    "description": "Given a number, reverse its digits and check if the reversed number is a power of 2. Walmart OA 2024.",
+    "description": "Given a number, reverse its digits and check if the reversed number is a power of 2. Walmart OA 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "Math",
     "category": "DSA",
@@ -63,7 +63,7 @@
   },
   {
     "title": "Row and Column Operations on Matrix",
-    "description": "Given an m x n matrix and a series of row/column increment operations, compute the final matrix. Walmart OA 2025.",
+    "description": "Given an m x n matrix and a series of row/column increment operations, compute the final matrix. Walmart OA 2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -85,7 +85,7 @@
   },
   {
     "title": "Number of ways to reach destination in a matrix",
-    "description": "Given an m x n grid with obstacles, find the number of unique paths from top-left to bottom-right. You can only move down or right. Walmart OA 2025.",
+    "description": "Given an m x n grid with obstacles, find the number of unique paths from top-left to bottom-right. You can only move down or right. Walmart OA 2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -108,7 +108,7 @@
   },
   {
     "title": "Find maximum length subarray with sum equal to K",
-    "description": "Given an array of integers and a value K, find the maximum length of a subarray whose sum equals K. Walmart Coding Round 2024.",
+    "description": "Given an array of integers and a value K, find the maximum length of a subarray whose sum equals K. Walmart Coding Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Arrays",
     "category": "DSA",
@@ -130,7 +130,7 @@
   },
   {
     "title": "Coin Change variation - minimum coins with limited supply",
-    "description": "Given coins with limited supply and a target amount, find the minimum number of coins needed. Walmart OA 2024.",
+    "description": "Given coins with limited supply and a target amount, find the minimum number of coins needed. Walmart OA 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "DP",
     "category": "DSA",
@@ -152,7 +152,7 @@
   },
   {
     "title": "Right View of Binary Tree",
-    "description": "Given a binary tree, print the right view (nodes visible when looking from the right side). Walmart Technical Round 2024.",
+    "description": "Given a binary tree, print the right view (nodes visible when looking from the right side). Walmart Technical Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -175,7 +175,7 @@
   },
   {
     "title": "Left Boundary Traversal of Binary Tree",
-    "description": "Print the left boundary of a binary tree (non-leaf nodes on the left side, all leaves, and non-leaf nodes on the right side in reverse). Walmart Technical Round 2024.",
+    "description": "Print the left boundary of a binary tree (non-leaf nodes on the left side, all leaves, and non-leaf nodes on the right side in reverse). Walmart Technical Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -197,7 +197,7 @@
   },
   {
     "title": "Construct Binary Tree from Inorder and Preorder",
-    "description": "Given inorder and preorder traversals of a binary tree, construct the tree. Walmart Technical Round 2025.",
+    "description": "Given inorder and preorder traversals of a binary tree, construct the tree. Walmart Technical Round 2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Trees",
     "category": "DSA",
@@ -220,7 +220,7 @@
   },
   {
     "title": "Remove duplicates from sorted linked list",
-    "description": "Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Walmart Technical Round 2024.",
+    "description": "Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Walmart Technical Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "Linked List",
     "category": "DSA",
@@ -242,7 +242,7 @@
   },
   {
     "title": "Find latest log entry per user (SQL)",
-    "description": "Given a logs table (user_id, action, timestamp), write a SQL query to find the latest log entry for each user. Walmart SQL Round 2024.",
+    "description": "Given a logs table (user_id, action, timestamp), write a SQL query to find the latest log entry for each user. Walmart SQL Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "SQL",
     "category": "DSA",
@@ -262,7 +262,7 @@
   },
   {
     "title": "Longest Palindromic Substring (Walmart variant)",
-    "description": "Find the longest palindromic substring in a given string. Frequently asked in Walmart DSA rounds 2024-2025.",
+    "description": "Find the longest palindromic substring in a given string. Frequently asked in Walmart DSA rounds 2024-2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Strings",
     "category": "DSA",
@@ -285,7 +285,7 @@
   },
   {
     "title": "Design LRU/LFU Cache (Walmart LLD Round)",
-    "description": "Implement an LRU or LFU Cache data structure. Walmart frequently asks this in LLD rounds. Must handle get() and put() in O(1).",
+    "description": "Implement an LRU or LFU Cache data structure. Walmart frequently asks this in LLD rounds. Must handle get() and put() in O(1).\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Design",
     "category": "DSA",
@@ -309,7 +309,7 @@
   },
   {
     "title": "Word Search in Grid",
-    "description": "Given an m x n board and a word, find if the word exists in the grid by moving to adjacent cells. Walmart 2025 Interview.",
+    "description": "Given an m x n board and a word, find if the word exists in the grid by moving to adjacent cells. Walmart 2025 Interview.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Graph",
     "category": "DSA",
@@ -332,7 +332,7 @@
   },
   {
     "title": "Design Rate Limiter (Walmart LLD Round)",
-    "description": "Design a rate limiter to restrict the number of API requests per user per time window. Walmart LLD 2024.",
+    "description": "Design a rate limiter to restrict the number of API requests per user per time window. Walmart LLD 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "System Design",
     "category": "LLD",
@@ -351,7 +351,7 @@
   },
   {
     "title": "Design Walmart Checkout System",
-    "description": "Design the checkout system for Walmart's e-commerce platform. Handle cart validation, pricing, promotions, tax calculation, and payment processing. Walmart HLD 2024.",
+    "description": "Design the checkout system for Walmart's e-commerce platform. Handle cart validation, pricing, promotions, tax calculation, and payment processing. Walmart HLD 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "System Design",
     "category": "HLD",
@@ -371,7 +371,7 @@
   },
   {
     "title": "OOPS - Explain SOLID Principles with examples",
-    "description": "Walmart behavioral/theory question. Explain each SOLID principle with a real-world Java example. Walmart Interview Round 2024.",
+    "description": "Walmart behavioral/theory question. Explain each SOLID principle with a real-world Java example. Walmart Interview Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "OOP",
     "category": "CS_FUNDAMENTALS",
@@ -392,7 +392,7 @@
   },
   {
     "title": "DBMS - Explain Normalization (1NF, 2NF, 3NF, BCNF)",
-    "description": "Explain database normalization forms with examples. Walmart MCQ/Theory Round 2024.",
+    "description": "Explain database normalization forms with examples. Walmart MCQ/Theory Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "DBMS",
     "category": "CS_FUNDAMENTALS",
@@ -412,7 +412,7 @@
   },
   {
     "title": "OS - Explain Deadlock and its prevention",
-    "description": "What is a deadlock? What are the necessary conditions? How to prevent/avoid it? Walmart MCQ/Theory Round 2024-2025.",
+    "description": "What is a deadlock? What are the necessary conditions? How to prevent/avoid it? Walmart MCQ/Theory Round 2024-2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "OS",
     "category": "CS_FUNDAMENTALS",
@@ -432,7 +432,7 @@
   },
   {
     "title": "Networking - Explain TCP vs UDP",
-    "description": "Compare TCP and UDP protocols. When to use each? Walmart MCQ Round 2024.",
+    "description": "Compare TCP and UDP protocols. When to use each? Walmart MCQ Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "Networking",
     "category": "CS_FUNDAMENTALS",
@@ -452,7 +452,7 @@
   },
   {
     "title": "Java Collections - HashMap internals",
-    "description": "Explain how HashMap works internally in Java. What happens on collision? How does resizing work? Walmart Java Round 2024.",
+    "description": "Explain how HashMap works internally in Java. What happens on collision? How does resizing work? Walmart Java Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Java",
     "category": "CS_FUNDAMENTALS",
@@ -472,7 +472,7 @@
   },
   {
     "title": "Java Multithreading - Thread Pool and Executor Framework",
-    "description": "Explain the Executor framework in Java. What is ThreadPoolExecutor? How do you configure it? Walmart Java/LLD Round 2025.",
+    "description": "Explain the Executor framework in Java. What is ThreadPoolExecutor? How do you configure it? Walmart Java/LLD Round 2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Java",
     "category": "CS_FUNDAMENTALS",
@@ -492,7 +492,7 @@
   },
   {
     "title": "DBMS - Indexing and its types",
-    "description": "What is indexing? Types of indexes? When to use and when not to use? Walmart DBMS Round 2024.",
+    "description": "What is indexing? Types of indexes? When to use and when not to use? Walmart DBMS Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "DBMS",
     "category": "CS_FUNDAMENTALS",
@@ -512,7 +512,7 @@
   },
   {
     "title": "OS - Process vs Thread",
-    "description": "Differentiate between processes and threads. When to use each? Walmart OS/Theory Round 2024.",
+    "description": "Differentiate between processes and threads. When to use each? Walmart OS/Theory Round 2024.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "OS",
     "category": "CS_FUNDAMENTALS",
@@ -532,7 +532,7 @@
   },
   {
     "title": "DBMS - ACID Properties with examples",
-    "description": "Explain ACID properties in database transactions. Walmart DBMS Round 2024-2025.",
+    "description": "Explain ACID properties in database transactions. Walmart DBMS Round 2024-2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "DBMS",
     "category": "CS_FUNDAMENTALS",
@@ -552,7 +552,7 @@
   },
   {
     "title": "OOP - Design Patterns (Factory, Singleton, Observer, Strategy)",
-    "description": "Explain common design patterns with examples. Walmart LLD/Java Round 2024-2025.",
+    "description": "Explain common design patterns with examples. Walmart LLD/Java Round 2024-2025.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "OOP",
     "category": "CS_FUNDAMENTALS",

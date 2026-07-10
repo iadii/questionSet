@@ -9,4 +9,5 @@ public class AiChatRequest {
     private String message;
     private String mode; // "code" or "whiteboard"
     private String diagramJson;
+    private String diagramImageBase64;
 }

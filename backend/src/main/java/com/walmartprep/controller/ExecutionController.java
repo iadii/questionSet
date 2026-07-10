@@ -40,7 +40,13 @@ public class ExecutionController {
             question = questionRepository.findAll().stream().findFirst().orElseThrow();
         }
         
-        ExecutionResponse response = executionService.executeCode(user, question, request);
+        ExecutionResponse response;
+        if (request.getDiagramImageBase64() != null && !request.getDiagramImageBase64().isEmpty()) {
+            response = executionService.evaluateDesign(user, question, request);
+        } else {
+            response = executionService.executeCode(user, question, request);
+        }
+        
         return ResponseEntity.ok(response);
     }
 }

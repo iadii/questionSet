@@ -15,6 +15,15 @@ interface InterviewWorkspaceProps {
   question?: Question;
 }
 
+interface Submission {
+  id: string;
+  status: string;
+  language: string;
+  runtimeMs: number;
+  memoryKb: number;
+  submittedAt: string;
+}
+
 export default function InterviewWorkspace({ question }: InterviewWorkspaceProps) {
   const [code, setCode] = useState('// Write your code here\n\nclass Solution {\n  public void solve() {\n    System.out.println("Hello, World!");\n  }\n}');
   const [language, setLanguage] = useState("java");
@@ -29,6 +38,11 @@ export default function InterviewWorkspace({ question }: InterviewWorkspaceProps
   
   // Left Panel State
   const [leftMode, setLeftMode] = useState<"description" | "solutions" | "submissions" | "chat">(question ? "description" : "chat");
+  const [submissions, setSubmissions] = useState<Submission[]>([]);
+  const [isLoadingSubmissions, setIsLoadingSubmissions] = useState(false);
+  
+  // Whiteboard State
+  const [excalidrawAPI, setExcalidrawAPI] = useState<any>(null);
   
   // Chat State
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -40,6 +54,23 @@ export default function InterviewWorkspace({ question }: InterviewWorkspaceProps
       setLeftMode("description");
     }
   }, [question, defaultRightMode]);
+
+  useEffect(() => {
+    if (question && leftMode === "submissions") {
+      const fetchSubmissions = async () => {
+        setIsLoadingSubmissions(true);
+        try {
+          const res = await apiFetch<Submission[]>(`/submissions/question/${question.id}`);
+          setSubmissions(res);
+        } catch (error) {
+          console.error("Failed to fetch submissions:", error);
+        } finally {
+          setIsLoadingSubmissions(false);
+        }
+      };
+      fetchSubmissions();
+    }
+  }, [question, leftMode]);
 
   useEffect(() => {
     switch (language) {
@@ -81,6 +112,60 @@ export default function InterviewWorkspace({ question }: InterviewWorkspaceProps
     } catch (e: any) {
       setOutput({ status: "Error", raw: e.message });
     } finally {
+      setIsRunning(false);
+    }
+  };
+
+  const handleEvaluateDesign = async () => {
+    if (!excalidrawAPI) return;
+    
+    setIsRunning(true);
+    setConsoleMode("result");
+    setLeftMode("submissions");
+    setOutput({ status: "Evaluating Design with AI...", raw: "Please wait, the Staff Engineer AI is reviewing your architecture diagram..." });
+    
+    try {
+      const { exportToBlob } = await import("@excalidraw/excalidraw");
+      const elements = excalidrawAPI.getSceneElements();
+      
+      const blob = await exportToBlob({
+        elements,
+        appState: excalidrawAPI.getAppState(),
+        files: excalidrawAPI.getFiles(),
+        mimeType: "image/png",
+      });
+      
+      // Convert Blob to Base64
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onloadend = async () => {
+        const base64data = reader.result as string;
+        
+        try {
+          const res = await apiFetch<any>("/execute", {
+            method: "POST",
+            body: JSON.stringify({
+              questionId: question?.id || null,
+              language: "whiteboard",
+              code: "Diagram Evaluation",
+              diagramImageBase64: base64data
+            }),
+          });
+          
+          setOutput({
+            status: res.status,
+            runtimeMs: res.runtimeMs,
+            memoryKb: res.memoryKb,
+            raw: res.output
+          });
+        } catch (e: any) {
+          setOutput({ status: "Error", raw: e.message });
+        } finally {
+          setIsRunning(false);
+        }
+      };
+    } catch (e: any) {
+      setOutput({ status: "Error", raw: "Failed to capture whiteboard image." });
       setIsRunning(false);
     }
   };
@@ -256,18 +341,29 @@ export default function InterviewWorkspace({ question }: InterviewWorkspaceProps
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/10">
-                  <tr className="hover:bg-white/5 transition-colors cursor-pointer">
-                    <td className="px-4 py-4 text-sm font-medium text-emerald-400 flex items-center gap-2"><CheckCircle2 className="w-4 h-4" /> Accepted</td>
-                    <td className="px-4 py-4 text-sm text-gray-300"><span className="bg-white/10 px-2 py-0.5 rounded text-xs border border-white/10">java</span></td>
-                    <td className="px-4 py-4 text-sm text-gray-300">2 ms</td>
-                    <td className="px-4 py-4 text-sm text-gray-300">42.1 MB</td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors cursor-pointer">
-                    <td className="px-4 py-4 text-sm font-medium text-rose-400 flex items-center gap-2">Wrong Answer</td>
-                    <td className="px-4 py-4 text-sm text-gray-300"><span className="bg-white/10 px-2 py-0.5 rounded text-xs border border-white/10">java</span></td>
-                    <td className="px-4 py-4 text-sm text-gray-300">N/A</td>
-                    <td className="px-4 py-4 text-sm text-gray-300">N/A</td>
-                  </tr>
+                  {isLoadingSubmissions ? (
+                    <tr>
+                      <td colSpan={4} className="px-4 py-8 text-center text-sm text-gray-400">Loading submissions...</td>
+                    </tr>
+                  ) : submissions.length === 0 ? (
+                    <tr>
+                      <td colSpan={4} className="px-4 py-8 text-center text-sm text-gray-400">No submissions yet.</td>
+                    </tr>
+                  ) : (
+                    submissions.map((sub) => (
+                      <tr key={sub.id} className="hover:bg-white/5 transition-colors cursor-pointer">
+                        <td className={clsx("px-4 py-4 text-sm font-medium flex items-center gap-2", sub.status === "Passed" ? "text-emerald-400" : "text-rose-400")}>
+                          {sub.status === "Passed" ? <CheckCircle2 className="w-4 h-4" /> : null}
+                          {sub.status === "Passed" ? "Accepted" : sub.status}
+                        </td>
+                        <td className="px-4 py-4 text-sm text-gray-300">
+                          <span className="bg-white/10 px-2 py-0.5 rounded text-xs border border-white/10">{sub.language}</span>
+                        </td>
+                        <td className="px-4 py-4 text-sm text-gray-300">{sub.runtimeMs > 0 ? `${sub.runtimeMs} ms` : 'N/A'}</td>
+                        <td className="px-4 py-4 text-sm text-gray-300">{sub.memoryKb > 0 ? `${(sub.memoryKb / 1024).toFixed(1)} MB` : 'N/A'}</td>
+                      </tr>
+                    ))
+                  )}
                 </tbody>
               </table>
             </div>
@@ -465,8 +561,23 @@ export default function InterviewWorkspace({ question }: InterviewWorkspaceProps
             </div>
           </div>
         ) : (
-          <div className="flex-1 min-h-0 relative bg-black">
-            <Whiteboard onChange={(elements) => setDiagramElements(elements as any[])} />
+          <div className="flex-1 min-h-0 relative bg-black flex flex-col">
+            <div className="absolute top-4 right-4 z-10">
+              <button 
+                onClick={handleEvaluateDesign}
+                disabled={isRunning || !excalidrawAPI}
+                className="flex items-center gap-2 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 px-4 py-2 rounded-lg text-sm font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed border border-emerald-500/30 shadow-lg"
+              >
+                <Lightbulb className="w-4 h-4" />
+                {isRunning ? "Evaluating..." : "Evaluate Design"}
+              </button>
+            </div>
+            <div className="flex-1 min-h-0 relative">
+              <Whiteboard 
+                onChange={(elements) => setDiagramElements(elements as any[])} 
+                setExcalidrawAPI={setExcalidrawAPI}
+              />
+            </div>
           </div>
         )}
       </div>

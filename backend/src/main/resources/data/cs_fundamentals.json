@@ -1,0 +1,1802 @@
+[
+  {
+    "title": "Explain the four pillars of OOP.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the four pillars of OOP.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Microsoft",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What is the difference between an abstract class and an interface?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between an abstract class and an interface?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Walmart",
+      "Meta"
+    ]
+  },
+  {
+    "title": "Explain Method Overloading vs Method Overriding.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain Method Overloading vs Method Overriding.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Microsoft",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "What is encapsulation and how is it achieved?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is encapsulation and how is it achieved?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Netflix",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is polymorphism? Give a real-world example.",
+    "description": "CS Fundamentals Interview Question:\n\n**What is polymorphism? Give a real-world example.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Amazon",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "Explain the SOLID principles.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the SOLID principles.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Meta",
+      "Google"
+    ]
+  },
+  {
+    "title": "What is the difference between composition and inheritance?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between composition and inheritance?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 7,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Google",
+      "Apple"
+    ]
+  },
+  {
+    "title": "Explain the concept of a 'Singleton' design pattern.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the concept of a 'Singleton' design pattern.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Walmart",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "What is an abstract factory pattern?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is an abstract factory pattern?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Microsoft",
+      "Meta"
+    ]
+  },
+  {
+    "title": "How do you prevent a class from being inherited?",
+    "description": "CS Fundamentals Interview Question:\n\n**How do you prevent a class from being inherited?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Netflix",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What is the difference between 'is-a' and 'has-a' relationships?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between 'is-a' and 'has-a' relationships?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Google",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "Explain dependency injection.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain dependency injection.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What are the advantages of OOP over procedural programming?",
+    "description": "CS Fundamentals Interview Question:\n\n**What are the advantages of OOP over procedural programming?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Amazon",
+      "Uber"
+    ]
+  },
+  {
+    "title": "Can we overload the main method?",
+    "description": "CS Fundamentals Interview Question:\n\n**Can we overload the main method?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Netflix",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is a copy constructor?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a copy constructor?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Netflix",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "Explain early binding vs late binding.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain early binding vs late binding.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Apple",
+      "Uber"
+    ]
+  },
+  {
+    "title": "What happens if a child class doesn't implement all abstract methods?",
+    "description": "CS Fundamentals Interview Question:\n\n**What happens if a child class doesn't implement all abstract methods?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 6,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Uber",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What is multiple inheritance? Does your primary language support it?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is multiple inheritance? Does your primary language support it?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Uber",
+      "Google"
+    ]
+  },
+  {
+    "title": "How does a hash map work internally?",
+    "description": "CS Fundamentals Interview Question:\n\n**How does a hash map work internally?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Walmart",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "What is a virtual function in C++?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a virtual function in C++?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Object-Oriented Programming (OOP)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 6,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Meta",
+      "Apple"
+    ]
+  },
+  {
+    "title": "What is a process vs a thread?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a process vs a thread?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Google",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "Explain the concept of a Deadlock and the 4 necessary conditions.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the concept of a Deadlock and the 4 necessary conditions.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Microsoft",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "How do you prevent a deadlock?",
+    "description": "CS Fundamentals Interview Question:\n\n**How do you prevent a deadlock?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Walmart",
+      "Uber"
+    ]
+  },
+  {
+    "title": "What is a Mutex vs a Semaphore?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a Mutex vs a Semaphore?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Apple",
+      "Google"
+    ]
+  },
+  {
+    "title": "Explain context switching.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain context switching.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Apple",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What is virtual memory and how does it work?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is virtual memory and how does it work?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Walmart",
+      "Apple"
+    ]
+  },
+  {
+    "title": "Explain paging and segmentation.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain paging and segmentation.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Microsoft",
+      "Uber"
+    ]
+  },
+  {
+    "title": "What is thrashing in OS?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is thrashing in OS?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Google",
+      "Apple"
+    ]
+  },
+  {
+    "title": "Describe the different CPU scheduling algorithms.",
+    "description": "CS Fundamentals Interview Question:\n\n**Describe the different CPU scheduling algorithms.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What is the difference between preemptive and non-preemptive scheduling?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between preemptive and non-preemptive scheduling?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Walmart",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "Explain inter-process communication (IPC).",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain inter-process communication (IPC).**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Apple",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is a race condition? How do you prevent it?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a race condition? How do you prevent it?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Walmart",
+      "Uber"
+    ]
+  },
+  {
+    "title": "Explain the producer-consumer problem.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the producer-consumer problem.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Amazon",
+      "Apple"
+    ]
+  },
+  {
+    "title": "What is a kernel?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a kernel?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 7,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Microsoft",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "What is the difference between user space and kernel space?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between user space and kernel space?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "Explain demand paging.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain demand paging.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Amazon",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is an interrupt?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is an interrupt?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Meta",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What is a zombie process?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a zombie process?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Apple",
+      "Google"
+    ]
+  },
+  {
+    "title": "Explain the dining philosophers problem.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the dining philosophers problem.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Meta",
+      "Google"
+    ]
+  },
+  {
+    "title": "What is the difference between a hard link and a soft link?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between a hard link and a soft link?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Operating Systems (OS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 7,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Microsoft",
+      "Apple"
+    ]
+  },
+  {
+    "title": "What are ACID properties?",
+    "description": "CS Fundamentals Interview Question:\n\n**What are ACID properties?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Google",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What is the difference between a primary key and a unique key?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between a primary key and a unique key?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Netflix",
+      "Google"
+    ]
+  },
+  {
+    "title": "Explain normalization and its different normal forms (1NF, 2NF, 3NF, BCNF).",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain normalization and its different normal forms (1NF, 2NF, 3NF, BCNF).**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 7,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Netflix",
+      "Google"
+    ]
+  },
+  {
+    "title": "What is the difference between DELETE, TRUNCATE, and DROP?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between DELETE, TRUNCATE, and DROP?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Uber",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "Explain the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Uber",
+      "Google"
+    ]
+  },
+  {
+    "title": "What is an index? How does it improve query performance?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is an index? How does it improve query performance?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Netflix",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is a clustered vs non-clustered index?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a clustered vs non-clustered index?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Netflix",
+      "Google"
+    ]
+  },
+  {
+    "title": "Explain the CAP theorem.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the CAP theorem.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Google",
+      "Apple"
+    ]
+  },
+  {
+    "title": "What is the difference between SQL and NoSQL?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between SQL and NoSQL?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Google",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "When would you choose a NoSQL database over a relational one?",
+    "description": "CS Fundamentals Interview Question:\n\n**When would you choose a NoSQL database over a relational one?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Walmart",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What is database sharding?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is database sharding?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Amazon",
+      "Apple"
+    ]
+  },
+  {
+    "title": "Explain database replication and its types.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain database replication and its types.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Amazon",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What is a transaction?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a transaction?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Walmart",
+      "Google"
+    ]
+  },
+  {
+    "title": "Explain transaction isolation levels and the problems they solve.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain transaction isolation levels and the problems they solve.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Microsoft",
+      "Apple"
+    ]
+  },
+  {
+    "title": "What is a stored procedure?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a stored procedure?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What is a database view?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a database view?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Meta",
+      "Google"
+    ]
+  },
+  {
+    "title": "Explain the difference between optimistic and pessimistic locking.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the difference between optimistic and pessimistic locking.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Google",
+      "Apple"
+    ]
+  },
+  {
+    "title": "What is a trigger?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a trigger?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Apple",
+      "Google"
+    ]
+  },
+  {
+    "title": "How does a B-Tree index work?",
+    "description": "CS Fundamentals Interview Question:\n\n**How does a B-Tree index work?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Uber",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "What is a foreign key?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a foreign key?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Database Management Systems (DBMS)",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Google",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "Explain the OSI model and its 7 layers.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the OSI model and its 7 layers.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Apple",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is the difference between TCP and UDP?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between TCP and UDP?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Apple",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "How does the TCP 3-way handshake work?",
+    "description": "CS Fundamentals Interview Question:\n\n**How does the TCP 3-way handshake work?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Microsoft",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What happens when you type a URL in the browser and press enter?",
+    "description": "CS Fundamentals Interview Question:\n\n**What happens when you type a URL in the browser and press enter?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 6,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "Explain DNS (Domain Name System).",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain DNS (Domain Name System).**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Meta",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "What is the difference between HTTP and HTTPS?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between HTTP and HTTPS?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Uber",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "Explain how SSL/TLS handshake works.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain how SSL/TLS handshake works.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Uber",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What is a MAC address vs an IP address?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a MAC address vs an IP address?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Amazon",
+      "Uber"
+    ]
+  },
+  {
+    "title": "What is a subnet mask?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a subnet mask?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Meta",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "Explain REST vs SOAP.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain REST vs SOAP.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Microsoft",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What are HTTP status codes? Name a few important ones.",
+    "description": "CS Fundamentals Interview Question:\n\n**What are HTTP status codes? Name a few important ones.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Google",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is a load balancer?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a load balancer?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Microsoft",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "Explain the difference between a router and a switch.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the difference between a router and a switch.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "What is NAT (Network Address Translation)?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is NAT (Network Address Translation)?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Walmart",
+      "Google"
+    ]
+  },
+  {
+    "title": "Explain the concept of a CDN.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the concept of a CDN.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 9,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Apple",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "What is WebSockets?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is WebSockets?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 7,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Netflix",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "What is the difference between IPv4 and IPv6?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between IPv4 and IPv6?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 6,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Apple",
+      "Meta"
+    ]
+  },
+  {
+    "title": "Explain ARP (Address Resolution Protocol).",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain ARP (Address Resolution Protocol).**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Amazon",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "What is ping and traceroute?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is ping and traceroute?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Netflix",
+      "Uber"
+    ]
+  },
+  {
+    "title": "What is a proxy server vs a reverse proxy?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a proxy server vs a reverse proxy?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Computer Networks",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Netflix",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "Explain the internal working of HashMap in Java.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the internal working of HashMap in Java.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What is the difference between String, StringBuilder, and StringBuffer?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between String, StringBuilder, and StringBuffer?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Walmart",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "Explain the Java Memory Model (Heap vs Stack).",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the Java Memory Model (Heap vs Stack).**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 6,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Meta",
+      "Microsoft"
+    ]
+  },
+  {
+    "title": "What is garbage collection and how does it work in Java?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is garbage collection and how does it work in Java?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Apple",
+      "Walmart"
+    ]
+  },
+  {
+    "title": "Explain the difference between checked and unchecked exceptions.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the difference between checked and unchecked exceptions.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 6,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Apple",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What are the new features in Java 8?",
+    "description": "CS Fundamentals Interview Question:\n\n**What are the new features in Java 8?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 3,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Uber",
+      "Apple"
+    ]
+  },
+  {
+    "title": "Explain the concept of functional interfaces and lambdas.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the concept of functional interfaces and lambdas.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Netflix",
+      "Google"
+    ]
+  },
+  {
+    "title": "What is the Streams API?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the Streams API?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Apple",
+      "Uber",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is a synchronized block?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is a synchronized block?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 1,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Uber",
+      "Netflix",
+      "Meta"
+    ]
+  },
+  {
+    "title": "Explain Volatile vs Transient keyword.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain Volatile vs Transient keyword.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 6,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "What is Spring Boot and how is it different from Spring?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is Spring Boot and how is it different from Spring?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Walmart",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "Explain Spring Dependency Injection (IoC).",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain Spring Dependency Injection (IoC).**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Walmart",
+      "Apple",
+      "Meta"
+    ]
+  },
+  {
+    "title": "What is the difference between @Controller and @RestController?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between @Controller and @RestController?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Amazon",
+      "Apple"
+    ]
+  },
+  {
+    "title": "Explain the Spring Bean Lifecycle.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain the Spring Bean Lifecycle.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Netflix",
+      "Microsoft",
+      "Google"
+    ]
+  },
+  {
+    "title": "What are Spring Boot Starters?",
+    "description": "CS Fundamentals Interview Question:\n\n**What are Spring Boot Starters?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 4,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Walmart",
+      "Apple"
+    ]
+  },
+  {
+    "title": "Explain @Transactional annotation.",
+    "description": "CS Fundamentals Interview Question:\n\n**Explain @Transactional annotation.**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 5,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Google",
+      "Apple"
+    ]
+  },
+  {
+    "title": "What is the difference between @Autowired and @Resource?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is the difference between @Autowired and @Resource?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 2,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Google",
+      "Netflix",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "How does Spring MVC work?",
+    "description": "CS Fundamentals Interview Question:\n\n**How does Spring MVC work?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Easy",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 7,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Microsoft",
+      "Meta",
+      "Netflix"
+    ]
+  },
+  {
+    "title": "What is Spring AOP?",
+    "description": "CS Fundamentals Interview Question:\n\n**What is Spring AOP?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 10,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Meta",
+      "Uber",
+      "Amazon"
+    ]
+  },
+  {
+    "title": "How do you handle exceptions globally in Spring Boot?",
+    "description": "CS Fundamentals Interview Question:\n\n**How do you handle exceptions globally in Spring Boot?**\n\n**Instructions:**\n- Explain the concept clearly.\n- Provide a real-world example or code snippet if applicable.\n- Discuss the pros, cons, and use cases.\n- Mention any common interview follow-ups related to this topic.",
+    "difficulty": "Medium",
+    "topic": "Java & Spring Framework",
+    "category": "CS_FUNDAMENTALS",
+    "frequency": 8,
+    "hints": [
+      "Break down the definition into simple terms.",
+      "Use analogies to explain complex systems.",
+      "If it involves trade-offs (e.g., SQL vs NoSQL), highlight both sides."
+    ],
+    "companyTags": [
+      "Amazon",
+      "Meta",
+      "Google"
+    ]
+  }
+]

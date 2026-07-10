@@ -20,14 +20,16 @@ const Excalidraw = dynamic(
 
 interface WhiteboardProps {
   onChange?: (elements: readonly any[]) => void;
+  setExcalidrawAPI?: (api: any) => void;
 }
 
-export default function Whiteboard({ onChange }: WhiteboardProps) {
+export default function Whiteboard({ onChange, setExcalidrawAPI }: WhiteboardProps) {
   return (
     <div className="h-full w-full relative">
       <Excalidraw 
         theme="dark" 
         onChange={onChange ? (elements) => onChange(elements) : undefined} 
+        excalidrawAPI={setExcalidrawAPI ? (api) => setExcalidrawAPI(api) : undefined}
       />
     </div>
   );

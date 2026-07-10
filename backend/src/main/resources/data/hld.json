@@ -1,7 +1,7 @@
 [
   {
     "title": "Design URL Shortener (TinyURL)",
-    "description": "Design a scalable URL shortening service like TinyURL or Bitly. Handle billions of URLs, high read volume, and analytics.",
+    "description": "Design a scalable URL shortening service like TinyURL or Bitly. Handle billions of URLs, high read volume, and analytics.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "URL Shortener",
     "category": "HLD",
@@ -22,7 +22,7 @@
   },
   {
     "title": "Design WhatsApp / Messaging System",
-    "description": "Design a real-time messaging platform supporting one-on-one chats, group chats, media sharing, read receipts, and online status.",
+    "description": "Design a real-time messaging platform supporting one-on-one chats, group chats, media sharing, read receipts, and online status.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "WhatsApp",
     "category": "HLD",
@@ -43,7 +43,7 @@
   },
   {
     "title": "Design Netflix / Video Streaming",
-    "description": "Design a global video streaming service that serves millions of concurrent users with low latency.",
+    "description": "Design a global video streaming service that serves millions of concurrent users with low latency.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "Video Streaming",
     "category": "HLD",
@@ -64,7 +64,7 @@
   },
   {
     "title": "Design Uber / Ride Sharing",
-    "description": "Design a ride-sharing platform supporting real-time matching, location tracking, fare estimation, and payments.",
+    "description": "Design a ride-sharing platform supporting real-time matching, location tracking, fare estimation, and payments.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "Uber",
     "category": "HLD",
@@ -85,7 +85,7 @@
   },
   {
     "title": "Design YouTube",
-    "description": "Design a video-sharing platform supporting video upload, transcoding, search, recommendations, and streaming.",
+    "description": "Design a video-sharing platform supporting video upload, transcoding, search, recommendations, and streaming.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "YouTube",
     "category": "HLD",
@@ -106,7 +106,7 @@
   },
   {
     "title": "Design Twitter",
-    "description": "Design a social media platform supporting posting tweets, following users, timeline generation, and trending topics.",
+    "description": "Design a social media platform supporting posting tweets, following users, timeline generation, and trending topics.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "Twitter",
     "category": "HLD",
@@ -127,7 +127,7 @@
   },
   {
     "title": "Design Amazon E-Commerce (HLD)",
-    "description": "Design a large-scale e-commerce platform handling product catalog, search, cart, checkout, payments, and logistics.",
+    "description": "Design a large-scale e-commerce platform handling product catalog, search, cart, checkout, payments, and logistics.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "E-Commerce",
     "category": "HLD",
@@ -148,7 +148,7 @@
   },
   {
     "title": "Design Walmart Inventory Management System",
-    "description": "Design a scalable inventory management system for a global retailer like Walmart. Handle real-time stock updates, warehouse management, and supply chain coordination.",
+    "description": "Design a scalable inventory management system for a global retailer like Walmart. Handle real-time stock updates, warehouse management, and supply chain coordination.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "Inventory System",
     "category": "HLD",
@@ -169,7 +169,7 @@
   },
   {
     "title": "Design Notification System",
-    "description": "Design a notification service that supports push notifications, SMS, email, and in-app notifications at scale.",
+    "description": "Design a notification service that supports push notifications, SMS, email, and in-app notifications at scale.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Notification System",
     "category": "HLD",
@@ -190,7 +190,7 @@
   },
   {
     "title": "Design Payment System",
-    "description": "Design a payment processing system that handles transactions, refunds, settlements, and fraud detection.",
+    "description": "Design a payment processing system that handles transactions, refunds, settlements, and fraud detection.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "Payment System",
     "category": "HLD",
@@ -211,7 +211,7 @@
   },
   {
     "title": "Design Search Autocomplete / Typeahead",
-    "description": "Design a search autocomplete system that provides real-time suggestions as the user types.",
+    "description": "Design a search autocomplete system that provides real-time suggestions as the user types.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Search System",
     "category": "HLD",
@@ -232,7 +232,7 @@
   },
   {
     "title": "Design Distributed Cache (Redis)",
-    "description": "Design a distributed in-memory caching system like Redis or Memcached. Handle replication, partitioning, and eviction.",
+    "description": "Design a distributed in-memory caching system like Redis or Memcached. Handle replication, partitioning, and eviction.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "Distributed Cache",
     "category": "HLD",

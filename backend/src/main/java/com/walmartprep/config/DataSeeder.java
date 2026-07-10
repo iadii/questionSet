@@ -45,6 +45,9 @@ public class DataSeeder implements CommandLineRunner {
             seedData("data/lld.json");
             seedData("data/hld.json");
             seedData("data/walmart_previous.json");
+            seedData("data/behavioral.json");
+            seedData("data/cs_fundamentals.json");
+            seedData("data/dsa_extra.json");
             log.info("Seeding completed.");
         } else {
             log.info("Database is not empty. Skipping seed.");

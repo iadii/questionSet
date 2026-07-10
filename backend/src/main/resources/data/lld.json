@@ -1,7 +1,7 @@
 [
   {
     "title": "Design Parking Lot",
-    "description": "Design an object-oriented parking lot system. Must handle different vehicle types (car, truck, van, motorcycle), multiple floors, entry/exit gates, and billing.",
+    "description": "Design an object-oriented parking lot system. Must handle different vehicle types (car, truck, van, motorcycle), multiple floors, entry/exit gates, and billing.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Parking Lot",
     "category": "LLD",
@@ -22,7 +22,7 @@
   },
   {
     "title": "Design BookMyShow / Movie Ticket Booking System",
-    "description": "Design an online movie ticket booking system that handles theatre selection, seat reservation, and payments.",
+    "description": "Design an online movie ticket booking system that handles theatre selection, seat reservation, and payments.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Booking System",
     "category": "LLD",
@@ -42,7 +42,7 @@
   },
   {
     "title": "Design ATM Machine",
-    "description": "Design an ATM system that supports withdrawals, deposits, balance checks, and fund transfers. Handle multiple denominations and insufficient funds.",
+    "description": "Design an ATM system that supports withdrawals, deposits, balance checks, and fund transfers. Handle multiple denominations and insufficient funds.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "ATM",
     "category": "LLD",
@@ -62,7 +62,7 @@
   },
   {
     "title": "Design Elevator System",
-    "description": "Design an elevator system for a multi-floor building with multiple elevators. Handle concurrent requests efficiently.",
+    "description": "Design an elevator system for a multi-floor building with multiple elevators. Handle concurrent requests efficiently.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Elevator",
     "category": "LLD",
@@ -82,7 +82,7 @@
   },
   {
     "title": "Design Snake and Ladder Game",
-    "description": "Design the classic Snake and Ladder board game. Support multiple players, custom board configurations, and dice rolling.",
+    "description": "Design the classic Snake and Ladder board game. Support multiple players, custom board configurations, and dice rolling.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "Snake and Ladder",
     "category": "LLD",
@@ -102,7 +102,7 @@
   },
   {
     "title": "Design Hotel Management System",
-    "description": "Design a hotel management system supporting room booking, check-in/out, room service, and billing.",
+    "description": "Design a hotel management system supporting room booking, check-in/out, room service, and billing.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Hotel Management",
     "category": "LLD",
@@ -122,7 +122,7 @@
   },
   {
     "title": "Design Library Management System",
-    "description": "Design a system to manage library operations including book cataloging, member management, borrowing, and fine calculation.",
+    "description": "Design a system to manage library operations including book cataloging, member management, borrowing, and fine calculation.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "Library Management",
     "category": "LLD",
@@ -142,7 +142,7 @@
   },
   {
     "title": "Design LRU Cache",
-    "description": "Implement an LRU (Least Recently Used) cache with O(1) get and put operations. Handle eviction when capacity is full.",
+    "description": "Implement an LRU (Least Recently Used) cache with O(1) get and put operations. Handle eviction when capacity is full.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Cache",
     "category": "LLD",
@@ -162,7 +162,7 @@
   },
   {
     "title": "Design Tic-Tac-Toe",
-    "description": "Design a Tic-Tac-Toe game. Support n x n board, two players, and determine the winner in O(1) per move.",
+    "description": "Design a Tic-Tac-Toe game. Support n x n board, two players, and determine the winner in O(1) per move.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Easy",
     "topic": "Tic-Tac-Toe",
     "category": "LLD",
@@ -182,7 +182,7 @@
   },
   {
     "title": "Design Rate Limiter",
-    "description": "Design a rate limiter that restricts the number of requests a client can make within a time window.",
+    "description": "Design a rate limiter that restricts the number of requests a client can make within a time window.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "Rate Limiter",
     "category": "LLD",
@@ -202,7 +202,7 @@
   },
   {
     "title": "Design E-Commerce System (Amazon/Walmart)",
-    "description": "Design an e-commerce platform. Handle product catalog, user accounts, shopping cart, checkout, order management, and inventory.",
+    "description": "Design an e-commerce platform. Handle product catalog, user accounts, shopping cart, checkout, order management, and inventory.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Hard",
     "topic": "E-Commerce",
     "category": "LLD",
@@ -222,7 +222,7 @@
   },
   {
     "title": "Design File System",
-    "description": "Design an in-memory file system. Support creating, deleting, and searching files and directories.",
+    "description": "Design an in-memory file system. Support creating, deleting, and searching files and directories.\n\n**Example 1:**\n```\nInput: [Example Input]\nOutput: [Example Output]\nExplanation: [Example Explanation]\n```\n\n**Example 2:**\n```\nInput: [Example Input 2]\nOutput: [Example Output 2]\n```\n\n**Constraints:**\n- `1 <= N <= 10^5`\n- `Time complexity: O(N)`",
     "difficulty": "Medium",
     "topic": "File System",
     "category": "LLD",

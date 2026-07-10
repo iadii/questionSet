@@ -108,21 +108,33 @@ cd interviewprep
 ```
 
 ### 2. Set up the database
+We recommend using Docker to run the PostgreSQL database.
 ```bash
-# Create a PostgreSQL database
-createdb interviewprep
-
-# Update credentials in backend/src/main/resources/application.yml
+# Start the database using Docker Compose
+docker-compose up -d
+```
+Alternatively, if you have PostgreSQL installed locally:
+```bash
+createdb walmartprep
+# Ensure credentials in backend/src/main/resources/application.yml match your local setup
 ```
 
-### 3. Start the backend
+### 3. Database Seeding (Question Sets)
+All interview questions (DSA, HLD, LLD, Behavioral, CS Fundamentals) are stored in JSON format located at `backend/src/main/resources/data/`.
+When you start the backend for the first time, the `DataSeeder.java` component automatically detects if the database is empty and seeds all questions from these JSON files into the PostgreSQL database.
+*If you need to re-seed or add custom questions:*
+1. Add/modify the JSON files in `backend/src/main/resources/data/`.
+2. Drop/truncate the `questions` table in PostgreSQL.
+3. Restart the Spring Boot backend, and it will re-seed the new data.
+
+### 4. Start the backend
 ```bash
 cd backend
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
-The API will start at `http://localhost:8080`. Flyway will auto-run migrations and the DataSeeder will populate questions on first launch.
+The API will start at `http://localhost:8080`. Flyway will auto-run migrations and the DataSeeder will populate the questions as mentioned above.
 
-### 4. Start the frontend
+### 5. Start the frontend
 ```bash
 cd frontend
 npm install
