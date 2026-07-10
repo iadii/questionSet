@@ -6,7 +6,7 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 import Heatmap from "@/components/profile/Heatmap";
 import InterviewWorkspace from "@/components/profile/InterviewWorkspace";
 import Link from "next/link";
-import { ArrowLeft, User } from "lucide-react";
+import { User, CheckCircle, Target, ArrowLeft } from "lucide-react";
 
 interface UserProfile {
   name: string;
@@ -27,8 +27,8 @@ export default function ProfilePage() {
   if (isLoading) {
     return (
       <ProtectedRoute>
-        <div className="min-h-screen bg-[#fafbfc] flex items-center justify-center">
-          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gray-900"></div>
+        <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
         </div>
       </ProtectedRoute>
     );
@@ -36,62 +36,83 @@ export default function ProfilePage() {
 
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-[#fafbfc] pb-24">
-        {/* Header */}
-        <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900">Your Profile</h1>
-            <Link href="/dashboard" className="text-sm font-medium text-blue-600 hover:underline flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" /> Back to Dashboard
-            </Link>
+      <div className="min-h-screen bg-[#0a0a0a] text-gray-300 pb-24">
+        {/* Simple Navbar */}
+        <nav className="border-b border-white/10 bg-[#0a0a0a] sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <Link href="/" className="text-xl font-bold text-white tracking-tight">InterviewPrep</Link>
+            <div className="flex gap-6">
+              <Link href="/dashboard" className="text-gray-400 hover:text-white transition-colors">Dashboard</Link>
+              <Link href="/problems" className="text-gray-400 hover:text-white transition-colors">Problems</Link>
+              <Link href="/profile" className="text-blue-400 font-medium">Profile</Link>
+            </div>
           </div>
-        </div>
+        </nav>
 
-        <main className="max-w-6xl mx-auto px-6 py-8 space-y-8">
+        <main className="max-w-6xl mx-auto px-6 py-10 space-y-8">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* User Info */}
-            <div className="col-span-1 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center justify-center text-center">
-              <div className="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
-                <User className="w-10 h-10" />
-              </div>
-              <h2 className="text-xl font-bold text-gray-900">{profile?.name}</h2>
-              <p className="text-gray-500 text-sm">{profile?.email}</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             
-            {/* Stats */}
-            <div className="col-span-1 md:col-span-2 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
-              <h3 className="text-gray-500 font-medium mb-4">Questions Solved</h3>
-              <div className="flex items-end gap-4 mb-6">
-                <span className="text-5xl font-bold text-gray-900">{profile?.totalSolved}</span>
-                <span className="text-gray-400 mb-1">/ 120</span>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-1 bg-emerald-50 text-emerald-700 px-4 py-3 rounded-xl border border-emerald-100">
-                  <span className="block text-xs font-bold uppercase tracking-wider mb-1 opacity-70">Easy</span>
-                  <span className="text-2xl font-bold">{profile?.easySolved}</span>
+            {/* Left Column: User Profile Details */}
+            <div className="md:col-span-1 space-y-6">
+              <div className="bg-white/5 border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center text-center">
+                <div className="w-24 h-24 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center mb-4">
+                  <User className="w-12 h-12" />
                 </div>
-                <div className="flex-1 bg-amber-50 text-amber-700 px-4 py-3 rounded-xl border border-amber-100">
-                  <span className="block text-xs font-bold uppercase tracking-wider mb-1 opacity-70">Medium</span>
-                  <span className="text-2xl font-bold">{profile?.mediumSolved}</span>
-                </div>
-                <div className="flex-1 bg-rose-50 text-rose-700 px-4 py-3 rounded-xl border border-rose-100">
-                  <span className="block text-xs font-bold uppercase tracking-wider mb-1 opacity-70">Hard</span>
-                  <span className="text-2xl font-bold">{profile?.hardSolved}</span>
+                <h2 className="text-xl font-bold text-white">{profile?.name}</h2>
+                <p className="text-gray-500 text-sm mt-1">{profile?.email}</p>
+                <div className="mt-6 w-full flex flex-col gap-2">
+                  <Link href="/dashboard" className="w-full py-2 bg-white/5 hover:bg-white/10 text-white rounded-lg text-sm font-medium transition-colors border border-white/10">
+                    Edit Profile
+                  </Link>
                 </div>
               </div>
             </div>
+
+            {/* Right Column: Stats & Heatmap */}
+            <div className="md:col-span-3 space-y-6">
+              
+              {/* Stats Section */}
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                <h3 className="text-gray-400 font-medium mb-4 flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4" /> Questions Solved
+                </h3>
+                <div className="flex items-end gap-4 mb-6">
+                  <span className="text-5xl font-bold text-white">{profile?.totalSolved || 0}</span>
+                  <span className="text-gray-500 mb-1">/ 120</span>
+                </div>
+                
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-emerald-500/10 text-emerald-400 px-4 py-3 rounded-xl border border-emerald-500/20">
+                    <span className="block text-xs font-bold uppercase tracking-wider mb-1 opacity-70">Easy</span>
+                    <span className="text-2xl font-bold text-emerald-300">{profile?.easySolved || 0}</span>
+                  </div>
+                  <div className="bg-amber-500/10 text-amber-400 px-4 py-3 rounded-xl border border-amber-500/20">
+                    <span className="block text-xs font-bold uppercase tracking-wider mb-1 opacity-70">Medium</span>
+                    <span className="text-2xl font-bold text-amber-300">{profile?.mediumSolved || 0}</span>
+                  </div>
+                  <div className="bg-rose-500/10 text-rose-400 px-4 py-3 rounded-xl border border-rose-500/20">
+                    <span className="block text-xs font-bold uppercase tracking-wider mb-1 opacity-70">Hard</span>
+                    <span className="text-2xl font-bold text-rose-300">{profile?.hardSolved || 0}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Heatmap Section */}
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                <Heatmap data={profile?.heatmap || {}} />
+              </div>
+
+              {/* AI Workspace - Keep if needed, but styling needs dark mode */}
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                <h3 className="text-lg font-bold text-white mb-4">AI Interview Workspace</h3>
+                <div className="opacity-80">
+                  <InterviewWorkspace />
+                </div>
+              </div>
+              
+            </div>
           </div>
-
-          {/* Heatmap */}
-          {profile?.heatmap && <Heatmap data={profile.heatmap} />}
-
-          {/* Interview Workspace */}
-          <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">AI Interview Workspace</h3>
-            <InterviewWorkspace />
-          </div>
-
         </main>
       </div>
     </ProtectedRoute>

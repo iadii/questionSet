@@ -5,7 +5,7 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 import { useQuery } from "@tanstack/react-query";
 import { apiFetch } from "@/lib/api";
 import { Question, PageResponse } from "@/types";
-import { ChevronRight, Target, Briefcase, ClockAlert } from "lucide-react";
+import { ChevronRight, Target, Flame, CheckCircle, ClockAlert, ArrowRight, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface UserProfile {
@@ -38,8 +38,8 @@ export default function DashboardPage() {
   if (isProfileLoading || isQuestionsLoading || isProgressLoading) {
     return (
       <ProtectedRoute>
-        <div className="min-h-screen flex items-center justify-center bg-[#fafbfc]">
-          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600"></div>
+        <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
         </div>
       </ProtectedRoute>
     );
@@ -47,7 +47,7 @@ export default function DashboardPage() {
 
   const targetCompany = profile?.targetCompany || "Walmart";
   
-  // Filter for the target company and just grab the top 5
+  // Filter for the target company
   const companyTrack = questionsData?.content
     ?.filter(q => q.companyTags && q.companyTags.includes(targetCompany))
     ?.slice(0, 5) || [];
@@ -60,184 +60,162 @@ export default function DashboardPage() {
   const dueReviews = questionsData?.content
     ?.filter(q => dueReviewIds.includes(q.id)) || [];
 
+  const totalQuestions = questionsData?.totalElements || 120;
+  const solvedCount = progressData?.filter(p => p.status === 'SOLVED').length || 0;
+  const progressPercent = Math.round((solvedCount / totalQuestions) * 100) || 0;
+
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-[#0a0a0a] text-white pb-24 relative overflow-hidden">
-        {/* Background Mesh Gradient */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-blue-900/10 blur-[120px] mix-blend-screen" />
-          <div className="absolute top-[20%] -right-[20%] w-[60%] h-[60%] rounded-full bg-indigo-900/10 blur-[120px] mix-blend-screen" />
-        </div>
-
-        {/* Dashboard Header */}
-        <header className="bg-white/5 backdrop-blur-xl border-b border-white/10 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex justify-between items-end">
-              <div>
-                <h1 className="text-3xl font-bold text-white mb-2">Welcome back, {profile?.name.split(' ')[0]} 👋</h1>
-                <p className="text-gray-400">Continue your preparation for {profile?.targetCompany || 'top tech companies'}.</p>
-              </div>
-              <div className="hidden sm:flex items-center gap-4">
-                <div className="text-right">
-                  <div className="text-sm text-gray-400 font-medium">Problems Solved</div>
-                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
-                    {progressData?.filter(p => p.status === 'SOLVED').length || 0} / {questionsData?.totalElements || 0}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+      <div className="min-h-screen bg-[#0a0a0a] text-gray-300 pb-24">
+        {/* Simple Navbar */}
+        <nav className="border-b border-white/10 bg-[#0a0a0a] sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <Link href="/" className="text-xl font-bold text-white tracking-tight">InterviewPrep</Link>
+            <div className="flex gap-6">
+              <Link href="/dashboard" className="text-blue-400 font-medium">Dashboard</Link>
+              <Link href="/problems" className="text-gray-400 hover:text-white transition-colors">Problems</Link>
+              <Link href="/profile" className="text-gray-400 hover:text-white transition-colors">Profile</Link>
+            </div>
           </div>
-        </header>
+        </nav>
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            {/* Left Column - Main Content */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* Target Company Banner */}
-              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-md rounded-2xl p-8 border border-blue-500/30 shadow-[0_0_20px_rgba(59,130,246,0.1)] relative overflow-hidden">
-                <div className="relative z-10 flex items-start justify-between">
-                  <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold mb-4 uppercase tracking-wider">
-                      <Target className="w-3 h-3" /> Current Goal
-                    </div>
-                    <h2 className="text-2xl font-bold text-white mb-2">Targeting {targetCompany}</h2>
-                    <p className="text-blue-200/80 max-w-md">Your dashboard is currently optimized for {targetCompany} interview patterns. Keep grinding!</p>
-                  </div>
-                  <div className="hidden md:flex w-16 h-16 bg-blue-500/20 rounded-2xl items-center justify-center border border-blue-400/30 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                    <Briefcase className="w-8 h-8 text-blue-300" />
-                  </div>
+        <main className="max-w-6xl mx-auto px-6 py-10 space-y-8">
+          
+          {/* Header */}
+          <div className="flex justify-between items-end">
+            <div>
+              <h1 className="text-3xl font-bold text-white mb-2">Welcome, {profile?.name.split(' ')[0]}</h1>
+              <p className="text-gray-400">Here's your prep overview for {targetCompany}.</p>
+            </div>
+          </div>
+
+          {/* Top Stats Row */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                <CheckCircle className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">Total Solved</p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-bold text-white">{solvedCount}</span>
+                  <span className="text-sm text-gray-500">/ {totalQuestions}</span>
                 </div>
-              </motion.div>
+              </div>
+            </div>
 
-              {/* Due for Review (SRS) */}
-              {dueReviews.length > 0 && (
-                <motion.section initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-orange-500/10 backdrop-blur-xl rounded-2xl shadow-sm border border-orange-500/20 overflow-hidden">
-                  <div className="p-6 border-b border-orange-500/20 flex justify-between items-center bg-orange-500/5">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.2)]">
-                        <ClockAlert className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h2 className="text-xl font-bold text-orange-400">Due for Review Today</h2>
-                        <p className="text-sm text-orange-300/80">Spaced repetition to reinforce memory.</p>
-                      </div>
-                    </div>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center">
+                <Flame className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">Current Streak</p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-bold text-white">{profile?.currentStreak || 0}</span>
+                  <span className="text-sm text-gray-500">Days</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                <Target className="w-6 h-6" />
+              </div>
+              <div className="w-full">
+                <p className="text-sm text-gray-400 flex justify-between">
+                  <span>Prep Progress</span>
+                  <span className="text-white font-medium">{progressPercent}%</span>
+                </p>
+                <div className="w-full bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
+                  <div 
+                    className="bg-emerald-500 h-full rounded-full" 
+                    style={{ width: `${progressPercent}%` }} 
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            {/* Left Column: Quick Actions & Due Reviews */}
+            <div className="lg:col-span-2 space-y-6">
+              
+              <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+                <div className="p-6 border-b border-white/10 flex justify-between items-center bg-white/5">
+                  <div className="flex items-center gap-3">
+                    <BookOpen className="w-5 h-5 text-blue-400" />
+                    <h2 className="text-lg font-bold text-white">Continue Practicing</h2>
                   </div>
-                  
-                  <div className="divide-y divide-orange-500/10 bg-white/5">
-                    {dueReviews.map((q, idx) => (
-                      <div key={q.id} className="p-4 flex items-center justify-between hover:bg-orange-500/10 transition-colors">
-                        <div className="flex items-center gap-4">
-                          <span className="text-orange-400 font-mono text-sm w-6 text-center">{idx + 1}</span>
-                          <div>
-                            <h4 className="font-semibold text-white text-base">{q.title}</h4>
-                            <div className="flex items-center gap-3 mt-1">
-                              <span className={`text-[11px] px-2 py-0.5 rounded-md font-bold tracking-wide ${
-                                q.difficulty === 'EASY' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' :
-                                q.difficulty === 'MEDIUM' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' :
-                                'bg-rose-500/20 text-rose-300 border border-rose-500/30'
-                              }`}>
-                                {q.difficulty}
-                              </span>
-                              <span className="text-xs text-gray-400 font-medium">{q.topic}</span>
-                            </div>
-                          </div>
+                  <Link href="/problems" className="text-sm text-blue-400 hover:text-blue-300 flex items-center">
+                    Go to Problems <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+                <div className="p-8 text-center bg-[#0a0a0a]">
+                  <p className="text-gray-400 mb-6">You have access to 120+ curated questions specifically for Walmart SDE-1 interviews.</p>
+                  <Link href="/problems" className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+                    Start Next Problem
+                  </Link>
+                </div>
+              </div>
+
+              {dueReviews.length > 0 && (
+                <div className="bg-white/5 border border-orange-500/20 rounded-2xl overflow-hidden">
+                  <div className="p-6 border-b border-white/10 flex items-center gap-3 bg-orange-500/5">
+                    <ClockAlert className="w-5 h-5 text-orange-400" />
+                    <h2 className="text-lg font-bold text-white">Due for Review ({dueReviews.length})</h2>
+                  </div>
+                  <div className="divide-y divide-white/10">
+                    {dueReviews.map((q) => (
+                      <div key={q.id} className="p-4 flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <div>
+                          <h4 className="font-medium text-gray-200">{q.title}</h4>
+                          <p className="text-xs text-gray-500 mt-1">{q.topic}</p>
                         </div>
-                        <Link href={`/dsa`} className="px-4 py-2 bg-orange-500/20 border border-orange-500/30 hover:bg-orange-500/30 text-orange-300 text-sm font-medium rounded-lg transition-colors shadow-[0_0_10px_rgba(249,115,22,0.1)]">
-                          Review Now
+                        <Link href={`/problems`} className="px-3 py-1.5 bg-orange-500/20 text-orange-300 text-sm font-medium rounded-lg hover:bg-orange-500/30 transition-colors">
+                          Review
                         </Link>
                       </div>
                     ))}
                   </div>
-                </motion.section>
+                </div>
               )}
+            </div>
 
-              {/* Company-Specific Prep Track */}
-              <motion.section initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white/5 backdrop-blur-xl rounded-2xl shadow-sm border border-white/10 overflow-hidden">
-                <div className="p-6 border-b border-white/10 flex justify-between items-center bg-white/5">
-                  <div>
-                    <h2 className="text-xl font-bold text-white">Top 5 {targetCompany} Questions</h2>
-                    <p className="text-sm text-gray-400 mt-1">Highly frequently asked in recent interviews.</p>
-                  </div>
-                  <Link href="/dsa" className="text-sm font-medium text-blue-400 hover:text-blue-300 flex items-center transition-colors">
-                    View all <ChevronRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-                
-                <div className="divide-y divide-white/10">
-                  {companyTrack.length > 0 ? companyTrack.map((q, idx) => (
-                    <div key={q.id} className="p-4 flex items-center justify-between hover:bg-white/5 transition-colors group">
-                      <div className="flex items-center gap-4">
-                        <span className="text-gray-500 font-mono text-sm w-6 text-center">{idx + 1}</span>
-                        <div>
-                          <h4 className="font-semibold text-gray-200 text-base group-hover:text-blue-400 transition-colors">{q.title}</h4>
-                          <div className="flex items-center gap-3 mt-1">
-                            <span className={`text-[11px] px-2 py-0.5 rounded-md font-bold tracking-wide ${
-                              q.difficulty === 'EASY' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' :
-                              q.difficulty === 'MEDIUM' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' :
-                              'bg-rose-500/20 text-rose-300 border border-rose-500/30'
-                            }`}>
-                              {q.difficulty}
-                            </span>
-                            <span className="text-xs text-gray-400 font-medium">{q.topic}</span>
-                          </div>
-                        </div>
+            {/* Right Column: Target Company Track */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden self-start">
+              <div className="p-6 border-b border-white/10 bg-white/5">
+                <h2 className="text-lg font-bold text-white mb-1">Top {targetCompany} Questions</h2>
+                <p className="text-xs text-gray-400">Highly frequent in recent interviews</p>
+              </div>
+              <div className="divide-y divide-white/10">
+                {companyTrack.length > 0 ? companyTrack.map((q) => (
+                  <div key={q.id} className="p-4 hover:bg-white/5 transition-colors">
+                    <Link href={`/problems`} className="block">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="font-medium text-gray-200 text-sm leading-snug hover:text-blue-400 transition-colors">{q.title}</h4>
                       </div>
-                      <Link href={`/dsa`} className="opacity-0 group-hover:opacity-100 px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-all border border-white/10">
-                        Solve
-                      </Link>
-                    </div>
-                  )) : (
-                    <div className="p-8 text-center text-gray-400">
-                      No specific questions found for this company yet. Check back soon!
-                    </div>
-                  )}
-                </div>
-              </motion.section>
+                      <div className="flex items-center gap-2">
+                        <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${
+                          q.difficulty === 'EASY' ? 'bg-emerald-500/20 text-emerald-400' :
+                          q.difficulty === 'MEDIUM' ? 'bg-amber-500/20 text-amber-400' :
+                          'bg-rose-500/20 text-rose-400'
+                        }`}>
+                          {q.difficulty}
+                        </span>
+                        <span className="text-xs text-gray-500">{q.topic}</span>
+                      </div>
+                    </Link>
+                  </div>
+                )) : (
+                  <div className="p-6 text-center text-sm text-gray-500">
+                    No specific questions found for this company yet.
+                  </div>
+                )}
+              </div>
             </div>
-            
-            {/* Right Column - Stats */}
-            <div className="space-y-6">
-              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-sm border border-white/10 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-gray-400 font-medium mb-1">Company Readiness</h3>
-                  <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
-                    {Math.min(100, Math.round((profile?.totalSolved || 0) / 50 * 100))}
-                    <span className="text-2xl text-gray-500">/100</span>
-                  </p>
-                </div>
-                <p className="text-sm text-gray-500 mt-4">Based on top {targetCompany} questions.</p>
-              </motion.div>
 
-              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-sm border border-white/10 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-gray-400 font-medium mb-1">Questions Solved</h3>
-                  <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
-                    {profile?.totalSolved || 0}
-                    <span className="text-2xl text-gray-500">/120</span>
-                  </p>
-                </div>
-                <div className="w-full bg-white/10 h-2 rounded-full mt-4 overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: `${Math.min(100, (profile?.totalSolved || 0) / 120 * 100)}%` }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="bg-emerald-500 h-full rounded-full shadow-[0_0_10px_rgba(16,185,129,0.5)]"
-                  />
-                </div>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl shadow-sm border border-white/10 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-gray-400 font-medium mb-1">Current Streak</h3>
-                  <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-400">
-                    {profile?.currentStreak || 0} <span className="text-2xl text-gray-500">Days</span>
-                  </p>
-                </div>
-                <p className="text-sm text-gray-500 mt-4">Keep the momentum going!</p>
-              </motion.div>
-            </div>
           </div>
         </main>
       </div>

@@ -3,18 +3,29 @@ import { apiFetch } from "@/lib/api";
 
 interface AuthState {
   isAuthenticated: boolean;
+  isInitialized: boolean;
   setAuthenticated: (status: boolean) => void;
+  checkAuth: () => Promise<void>;
   logout: () => void;
 }
 
-export const useAuthStore = create<AuthState>((set) => {
-  // We can't strictly know if cookie exists syncronously in JS, 
-  // so we default to false and rely on initial API calls to verify.
+export const useAuthStore = create<AuthState>((set, get) => {
   return {
-    isAuthenticated: false, 
+    isAuthenticated: false,
+    isInitialized: false,
     
     setAuthenticated: (status: boolean) => {
-      set({ isAuthenticated: status });
+      set({ isAuthenticated: status, isInitialized: true });
+    },
+    
+    checkAuth: async () => {
+      if (get().isInitialized) return;
+      try {
+        await apiFetch("/profile", { requireAuth: true });
+        set({ isAuthenticated: true, isInitialized: true });
+      } catch (e) {
+        set({ isAuthenticated: false, isInitialized: true });
+      }
     },
     
     logout: async () => {

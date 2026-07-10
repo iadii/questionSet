@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useAuthStore } from '@/store/authStore';
 
 export default function Home() {
+  const { isAuthenticated, logout } = useAuthStore();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -37,15 +39,34 @@ export default function Home() {
               </span>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/login" className="text-gray-300 hover:text-white font-medium text-sm transition-colors">
-                Log in
-              </Link>
-              <Link
-                href="/signup"
-                className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm"
-              >
-                Sign up
-              </Link>
+              {isAuthenticated ? (
+                <>
+                  <Link href="/dashboard" className="text-gray-300 hover:text-white font-medium text-sm transition-colors">
+                    Dashboard
+                  </Link>
+                  <Link href="/profile" className="text-gray-300 hover:text-white font-medium text-sm transition-colors">
+                    Profile
+                  </Link>
+                  <button
+                    onClick={logout}
+                    className="bg-white/10 text-white hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm"
+                  >
+                    Log out
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link href="/login" className="text-gray-300 hover:text-white font-medium text-sm transition-colors">
+                    Log in
+                  </Link>
+                  <Link
+                    href="/signup"
+                    className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm"
+                  >
+                    Sign up
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
